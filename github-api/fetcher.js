@@ -93,6 +93,18 @@ const fetchUsers = async () => {
   return users;
 }
 
+const addExtraData = async users => {
+  if (fs.existsSync('./allUsersSkills.json')) {
+    const userSkillsString = fs.readFileSync('./allUsersSkills.json', 'utf-8');
+    const skills = JSON.parse(userSkillsString);
+    users.forEach(u => {
+      if (skills[u.username]) u.skills = skills[u.username].join(',');
+    });
+  }
+
+  return users;
+};
+
 // If we want to upload from existing file, just don't pass in anything!
 const uploadUsers = async (users) => {
   if (!users) {
@@ -149,6 +161,7 @@ if (useSaved) {
   uploadUsers();
 } else {
   fetchUsers()
+    .then(users => addExtraData(users))
     .then(users => saveUsers(users))
     .then(users => uploadUsers(users))
     ;
