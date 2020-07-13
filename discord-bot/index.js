@@ -1,7 +1,22 @@
 const { discordToken } = require("./config");
 const client = require("./Client");
 
-client.once("ready", () => console.log("Client ready!"));
+client.once("ready", () => {
+	console.log("Client ready!");
+	client.guilds.cache
+		.first()
+		.members.fetch()
+		.then((fetchedMembers) => {
+			let output = [];
+			for (let member of fetchedMembers) {
+				output.push({
+					fullName: member[1].user.username,
+					discordId: member[1].user.id,
+				});
+			}
+			process.stdout.write(JSON.stringify(output) + "\n");
+		});
+});
 client.login(discordToken);
 
 client.on("message", (message) => {
