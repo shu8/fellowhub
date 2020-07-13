@@ -43,6 +43,20 @@
             "privacy": {
                 "open": true
             }
+        },
+        {
+            "name": "/events",
+            "lambdaFunction": "calendarendpoint",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/events/{id}",
+            "lambdaFunction": "calendarendpoint",
+            "privacy": {
+                "open": true
+            }
         }
     ],
     "resourceName": "fellowbookapi",
@@ -62,6 +76,9 @@
         },
         {
             "lambdaFunction": "standupendpoint"
+        },
+        {
+            "lambdaFunction": "calendarendpoint"
         }
     ],
     "privacy": {
@@ -110,7 +127,15 @@
                 "Name",
                 "Arn"
             ]
+        },
+        {
+            "category": "function",
+            "resourceName": "calendarendpoint",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
         }
     ],
-    "uuid": "f379a07e"
+    "uuid": "ed49f10a"
 }
