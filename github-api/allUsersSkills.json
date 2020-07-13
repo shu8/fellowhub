@@ -1,0 +1,518 @@
+{
+  "theycallmeswift": [
+    "JavaScript",
+    "Ruby"
+  ],
+  "eKhattak": [
+    "JavaScript",
+    "React",
+    "NodeJS",
+    "AI",
+    "Blockchain"
+  ],
+  "jackyzha0": [
+    "ML"
+  ],
+  "Xtremilicious": [
+    "JavaScript",
+    "React",
+    "Node"
+  ],
+  "darshkpatel": [
+    "Full Stack",
+    "React",
+    "NextJS",
+    "Django",
+    "DevOps"
+  ],
+  "avik-pal": [
+    "Machine Learning",
+    "Deep Learning"
+  ],
+  "sauravhiremath": [
+    "DevOps",
+    "TypeScript",
+    "JavaScript",
+    "Node",
+    "Go",
+    "React",
+    "NLP"
+  ],
+  "ani4aniket": [
+    "JavaScript",
+    "React",
+    "RN",
+    "Recoil",
+    "Redux",
+    "GQL",
+    "Nodejs",
+    "Django",
+    "DjangoRF",
+    "Blockchain"
+  ],
+  "jiviteshjain": [
+    "Python",
+    "C++",
+    "JavaScript",
+    "Django",
+    "React",
+    "Machine Learning"
+  ],
+  "AliMalik9599": [
+    "Python",
+    "Django",
+    "TensorFlow",
+    "Spark",
+    "Java",
+    "C++",
+    "SQL"
+  ],
+  "YashKumarVerma": [
+    "Full Stack",
+    "TSNode",
+    "React"
+  ],
+  "shu8": [
+    "JavaScript",
+    "React",
+    "Svelte",
+    "Node",
+    "Python",
+    "Flutter",
+    "Dart",
+    "Firebase",
+    "DevOps"
+  ],
+  "tayoogunbiyi": [
+    "Back End",
+    "Go",
+    "Python",
+    "Django",
+    "Flask",
+    "Node",
+    "React"
+  ],
+  "yashika51": [
+    "Python"
+  ],
+  "dnabanita7": [
+    "Machine Learning",
+    "Deep Learning",
+    "Reinforcement Learning",
+    "Julia"
+  ],
+  "kunal-kushwaha": [
+    "Java",
+    "Node",
+    "Python",
+    "Machine Learning",
+    "DevOps",
+    "K8s",
+    "GitHub"
+  ],
+  "anshulrgoyal": [
+    "Node",
+    "React",
+    "Golang",
+    "Rust"
+  ],
+  "larson-carter": [
+    "Java",
+    "Kotlin",
+    "Android",
+    "C++",
+    "Z-Shell",
+    "Powershell",
+    "Vue",
+    "TypeScript"
+  ],
+  "kendevops": [
+    "Front End",
+    "JavaScript",
+    "React",
+    "CSS",
+    "Node",
+    "Python",
+    "AWS",
+    "Serverless"
+  ],
+  "emctackett": [
+    "JavaScript",
+    "Node",
+    "Express",
+    "Ruby",
+    "Rails",
+    "Python",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "React"
+  ],
+  "gmelodie": [
+    "Python",
+    "FastAPI",
+    "Flask",
+    "BeautifulSoup",
+    "Go"
+  ],
+  "ayushjainrksh": [
+    "Full Stack",
+    "React",
+    "Node",
+    "Flask"
+  ],
+  "kpolnitz": [
+    "Go",
+    "Python",
+    "Polymerjs"
+  ],
+  "wlawt": [
+    "JavaScript",
+    "MERN",
+    "Azure",
+    "AWS",
+    "Machine Learning",
+    "Go"
+  ],
+  "garrettluu": [
+    "Full Stack",
+    "JavaScript",
+    "Java",
+    "Kotlin",
+    "Flutter"
+  ],
+  "LakshyaKhatri": [
+    "Django",
+    "Flask",
+    "DjangoRF",
+    "Data Scraping",
+    "Image Processing",
+    "SQL",
+    "NoSQL",
+    "Java",
+    "Kotlin",
+    "Machine Learning",
+    "NLP"
+  ],
+  "whoiswillma": [
+    "Swift",
+    "Java",
+    "Ruby",
+    "OCaml"
+  ],
+  "kbanc": [
+    "Python",
+    "Machine Learning",
+    "Swift",
+    "C++",
+    "JavaScript"
+  ],
+  "nchaloult": [
+    "Go",
+    "TypeScript",
+    "Redis",
+    "Postgres",
+    "Mongo",
+    "React",
+    "Redux",
+    "AWS",
+    "Go",
+    "Node"
+  ],
+  "yahengsu": [
+    "Go",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node",
+    "Swift"
+  ],
+  "mohammedsahl": [
+    "TypeScript",
+    "Python",
+    "C++",
+    "Artificial Intelligence",
+    "Machine Learning"
+  ],
+  "daschachter": [
+    "C++",
+    "Python",
+    "Linux",
+    "Java",
+    "Android",
+    "Python"
+  ],
+  "lincolnmroth": [
+    "Python",
+    "Java",
+    "C++",
+    "Swift"
+  ],
+  "RashikaKarki": [
+    "Data Science",
+    "Machine Learning",
+    "React",
+    "Django",
+    "UI"
+  ],
+  "ivov": [
+    "TypeScript",
+    "Node",
+    "React",
+    "Firebase",
+    "Flutter",
+    "Tailwind"
+  ],
+  "mwizasimbeye11": [
+    "Deep Learning",
+    "Artificial Intelligence",
+    "Django",
+    "Flask",
+    "Chalice",
+    "AWS"
+  ],
+  "barronwei": [
+    "C++",
+    "Python",
+    "Go",
+    "JavaScript",
+    "Rust",
+    "Java"
+  ],
+  "roeeyn": [
+    "Python",
+    "Flask",
+    "FastAPI",
+    "Node",
+    "JS",
+    "Python",
+    "DevOps",
+    "GitHub Actions"
+  ],
+  "BaffourAdu": [
+    "JavaScript",
+    "Node",
+    "Vue",
+    "PHP",
+    "Serverless",
+    "GraphQl",
+    "Hasura",
+    "Ruby"
+  ],
+  "gitburd": [
+    "JavaScript",
+    "React",
+    "Node",
+    "Go"
+  ],
+  "SimplyBallistic": [
+    "MERN",
+    "React",
+    "TypeScript",
+    "MongoDB",
+    "Node",
+    "Express"
+  ],
+  "PrabhanshuAttri": [
+    "Python",
+    "JavaScript",
+    "React",
+    "Node"
+  ],
+  "stealthanthrax": [
+    "Vue",
+    "React",
+    "Swift",
+    "Mobile Development",
+    "Express",
+    "Flask",
+    "Python",
+    "Bash"
+  ],
+  "Oghenebrume50": [
+    "JavaScript",
+    "Ruby",
+    "Node",
+    "Rails",
+    "React"
+  ],
+  "Biswajitghosh98": [
+    "C++",
+    "Python",
+    "Julia",
+    "JavaScript",
+    "Machine Learning",
+    "Computer Vision"
+  ],
+  "Diaga": [
+    "REST",
+    "Django",
+    "Flutter",
+    "Angular",
+    "IoT",
+    "Deep Learning"
+  ],
+  "srijonsaha": [
+    "UI",
+    "UX",
+    "React",
+    "Node",
+    "JavaScript"
+  ],
+  "AnshG714": [
+    "Full Stack",
+    "React",
+    "Swift",
+    "Firebase",
+    "Express",
+    "Python",
+    "Algorithms"
+  ],
+  "michiboo": [
+    "C++",
+    "Android",
+    "Python"
+  ],
+  "anikethsaha": [
+    "JavaScript",
+    "ASTs",
+    "Compiler"
+  ],
+  "harshil1712": [
+    "JavaScript",
+    "React",
+    "Vue",
+    "Flutter",
+    "MongoDB",
+    "Firebase",
+    "GraphQL"
+  ],
+  "chirag-singhal": [
+    "JavaScript",
+    "Node",
+    "React",
+    "Python",
+    "Machine Learning"
+  ],
+  "awasum": [
+    "Java",
+    "Spring",
+    "Boot",
+    "JavaScript",
+    "Angular",
+    "Just",
+    "Ruby",
+    "Node",
+    "Apache",
+    "Fineract",
+    "Linux",
+    "Ubuntu",
+    "Gitlab",
+    "CI",
+    "Github Actions",
+    "DevOps"
+  ],
+  "rkbeatss": [
+    "Python",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Node",
+    "Ruby",
+    "Rails",
+    "Machine Learning",
+    "Python"
+  ],
+  "mgautam98": [
+    "Node",
+    "JavaScript",
+    "Java",
+    "Flask",
+    "Spring",
+    "Boot",
+    "Django",
+    "DevOps",
+    "Flutter"
+  ],
+  "victorphoenix3": [
+    "React",
+    "Django",
+    "Python",
+    "JavaScript"
+  ],
+  "SaurabhAgarwala": [
+    "Python",
+    "Django",
+    "Machine Learning",
+    "Flutter",
+    "APIs"
+  ],
+  "ngojason9": [
+    "Python",
+    "Django",
+    "Machine Learning"
+  ],
+  "bartekpacia": [
+    "Android",
+    "Java",
+    "Kotlin",
+    "Flutter",
+    "JavaScript",
+    "TypeScript",
+    "Node",
+    "Python",
+    "Flask",
+    "Unity",
+    "Firebase",
+    "GCP"
+  ],
+  "HajerMahjoub": [
+    "NLP"
+  ],
+  "jevakallio": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "CSS",
+    "Redux"
+  ],
+  "ianjennings": [
+    "JavaScript",
+    "Bash",
+    "CoffeeScript",
+    "Electron",
+    "Java",
+    "WebSocket"
+  ],
+  "zencephalon": [
+    "Ruby",
+    "JavaScript",
+    "REST",
+    "Python"
+  ],
+  "flosincapite": [
+    "Python"
+  ],
+  "arcofdescent": [
+    "Julia",
+    "Docker",
+    "DevOps",
+    "JavaScript",
+    "Perl",
+    "Elixir",
+    "Vue",
+    "Python"
+  ],
+  "mkcode": [
+    "Ruby",
+    "JavaScript",
+    "TypeScript",
+    "Bash"
+  ],
+  "juped": [
+    "C",
+    "Ruby",
+    "JavaScript"
+  ]
+}
