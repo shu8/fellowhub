@@ -41,7 +41,7 @@ const latestPodStandupQuery = (pod) => {
   }`;
 }
 
-const latestUserStandupQuery = (username) => {
+const latestUserStandupQuery = (username, limit = 1) => {
   // TODO this username is case-sensitive
   // Make it case insensitive. How? Maybe get original_username from our DynamoDB?
   return `{
@@ -51,7 +51,7 @@ const latestUserStandupQuery = (username) => {
         edges {
           node {
             name
-            discussions(last: 1) {
+            discussions(first: ${limit}, orderBy: {field: CREATED_AT, direction: DESC}) {
               nodes {
                 comments(first: 20) {
                   nodes {
@@ -60,6 +60,7 @@ const latestUserStandupQuery = (username) => {
                       login
                     }
                     url
+                    createdAt
                   }
                 }
               }
@@ -108,7 +109,7 @@ app.get(path, function (req, res) {
       return res.json(comments);
     });
   } else if (req.query.user) {
-    const query = latestUserStandupQuery(req.query.user);
+    const query = latestUserStandupQuery(req.query.user, req.query.limit);
     if (!query) return res.json({ error: 'Unknown or Invalid user' });
 
     fetch(BASE_API_URL,
@@ -121,15 +122,32 @@ app.get(path, function (req, res) {
         body: JSON.stringify({ query })
       },
     ).then(res => res.json()).then(json => {
-      const comments = json.data.organization.teams.edges[0].node.discussions.nodes[0].comments.nodes;
-      const userComment = comments.find(comment => comment.author.login === req.query.user);
-      if (!userComment) return res.json({ error: 'No standup found for user. Check the username!' });
+      const nodes = json.data.organization.teams.edges[0].node.discussions.nodes
+        .filter(c => c.comments.nodes.length);
 
-      userComment.username = userComment.author.login;
-      userComment.body = userComment.bodyHTML;
-      delete userComment.bodyHTML;
-      delete userComment.author;
-      return res.json(userComment);
+      if (!nodes.length) {
+        return res.json({ error: 'No standup found for user. Check the username!' });
+      }
+
+      const toReturn = [];
+      nodes.forEach(node => {
+        const comments = node.comments.nodes;
+        const userComment = comments.find(comment => comment.author.login === req.query.user);
+        if (!userComment) return;
+
+        userComment.username = userComment.author.login;
+        userComment.body = userComment.bodyHTML;
+        delete userComment.bodyHTML;
+        delete userComment.author;
+        toReturn.push(userComment);
+      });
+
+      if (!toReturn.length) {
+        return res.json({ error: 'No standup found for user. Check the username!' });
+      }
+
+      // If no limit provided, i.e. 1, return single object, else array of objects
+      return res.json(!req.query.limit ? toReturn[0] : toReturn);
     });
   }
 });
