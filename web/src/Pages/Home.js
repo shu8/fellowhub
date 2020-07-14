@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from 'react-router-dom';
 
 import Header from "../Components/Header";
 import Search from "../Components/Search";
@@ -21,7 +20,7 @@ export default class Home extends React.Component {
     if (window.location.search.includes("access_token")) {
       accessToken = window.location.search.substr(1).split("=")[1];
       window.sessionStorage.setItem("accessToken", accessToken);
-      useHistory().replace("/");
+      window.location.replace('/');
       this.props.setAccessToken(accessToken);
     }
 
