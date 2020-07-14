@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PrimarySearchAppBar() {
   return (
-    <div>
+    <div style={{marginBottom: '20px'}}>
       <div class="Header" style={{backgroundColor: '#1d539f'}}>
         <div class="Header-item">
           <a href="#" class="Header-link f4 d-flex flex-items-center">

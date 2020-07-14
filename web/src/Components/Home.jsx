@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import AppsIcon from "@material-ui/icons/Apps";
 import SettingsEthernetIcon from "@material-ui/icons/SettingsEthernet";
 import PeopleIcon from "@material-ui/icons/People";
@@ -12,18 +9,19 @@ import Box from "@material-ui/core/Box";
 import Profile from "./Profile";
 import SimpleAvatar from "./SimpleAvatar";
 
+import { TabNav } from "@primer/components";
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, tab, value, ...other } = props;
 
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
-      id={`scrollable-force-tabpanel-${index}`}
-      aria-labelledby={`scrollable-force-tab-${index}`}
+      hidden={tab !== value}
+      id={`scrollable-force-tabpanel-${value}`}
+      aria-labelledby={`scrollable-force-tab-${value}`}
       {...other}
     >
-      {value === index && (
+      {tab === value && (
         <Box p={3}>
           <Typography>{children}</Typography>
         </Box>
@@ -38,13 +36,6 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-force-tab-${index}`,
-    "aria-controls": `scrollable-force-tabpanel-${index}`,
-  };
-}
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -55,11 +46,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ScrollableTabsButtonForce() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const [tab, setTab] = React.useState('home');
 
   const createAvatars = () => {
     const avatars = [];
@@ -76,26 +63,19 @@ export default function ScrollableTabsButtonForce() {
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Profile />
       <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="fullWidth"
-            scrollButtons="on"
-            indicatorColor="secondary"
-            textColor="primary"
-            aria-label="scrollable force tabs example"
-          >
-            <Tab label="OVERVIEW" icon={<AppsIcon />} {...a11yProps(0)} />
-            <Tab label="PODS" icon={<PeopleIcon />} {...a11yProps(1)} />
-            <Tab
-              label="PROJECTS"
-              icon={<SettingsEthernetIcon />}
-              {...a11yProps(2)}
-            />
-          </Tabs>
-        </AppBar>
-        <TabPanel value={value} index={0}>
+        <TabNav aria-label="Main">
+          <TabNav.Link href="#home" selected={tab === 'home'} onClick={() => setTab('home')}>
+            <AppsIcon /> Overview
+          </TabNav.Link>
+          <TabNav.Link href="#pods" selected={tab === 'pods'} onClick={() => setTab('pods')}>
+            <PeopleIcon /> Pods
+          </TabNav.Link>
+          <TabNav.Link href="#projects" selected={tab === 'projects'} onClick={() => setTab('projects')}>
+            <SettingsEthernetIcon /> Projects
+          </TabNav.Link>
+        </TabNav>
+
+        <TabPanel tab={tab} value={'home'}>
           <div
             style={{
               display: "grid",
@@ -106,11 +86,11 @@ export default function ScrollableTabsButtonForce() {
             {createAvatars()}
           </div>
         </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
+        <TabPanel tab={tab} value={'pods'}>
+          Pods
         </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
+        <TabPanel tab={tab} value={'projects'}>
+          Projects
         </TabPanel>
       </div>
     </div>
