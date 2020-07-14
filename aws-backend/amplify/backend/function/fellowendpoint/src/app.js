@@ -1,10 +1,12 @@
-const AWS = require('aws-sdk')
-const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-const bodyParser = require('body-parser')
-const express = require('express')
+const AWS = require('aws-sdk');
+const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
+const bodyParser = require('body-parser');
+const express = require('express');
+const fetch = require('node-fetch');
 
 AWS.config.update({ region: process.env.TABLE_REGION });
 
+const BASE_API_URL = 'https://api.github.com/graphql';
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 let tableName = "fellowsdb";
@@ -35,6 +37,30 @@ app.use(function (req, res, next) {
   next()
 });
 
+const query = username => `
+{
+  user(login: "${username}") {
+    pullRequests(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
+      nodes {
+        bodyHTML
+        url
+        title
+        state
+        createdAt
+      }
+    }
+    issues(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
+      nodes {
+        bodyHTML
+        url
+        title
+        state
+        createdAt
+      }
+    }
+  }
+}`;
+
 // convert url string param to expected Type
 const convertUrlType = (param, type) => {
   switch (type) {
@@ -45,7 +71,24 @@ const convertUrlType = (param, type) => {
   }
 }
 
-app.get(path, function (req, res) {
+const addRecentActivity = async user => {
+  const q = query(user.username_original);
+  const res = await fetch(BASE_API_URL,
+    {
+      method: 'post',
+      headers: {
+        Authorization: "bearer " + process.env.GITHUB_TOKEN,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query: q })
+    },
+  );
+  const json = await res.json();
+  user.pullsActivity = json.data.user.pullRequests.nodes;
+  user.issuesActivity = json.data.user.issues.nodes;
+};
+
+app.get(path, async function (req, res) {
   const params = {};
 
   if (req.params[partitionKeyName]) {
@@ -63,12 +106,13 @@ app.get(path, function (req, res) {
       Key: params
     }
 
-    dynamodb.get(getItemParams, (err, data) => {
+    dynamodb.get(getItemParams, async (err, data) => {
       if (err) {
         res.statusCode = 500;
         res.json({ error: 'Could not load items: ' + err.message });
       } else {
         if (data.Item) {
+          await addRecentActivity(data.Item);
           res.json(data.Item);
         } else {
           res.json(data);
