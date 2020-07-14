@@ -10,7 +10,7 @@ import PeopleIcon from "@material-ui/icons/People";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Profile from "./Profile";
-import Avatar from "./Avatar";
+import SimpleAvatar from "./SimpleAvatar";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,6 +61,17 @@ export default function ScrollableTabsButtonForce() {
     setValue(newValue);
   };
 
+  const createAvatars = () => {
+    const avatars = [];
+    for (let i = 0; i < 45; i++) {
+      avatars.push(<SimpleAvatar
+        bgPhoto={`https://picsum.photos/740/420/?random?${i}`}
+        cta="View profile"
+      />);
+    }
+    return avatars;
+  }
+
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Profile />
@@ -92,126 +103,7 @@ export default function ScrollableTabsButtonForce() {
               gridRowGap: "20px",
             }}
           >
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
-            <Avatar
-              bgPhoto="https://picsum.photos/740/420/?random"
-              cta="View profile"
-            />
+            {createAvatars()}
           </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
