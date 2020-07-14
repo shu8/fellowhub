@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import Profile from "./Profile";
 import SimpleAvatar from "./SimpleAvatar";
 
-import { TabNav } from "@primer/components";
+import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
 
 function TabPanel(props) {
@@ -21,8 +19,8 @@ function TabPanel(props) {
       {...other}
     >
       {tab === value && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
+        <Box p={3} as="div">
+          <Text as="div">{children}</Text>
         </Box>
       )}
     </div>
@@ -31,8 +29,8 @@ function TabPanel(props) {
 
 TabPanel.propTypes = {
   children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
+  tab: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -47,13 +45,10 @@ export default function Home(props) {
   const classes = useStyles();
   const [tab, setTab] = React.useState("home");
 
-  const createAvatars = () => {
-    console.log(props);
-    const avatars = props.data.map((fellow) => (
-      <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" />
+  const createAvatars = () =>
+    props.data.map((fellow, i) => (
+      <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" key={i} />
     ));
-    return avatars;
-  };
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
