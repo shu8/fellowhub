@@ -43,20 +43,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ScrollableTabsButtonForce() {
+export default function Home(props) {
   const classes = useStyles();
   const [tab, setTab] = React.useState("home");
 
   const createAvatars = () => {
-    const avatars = [];
-    for (let i = 0; i < 45; i++) {
-      avatars.push(
-        <SimpleAvatar
-          bgPhoto={`https://picsum.photos/740/420/?random?${i}`}
-          cta="View profile"
-        />
-      );
-    }
+    console.log(props);
+    const avatars = props.data.map((fellow) => (
+      <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" />
+    ));
     return avatars;
   };
 
