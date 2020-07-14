@@ -1,8 +1,9 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import image from "../img/mlh-logo-color.svg";
 
-function profile(props) {
+import { BorderBox, CounterLabel } from "@primer/components";
+
+function profile() {
   return (
     <div>
       <div>
@@ -19,56 +20,55 @@ function profile(props) {
             objectFit: "scale-down",
           }}
         />
-        <div
+        <BorderBox
           style={{
-            margin: "20px",
-            textAlign: "left",
-            borderStyle: "solid",
-            backgroundColor: "grey",
+            padding: "15px",
+            margin: "10px",
           }}
         >
-          <h3>
-            Fellows{" "}
-            <span
+          <h3 style={{ marginBottom: "5px" }}>
+            <CounterLabel
+              padding="10px"
               style={{
-                backgroundColor: "grey",
-                color: "white",
-                padding: "10px",
+                minWidth: "50px",
+                textAlign: "center",
+                fontSize: "15px",
               }}
             >
               160
-            </span>
+            </CounterLabel>{" "}
+            Fellows
           </h3>
-          <h3>
-            Mentors{" "}
-            <span
+          <h3 style={{ marginBottom: "5px" }}>
+            <CounterLabel
+              padding="10px"
               style={{
-                backgroundColor: "grey",
-                color: "white",
-                padding: "10px",
+                minWidth: "50px",
+                textAlign: "center",
+                fontSize: "15px",
               }}
             >
               20
-            </span>
+            </CounterLabel>{" "}
+            Mentors
           </h3>
-          <h3>
-            MLH Staffs{" "}
-            <span
+          <h3 style={{ marginBottom: "5px" }}>
+            <CounterLabel
+              padding="10px"
               style={{
-                backgroundColor: "grey",
-                color: "white",
-                padding: "10px",
+                minWidth: "50px",
+                textAlign: "center",
+                fontSize: "15px",
               }}
             >
               5
-            </span>
+            </CounterLabel>{" "}
+            MLH Staff
           </h3>
-        </div>
+        </BorderBox>
       </div>
     </div>
   );
 }
-
-// profile.propTypes = {};
 
 export default profile;
