@@ -12,7 +12,8 @@ import Profile from "./Profile";
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-    maxWidth: 650,
+    maxWidth: "65%",
+    height: "100%",
   },
 });
 
