@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header";
+import Header from "./Components/Header/Header";
 import Search from "./Components/Search";
 import Card from "./Components/Card";
 import Home from "./Components/Home";
