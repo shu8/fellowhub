@@ -195,6 +195,7 @@ export default function PrimarySearchAppBar() {
               </TabNav.Link>
               <TabNav.Link href="#documentation">Events</TabNav.Link>
               <TabNav.Link href="#support">Job</TabNav.Link>
+              <TabNav.Link href="#about">About</TabNav.Link>
             </TabNav>
           </div>
         </Toolbar>
