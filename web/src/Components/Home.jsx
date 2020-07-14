@@ -7,6 +7,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
+import Profile from "./Profile";
 
 const useStyles = makeStyles({
   root: {
@@ -24,7 +25,8 @@ export default function IconLabelTabs() {
   };
 
   return (
-    <div>
+    <div style={{ display: "flex" }}>
+      <Profile />
       <Paper square className={classes.root}>
         <Tabs
           value={value}
