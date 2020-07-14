@@ -10,7 +10,7 @@ function profile(props) {
           src={image}
           alt="MLH"
           style={{
-            width: "380px",
+            width: "360px",
             height: "350px",
             borderStyle: "solid",
             borderColor: "#000",

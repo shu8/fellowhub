@@ -1,24 +1,59 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper";
+import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import AppsIcon from "@material-ui/icons/Apps";
 import SettingsEthernetIcon from "@material-ui/icons/SettingsEthernet";
 import PeopleIcon from "@material-ui/icons/People";
-import AccountTreeIcon from "@material-ui/icons/AccountTree";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 import Profile from "./Profile";
+import Avatar from "./Avatar";
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
-const useStyles = makeStyles({
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`scrollable-force-tabpanel-${index}`}
+      aria-labelledby={`scrollable-force-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `scrollable-force-tab-${index}`,
+    "aria-controls": `scrollable-force-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     maxWidth: "65%",
-    height: "100%",
+    backgroundColor: theme.palette.background.paper,
   },
-});
+}));
 
-export default function IconLabelTabs() {
+export default function ScrollableTabsButtonForce() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -29,21 +64,163 @@ export default function IconLabelTabs() {
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Profile />
-      <Paper square className={classes.root}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          variant="MEDIUM"
-          indicatorColor="secondary"
-          textColor="secondary"
-          aria-label="icon label tabs example"
-        >
-          <Tab icon={<AppsIcon />} label="OVERVIEW" />
-          <Tab icon={<PeopleIcon />} label="PODS" />
-          <Tab icon={<SettingsEthernetIcon />} label="PROJECTS" />
-          <Tab icon={<AccountTreeIcon />} label="FELLOWS" />
-        </Tabs>
-      </Paper>
+      <div className={classes.root}>
+        <AppBar position="static" color="default">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            scrollButtons="on"
+            indicatorColor="secondary"
+            textColor="primary"
+            aria-label="scrollable force tabs example"
+          >
+            <Tab label="OVERVIEW" icon={<AppsIcon />} {...a11yProps(0)} />
+            <Tab label="PODS" icon={<PeopleIcon />} {...a11yProps(1)} />
+            <Tab
+              label="PROJECTS"
+              icon={<SettingsEthernetIcon />}
+              {...a11yProps(2)}
+            />
+          </Tabs>
+        </AppBar>
+        <TabPanel value={value} index={0}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto auto auto auto",
+              gridRowGap: "20px",
+            }}
+          >
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+            <Avatar
+              bgPhoto="https://picsum.photos/740/420/?random"
+              cta="View profile"
+            />
+          </div>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          Item Two
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          Item Three
+        </TabPanel>
+      </div>
     </div>
   );
 }
