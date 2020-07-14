@@ -1,6 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import image from "../img/mlh.png";
+import image from "../img/mlh-logo-color.svg";
 
 function profile(props) {
   return (
@@ -16,6 +16,7 @@ function profile(props) {
             borderColor: "#000",
             borderRadius: "100%",
             margin: "20px",
+            objectFit: "scale-down",
           }}
         />
         <div
