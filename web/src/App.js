@@ -31,9 +31,12 @@ class App extends React.Component {
       <Router>
         <div>
           <Switch>
-            <Route path="/fellows">
+            <Route path="/fellows/:username" render={props =>
+              <Fellows accessToken={this.state.accessToken} {...props} />
+            } />
+            <Route path="/fellows" render={() =>
               <Fellows accessToken={this.state.accessToken} />
-            </Route>
+            } />
             <Route path="/events">
               <Events />
             </Route>
@@ -46,7 +49,7 @@ class App extends React.Component {
             </Route>
           </Switch>
         </div>
-      </Router>
+      </Router >
     );
   }
 }
