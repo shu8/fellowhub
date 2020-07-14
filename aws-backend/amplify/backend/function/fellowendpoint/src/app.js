@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 
 AWS.config.update({ region: process.env.TABLE_REGION });
 
-const BASE_API_URL = 'https://api.github.com/graphql';
+const BASE_GRAPH_QL_API_URL = 'https://api.github.com/graphql';
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 let tableName = "fellowsdb";
@@ -73,7 +73,7 @@ const convertUrlType = (param, type) => {
 
 const addRecentActivity = async user => {
   const q = query(user.username_original);
-  const res = await fetch(BASE_API_URL,
+  const res = await fetch(BASE_GRAPH_QL_API_URL,
     {
       method: 'post',
       headers: {
