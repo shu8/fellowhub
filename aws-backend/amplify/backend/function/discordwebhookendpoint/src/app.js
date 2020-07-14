@@ -50,7 +50,7 @@ app.post(path, function (req, res) {
         await fetch(process.env.DISCORD_WEBHOOK_URL, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ content: `Hey <@${recipientDiscordId}>, <@${senderDiscordId}> just starred your project on GitHub!` }),
+          body: JSON.stringify({ content: `Hey <@${recipientDiscordId}>, <@${senderDiscordId}> just starred your project \`${req.body.project}\` on GitHub!` }),
         });
         res.json({ success: true });
       } catch (err) {
