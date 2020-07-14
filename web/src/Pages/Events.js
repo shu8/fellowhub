@@ -10,6 +10,20 @@ export default class Events extends React.Component {
   };
 
   render() {
+    let id;
+    if (this.props.match && this.props.match.params) id = this.props.match.params.id;
+
+    if (id) {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <Header />
+          </header>
+          <main className="container">Event: {id}</main>
+        </div>
+      );
+    }
+
     return (
       <div className="App">
         <header className="App-header">
