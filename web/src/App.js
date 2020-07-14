@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import Header from "./Components/Header";
-import Search from "./Components/Search";
-import Card from "./Components/Card";
+import Card05 from "./Components/Avatar";
+import Avatars from "./Components/Avatar";
 import Home from "./Components/Home";
 import "font-awesome/css/font-awesome.min.css";
 import { fetchData } from "./Components";
