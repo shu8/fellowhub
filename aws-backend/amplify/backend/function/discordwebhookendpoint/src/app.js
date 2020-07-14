@@ -42,9 +42,7 @@ app.post(path, function (req, res) {
       res.statusCode = 500;
       res.json({ error: 'Could not load items: ' + err.message });
     } else {
-      console.log(data);
       const fellows = data.Items;
-
       const recipientDiscordId = fellows.find(u => u.username === recipient).discord_id;
       const senderDiscordId = fellows.find(u => u.username === sender).discord_id;
 
@@ -52,7 +50,7 @@ app.post(path, function (req, res) {
         await fetch(process.env.DISCORD_WEBHOOK_URL, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ content: 'test' })
+          body: JSON.stringify({ content: `Hey <@${recipientDiscordId}>, <@${senderDiscordId}> just starred your project on GitHub!` }),
         });
         res.json({ success: true });
       } catch (err) {
