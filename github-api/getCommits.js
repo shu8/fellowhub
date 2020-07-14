@@ -40,7 +40,17 @@ const formatDate = (date) => {
   return [year, month, day].join("-");
 };
 
+/**Find the fellow with the highest commit count.*/
+const findMostValuable = (arr) =>
+  arr.reduce((a, b) => (a.total_count > b.total_count ? a : b));
+
 const jsonUsernames = JSON.parse(fs.readFileSync("./usernames.json"));
 const usernames = jsonUsernames.data;
 
-usernames.forEach((u) => getCommits(u).then(console.log));
+(async () => {
+  const counts = await Promise.all(
+    usernames.map(async (u) => await getCommits(u))
+  );
+  const result = findMostValuable(counts);
+  console.log(result);
+})();
