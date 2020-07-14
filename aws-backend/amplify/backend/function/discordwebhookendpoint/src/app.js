@@ -26,13 +26,15 @@ app.use(function (req, res, next) {
 });
 
 app.post(path, function (req, res) {
-  dynamodb.batchGet({
-    RequestItems: {
-      [tableName]: {
-        Keys: [
-          { "username": req.body.sender },
-          { "username": req.body.recipient },
-        ],
+  const sender = req.body.sender.toLowerCase();
+  const recipient = req.body.recipient.toLowerCase();
+
+  dynamodb.scan({
+    TableName: tableName,
+    ScanFilter: {
+      username: {
+        AttributeValueList: [sender, recipient],
+        ComparisonOperator: 'IN',
       },
     },
   }, async (err, data) => {
@@ -43,11 +45,14 @@ app.post(path, function (req, res) {
       console.log(data);
       const fellows = data.Items;
 
+      const recipientDiscordId = fellows.find(u => u.username === recipient).discord_id;
+      const senderDiscordId = fellows.find(u => u.username === sender).discord_id;
+
       try {
         await fetch(process.env.DISCORD_WEBHOOK_URL, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: 'test' })
+          body: JSON.stringify({ content: 'test' })
         });
         res.json({ success: true });
       } catch (err) {
