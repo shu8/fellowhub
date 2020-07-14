@@ -3,9 +3,9 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import PhoneIcon from "@material-ui/icons/Phone";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import PersonPinIcon from "@material-ui/icons/PersonPin";
+import AppsIcon from "@material-ui/icons/Apps";
+import SettingsEthernetIcon from "@material-ui/icons/SettingsEthernet";
+import PeopleIcon from "@material-ui/icons/People";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import Profile from "./Profile";
 
@@ -25,7 +25,7 @@ export default function IconLabelTabs() {
   };
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Profile />
       <Paper square className={classes.root}>
         <Tabs
@@ -36,9 +36,9 @@ export default function IconLabelTabs() {
           textColor="secondary"
           aria-label="icon label tabs example"
         >
-          <Tab icon={<PhoneIcon />} label="OVERVIEW" />
-          <Tab icon={<FavoriteIcon />} label="PODS" />
-          <Tab icon={<PersonPinIcon />} label="PROJECTS" />
+          <Tab icon={<AppsIcon />} label="OVERVIEW" />
+          <Tab icon={<PeopleIcon />} label="PODS" />
+          <Tab icon={<SettingsEthernetIcon />} label="PROJECTS" />
           <Tab icon={<AccountTreeIcon />} label="FELLOWS" />
         </Tabs>
       </Paper>

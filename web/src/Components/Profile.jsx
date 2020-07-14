@@ -10,10 +10,11 @@ function profile(props) {
           src={image}
           alt="MLH"
           style={{
-            width: "400px",
-            borderWidth: "20px",
+            width: "350px",
+            borderStyle: "solid",
             borderColor: "#000",
-            borderRadius: "40px",
+            borderRadius: "100%",
+            margin: "20px",
           }}
         />
         <div>
