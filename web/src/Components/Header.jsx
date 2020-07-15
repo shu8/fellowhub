@@ -1,12 +1,17 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { useHistory, Link } from "react-router-dom";
 
 export default function PrimarySearchAppBar() {
+  const history = useHistory();
+
   return (
     <div style={{ marginBottom: "20px" }}>
       <div className="Header" style={{ backgroundColor: "#1d539f" }}>
         <div className="Header-item">
-          <a href="/" className="Header-link f4 d-flex flex-items-center">
+          <Link
+            onClick={() => history.push("/")}
+            className="Header-link f4 d-flex flex-items-center"
+          >
             <svg
               height="32"
               className="octicon octicon-mark-github mr-2"
@@ -21,7 +26,7 @@ export default function PrimarySearchAppBar() {
               ></path>
             </svg>
             <span>FellowHub</span>
-          </a>
+          </Link>
         </div>
         <div className="Header-item">
           <input
@@ -31,29 +36,32 @@ export default function PrimarySearchAppBar() {
           />
         </div>
         <div className="Header-item">
-          <a href="/" className="Header-link">
+          <Link onClick={() => history.push("/")} className="Header-link">
             Home
-          </a>
+          </Link>
         </div>
         <div className="Header-item">
-          <a href="/events" className="Header-link">
+          <Link onClick={() => history.push("/events")} className="Header-link">
             Events
-          </a>
+          </Link>
         </div>
         <div className="Header-item">
-          <a href="#" className="Header-link">
+          <Link onClick={() => history.push("/jobs")} className="Header-link">
             Jobs
-          </a>
+          </Link>
         </div>
         <div className="Header-item">
-          <a href="/get-help" className="Header-link">
+          <Link
+            onClick={() => history.push("/get-help")}
+            className="Header-link"
+          >
             Get Help
-          </a>
+          </Link>
         </div>
         <div className="Header-item">
-          <a href="/about" className="Header-link">
+          <Link onClick={() => history.push("/about")} className="Header-link">
             About
-          </a>
+          </Link>
         </div>
       </div>
     </div>

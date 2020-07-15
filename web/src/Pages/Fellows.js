@@ -1,7 +1,6 @@
 import React from "react";
 
 import SimpleAvatar from "../Components/SimpleAvatar";
-import Search from "../Components/Search";
 
 export default class Fellows extends React.Component {
   state = { search: "" };
