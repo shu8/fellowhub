@@ -125,38 +125,38 @@ export default function Home(props) {
             />
             <Projects
               name="Amplify"
-              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              description="AWS Amplify is a set of tools and services that enables mobile and front-end web developers to build secure, scalable full stack applications, powered by AWS."
               alt="Amplify"
               image={amplify}
-              link="https://github.com/babel"
+              link="https://github.com/aws-amplify"
             />
             <Projects
               name="Sheetjs"
-              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              description="Spreadsheets simplified. Read, edit, and export spreadsheets Works in web browsers and servers Supports every Excel file format"
               alt="Sheetjs"
               image={sheetjs}
-              link="https://github.com/babel"
+              link="https://github.com/SheetJS"
             />
             <Projects
               name="N8N"
-              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              description="Free and open self hostable workflow automation tool."
               alt="N8N"
               image={n8n}
-              link="https://github.com/babel"
+              link="https://github.com/n8n-io"
             />
             <Projects
               name="Webaverse"
-              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              description="The Webaverse is a blanket term used to describe a set of technologies that enable the use of spatial applications and objects powered by WebXR."
               alt="Webaverse"
               image={webaverse}
-              link="https://github.com/babel"
+              link="https://github.com/webaverse"
             />
             <Projects
               name="Docsify"
-              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              description="A magical documentation site generator."
               alt="Docsify"
               image={docsify}
-              link="https://github.com/babel"
+              link="https://github.com/docsifyjs"
             />
           </div>
         </TabPanel>
