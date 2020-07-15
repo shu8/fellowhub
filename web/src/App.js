@@ -57,7 +57,7 @@ class App extends React.Component {
               return <Portfolio username={username} accessToken={this.state.accessToken} />
             }} />
             <Route path="/fellows" component={() =>
-              <Fellows accessToken={this.state.accessToken} />
+              <Fellows fellows={this.state.fellows} accessToken={this.state.accessToken} />
             } />
             <Route path="/events/:id" component={props =>
               <Events accessToken={this.state.accessToken} events={this.state.events} {...props} />
@@ -75,7 +75,7 @@ class App extends React.Component {
                 setAccessToken={this.setAccessToken}
                 setFetchedFellows={this.setFetchedFellows}
                 fellows={this.state.fellows}
-                accessToken={this.state.accessToken} />
+                accessToken={this.state.accessToken || window.sessionStorage.getItem("accessToken")} />
             </Route>
           </Switch>
         </div>
