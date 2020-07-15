@@ -11,6 +11,7 @@ import Events from './Pages/Events';
 import Jobs from './Pages/Jobs';
 import About from './Pages/About';
 import GetHelp from './Pages/GetHelp';
+import Portfolio from './Pages/Portfolio';
 
 import "./App.css";
 import Header from "./Components/Header";
@@ -52,7 +53,7 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route path="/fellows/:username" component={props =>
-              <Fellows accessToken={this.state.accessToken} {...props} />
+              <Portfolio accessToken={this.state.accessToken} {...props} />
             } />
             <Route path="/fellows" component={() =>
               <Fellows accessToken={this.state.accessToken} />

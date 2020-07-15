@@ -10,14 +10,20 @@ export default class Fellows extends React.Component {
   };
 
   render() {
+    let username;
+    if (this.props.match && this.props.match.params) username = this.props.match.params.username;
+
+    if (!username) {
+      return (
+        <div className="App">
+          <h1>No username provided!</h1>
+        </div>
+      );
+    }
+
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="Search">
-            <Search handleInput={this.handleInput} />
-          </div>
-        </header>
-        <main className="container">Fellows</main>
+        <main className="container">Fellow: {username}</main>
       </div>
     );
   }
