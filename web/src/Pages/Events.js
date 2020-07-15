@@ -1,5 +1,5 @@
 import React from "react";
-import { SubNav, TextInput } from "@primer/components";
+import { SubNav, TextInput, Heading } from "@primer/components";
 
 import Event from "../Components/Event";
 import TabPanel from "../Components/TabPanel";
@@ -102,6 +102,12 @@ export default function Events(props) {
 
   return (
     <div className="App">
+      <Heading fontSize={7} mb={3}>
+        Events
+      </Heading>
+      <Heading fontSize={2} mb={20}>
+        Your all-in-one resource for all the events, talks and workshops throughout the MLH Fellowship.
+      </Heading>
       {createEvents()}
     </div>
   );

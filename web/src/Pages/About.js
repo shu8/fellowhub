@@ -1,11 +1,13 @@
 import React from "react"
-import { StyledOcticon } from "@primer/components";
+import { StyledOcticon, Heading } from "@primer/components";
 import { HeartFillIcon } from "@primer/octicons-react";
 
 export default function Home(props) {
   return (
     <div className='App'>
-      <h1>MLH Fellowship</h1>
+      <Heading fontSize={7} mb={3}>
+        About FellowHub
+      </Heading>
       <p>The MLH Fellowship is the future of tech internships -- an internship alternative for software engineers.</p>
       <p>Contribute to Open Source projects that companies actually depend on, whilst working with a group of 10 students in a "Pod".</p>
       <p>
