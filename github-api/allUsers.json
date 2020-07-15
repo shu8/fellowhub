@@ -15,7 +15,7 @@
     "company": null,
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "C,Ruby,JavaScript"
+    "skills": "C,Ruby,JavaScript,Solidity"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/123345?u=d9c2937ce9d14f250be03eb884113f36a6b82346&v=4",
@@ -32,7 +32,8 @@
     "website_url": "https://johndbritton.com",
     "company": "Founder & CEO at @raise-dev",
     "pod": "Mentors",
-    "pod_id": "Mentors"
+    "pod_id": "Mentors",
+    "skills": "Ruby,JavaScript,Objective-C,PHP,Shell,HTML,Python,Swift,C++"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/237177?u=bfeaaf1cad4b77f76077c6988de45b9f24ffb72b&v=4",
@@ -50,7 +51,7 @@
     "company": null,
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "Julia,Docker,DevOps,JavaScript,Perl,Elixir,Vue,Python"
+    "skills": "Julia,Docker,DevOps,JavaScript,Perl,Elixir,Vue,Python,Go,VimL,Vim script"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/283496?u=cbf932d9fbc3886202d34ecd232afe6cdca2bacf&v=4",
@@ -68,10 +69,10 @@
     "company": "Raise.dev",
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "Ruby,JavaScript,TypeScript,Bash"
+    "skills": "Ruby,JavaScript,TypeScript,Bash,Emacs Lisp,CoffeeScript,Objective-C"
   },
   {
-    "avatar_url": "https://avatars3.githubusercontent.com/u/318295?v=4",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/318295?u=1405ad3e135d7859de43b12300ea485c8fb65541&v=4",
     "bio": "Last of the freelance hackers, greatest sword fighter in the world.",
     "email": "ian@meetjennings.com",
     "followers": 84,
@@ -86,7 +87,7 @@
     "company": "@haxordx ",
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "JavaScript,Bash,CoffeeScript,Electron,Java,WebSocket"
+    "skills": "JavaScript,Bash,CoffeeScript,Electron,Java,WebSocket,C++,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/434373?v=4",
@@ -104,7 +105,7 @@
     "company": "Major League Hacking (MLH)",
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "JavaScript,Ruby"
+    "skills": "JavaScript,Ruby,Arduino,C,Python,CoffeeScript,PHP,Vim script,CSS"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/1203949?u=f51817e8ff8468a3c50b6536de787ca7738d8db7&v=4",
@@ -122,7 +123,7 @@
     "company": null,
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "JavaScript,TypeScript,React,CSS,Redux"
+    "skills": "JavaScript,TypeScript,React,CSS,Redux,Java,Objective-C,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/1297679?u=81a6bfd3e89355b225c9af1b59635bfe0397ecb1&v=4",
@@ -140,7 +141,7 @@
     "company": "@fabrictech ",
     "pod": "Mentors",
     "pod_id": "Mentors",
-    "skills": "Ruby,JavaScript,REST,Python"
+    "skills": "Ruby,JavaScript,REST,Python,Vim script,HTML,C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/4074974?u=a7242e038a9653e5e1f89722b8fb4896a77c48c6&v=4",
@@ -175,7 +176,8 @@
     "website_url": "https://prabhanshu.com",
     "company": "@forksociety @Bytewalkers ",
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "C#,JavaScript,Python,Java,Shell,CSS,PHP,TypeScript"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/12412816?u=5691007f33c94cc39dd1b33b9e5c67311ea496c4&v=4",
@@ -193,7 +195,7 @@
     "company": null,
     "pod": "Smart Sea Cucumbers",
     "pod_id": "0.1.1",
-    "skills": "C++,Python,Linux,Java,Android,Python"
+    "skills": "C++,Python,Linux,Java,Android,C,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/14778866?u=322379077597b8c47523eaced34697575e759646&v=4",
@@ -211,14 +213,14 @@
     "company": "MLH Fellow, Founder @hackPrincetonHS",
     "pod": "Smart Sea Cucumbers",
     "pod_id": "0.1.1",
-    "skills": "Python,Java,C++,Swift"
+    "skills": "Python,Java,C++,Swift,Ruby,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/15181757?u=fb42a25ff7353060b85c0f3c2df15eed6632ca93&v=4",
     "bio": "Scrape Everything!",
     "email": "karan.sheth@somaiya.edu",
     "followers": 84,
-    "following": 61,
+    "following": 62,
     "location": "Earth 42",
     "username": "korusuke",
     "username_original": "Korusuke",
@@ -228,7 +230,8 @@
     "website_url": "kiteretsu.tech",
     "company": "Freelancing",
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "Python,CSS,Jupyter Notebook,Dart,Java,JavaScript,HTML,Dockerfile,Tcl,C++"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/18108127?v=4",
@@ -245,7 +248,8 @@
     "website_url": null,
     "company": null,
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "HTML,Ruby,C++,Java"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/20099584?u=539f3820b64d39dbb4e875d2db61dcf2ff1c7771&v=4",
@@ -263,7 +267,7 @@
     "company": null,
     "pod": "Smart Sea Cucumbers",
     "pod_id": "0.1.1",
-    "skills": "Go,Python,Polymerjs"
+    "skills": "Go,Python,Polymerjs,C++,C,JavaScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/25109673?u=92dca16355db552b765d2d39c83cc7854d04d5de&v=4",
@@ -280,7 +284,8 @@
     "website_url": "https://www.linkedin.com/in/parthiv-chigurupati/",
     "company": "MLH Fellowship",
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "C++,Python,Java,Ruby,JavaScript,Jupyter Notebook,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/25571962?u=dacca945d5379837ab6450ab86e79d397b97e624&v=4",
@@ -297,7 +302,8 @@
     "website_url": "https://yalamov.com/",
     "company": "University of Western Ontario",
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "HTML,JavaScript,Java,Python,C++"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/44390541?u=7c7266746aea880c6c5c92ccd119507ed35c67dc&v=4",
@@ -314,7 +320,8 @@
     "website_url": "rubywerman.me",
     "company": "@MLH-Fellowship ",
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "Jupyter Notebook,JavaScript,Python,Ruby,HTML,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/46392676?u=4d0885dd20c3a2050f0ec08e99cde47e9a3c6817&v=4",
@@ -331,7 +338,8 @@
     "website_url": "stellawang.com",
     "company": "University of British Columbia",
     "pod": "Smart Sea Cucumbers",
-    "pod_id": "0.1.1"
+    "pod_id": "0.1.1",
+    "skills": "Python,JavaScript,HTML,Ruby,Java,CSS"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/7961373?u=ef74af708fd61232c17842364bb60de682641a4e&v=4",
@@ -348,24 +356,26 @@
     "website_url": "rithvikrao.com",
     "company": null,
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "Python,Java,Jupyter Notebook,HTML"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/7970378?u=25f5989b36554a4dee3e0b9be9821fd5035b7d56&v=4",
-    "bio": "Another cog in the machine ",
+    "bio": "another cog in the machine ",
     "email": "llow@uwaterloo.ca",
     "followers": 31,
     "following": 30,
-    "location": "Left as an exercise to the reader",
+    "location": "left as an exercise to the reader",
     "username": "lucylow",
     "username_original": "lucylow",
-    "name": "llow",
+    "name": null,
     "twitter_username": null,
     "github_url": "https://github.com/lucylow",
     "website_url": null,
-    "company": "Non trivial",
+    "company": "non trivial",
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "JavaScript,Python,Assembly,Objective-C,Arduino,C++,Makefile,Jupyter Notebook,C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/11803942?u=a192a0fb73dfd6a0e8983cc56fb689c8db2274d4&v=4",
@@ -382,11 +392,12 @@
     "website_url": null,
     "company": null,
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "Java,Arduino,C++,TypeScript,C,Ruby,Matlab,Jupyter Notebook,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/16181459?u=494de2dc6a526fcf0c30fbc2320e7be850d7d875&v=4",
-    "bio": "ECE B.Eng → Data science, ML, and open source development",
+    "bio": "ECE B.Eng → Data science, ML, and open source development. \r\n\r\nActive contributor to @scikit-learn and @bentoml.",
     "email": "joshuacwnewton@gmail.com",
     "followers": 9,
     "following": 12,
@@ -399,7 +410,8 @@
     "website_url": "https://www.linkedin.com/in/joshuacwnewton/",
     "company": null,
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "MATLAB,Python,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/22943414?u=ea913f166d3c2f83a09d3cc135e978cb0cec8043&v=4",
@@ -416,13 +428,14 @@
     "website_url": "https://akainth.me",
     "company": null,
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "JavaScript,Kotlin,HTML,C#,Rust,CSS,Java,Shell"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/23178940?u=a86bd776c1e03f045c3af7bf83feff730f9cab8a&v=4",
     "bio": "@MLH-Fellowship '20 | @ubc cs",
     "email": "j.zhao2k19@gmail.com",
-    "followers": 104,
+    "followers": 105,
     "following": 75,
     "location": "Vancouver, Canada",
     "username": "jackyzha0",
@@ -434,7 +447,7 @@
     "company": "currently @hootsuite",
     "pod": "Baby Shark",
     "pod_id": "0.1.2",
-    "skills": "ML"
+    "skills": "ML,Python,Java,JavaScript,Dockerfile,Go,HTML,Jupyter Notebook,CSS"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/30424160?u=51563b36986ad592693e544f3e95d2fef18b39b7&v=4",
@@ -451,7 +464,8 @@
     "website_url": "http://kristi.codes",
     "company": "CS student at Kent State University",
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "C,Ruby,HTML,C++,Python,R,TypeScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/34909206?u=7fa002afe0341360ecb3694409a4888842f88818&v=4",
@@ -469,7 +483,7 @@
     "company": "@MLH ",
     "pod": "Baby Shark",
     "pod_id": "0.1.2",
-    "skills": "Python"
+    "skills": "Python,Jupyter Notebook,HTML,Ruby,C++"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/37596483?u=225c8ea57413c9fd2b6ad37be2de0dc7da229852&v=4",
@@ -487,7 +501,7 @@
     "company": "Haverford College '21 (student)",
     "pod": "Baby Shark",
     "pod_id": "0.1.2",
-    "skills": "Python,Django,Machine Learning"
+    "skills": "Python,Django,Machine Learning,HTML,Java,Mathematica"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/40009989?u=2fe2db8fd39e3a674e5f88421c1cb0dd7f31921c&v=4",
@@ -504,7 +518,8 @@
     "website_url": null,
     "company": null,
     "pod": "Baby Shark",
-    "pod_id": "0.1.2"
+    "pod_id": "0.1.2",
+    "skills": "Jupyter Notebook,Python,Ruby,HTML,JavaScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/1297679?u=81a6bfd3e89355b225c9af1b59635bfe0397ecb1&v=4",
@@ -522,7 +537,7 @@
     "company": "@fabrictech ",
     "pod": "Sudo Seals",
     "pod_id": "0.0.1",
-    "skills": "Ruby,JavaScript,REST,Python"
+    "skills": "Ruby,JavaScript,REST,Python,Vim script,HTML,C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/1882991?u=9cc7f81ff7944ca84cb77850db1fc35174062689&v=4",
@@ -540,7 +555,7 @@
     "company": null,
     "pod": "Sudo Seals",
     "pod_id": "0.0.1",
-    "skills": "Swift,Java,Ruby,OCaml"
+    "skills": "Swift,Java,Ruby,OCaml,Python,Dockerfile,HTML,CSS"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/15528032?u=5995af530d6a003f14897b93c88a698a3e4ce571&v=4",
@@ -558,7 +573,7 @@
     "company": null,
     "pod": "Sudo Seals",
     "pod_id": "0.0.1",
-    "skills": "Java,Spring,Boot,JavaScript,Angular,Just,Ruby,Node,Apache,Fineract,Linux,Ubuntu,Gitlab,CI,Github Actions,DevOps"
+    "skills": "Java,Spring,Boot,JavaScript,Angular,Just,Ruby,Node,Apache,Fineract,Linux,Ubuntu,Gitlab,CI,Github Actions,DevOps,TypeScript,Erlang,PHP,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/19399698?u=bf9d387f4b8ea0424c7727689e52d1621e20db66&v=4",
@@ -582,7 +597,7 @@
     "avatar_url": "https://avatars3.githubusercontent.com/u/21244267?u=ed0f9804b62a739ad757b2c90c5a820806fb4b50&v=4",
     "bio": "Maintainer of @ohmyzsh @node-fetch",
     "email": "larsoncarter@blazermail.net",
-    "followers": 88,
+    "followers": 87,
     "following": 98,
     "location": "Arkansas, USA",
     "username": "larson-carter",
@@ -594,7 +609,7 @@
     "company": "@ohmyzsh and @Operation-Jupiter ",
     "pod": "Sudo Seals",
     "pod_id": "0.0.1",
-    "skills": "Java,Kotlin,Android,C++,Z-Shell,Powershell,Vue,TypeScript"
+    "skills": "Java,Kotlin,Android,C++,Z-Shell,Powershell,Vue,TypeScript,Python,Shell,Swift,JavaScript,Ruby,C,PowerShell,HTML"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/22221905?u=bf1f7ec1efde01357c0a0d8c76ca60ecce5d8732&v=4",
@@ -611,14 +626,15 @@
     "website_url": "https://baffouraduboampong.me/",
     "company": null,
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "JavaScript,CSS,PHP,Ruby"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/26309166?u=271b34a10104071a1af20d4e9d25f18cc2fa79d2&v=4",
     "bio": "👨 He/him | 📍 Madrid, Spain | 🎓 Physics (MSc in Nuclear Physics ⚛️) | 💻 Self-taught web developer (React, Node.js, and Ruby on Rails)",
     "email": "apdrf.94@gmail.com",
     "followers": 7,
-    "following": 4,
+    "following": 5,
     "location": "Madrid, Spain",
     "username": "albertopdrf",
     "username_original": "AlbertoPdRF",
@@ -628,7 +644,8 @@
     "website_url": null,
     "company": null,
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "Ruby,TeX,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/29104062?u=51415e768895362f60498905186924509068eb36&v=4",
@@ -645,7 +662,8 @@
     "website_url": "twitter.com/lionellloh",
     "company": null,
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "Jupyter Notebook,Verilog,Python,JavaScript,C,Java,Go,Ruby,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/30195980?u=cd68c5bcd859bdae422de3b75b184f835f2a0461&v=4",
@@ -662,7 +680,8 @@
     "website_url": "https://kodekage.tech",
     "company": "DeimosCloud",
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "Shell,HTML,JavaScript,C#,Ruby"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/33699480?u=8e5b96f4c17491aa6b90b0e59be352683cafbbef&v=4",
@@ -679,7 +698,8 @@
     "website_url": null,
     "company": null,
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "JavaScript,Python,HTML,Ruby,Jupyter Notebook,Processing,Go,C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/35715329?u=02c7cf43365a5e621a76a79bb2c6a68090781b19&v=4",
@@ -696,7 +716,8 @@
     "website_url": "www.ontherecord.us",
     "company": "raise.dev",
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "CSS,HTML,Python,JavaScript,C"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/37092867?u=9c057893aa4d68505b3a0ffc1384cf2c03e22b14&v=4",
@@ -713,14 +734,15 @@
     "website_url": "http://raphaelnoriode.me",
     "company": null,
     "pod": "Sudo Seals",
-    "pod_id": "0.0.1"
+    "pod_id": "0.0.1",
+    "skills": "JavaScript,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/40357511?u=f215fd89758e03d18841490d34fb68a66cad69f4&v=4",
     "bio": "Programmer & technology enthusiast •\r\nGoogle Code-in 2019 Grand Prize Winner • Fellow @MLH-Fellowship • open-source maintainer @anitab-org • 18y",
     "email": "barpac02@gmail.com",
     "followers": 81,
-    "following": 115,
+    "following": 116,
     "location": "Rybnik, Poland",
     "username": "bartekpacia",
     "username_original": "bartekpacia",
@@ -731,7 +753,7 @@
     "company": null,
     "pod": "Sudo Seals",
     "pod_id": "0.0.1",
-    "skills": "Android,Java,Kotlin,Flutter,JavaScript,TypeScript,Node,Python,Flask,Unity,Firebase,GCP"
+    "skills": "Android,Java,Kotlin,Flutter,JavaScript,TypeScript,Node,Python,Flask,Unity,Firebase,GCP,CSS,Dart,C,C++,C#,Shell,Ruby"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/1297679?u=81a6bfd3e89355b225c9af1b59635bfe0397ecb1&v=4",
@@ -749,7 +771,7 @@
     "company": "@fabrictech ",
     "pod": "Pod 0.0.2",
     "pod_id": "0.0.2",
-    "skills": "Ruby,JavaScript,REST,Python"
+    "skills": "Ruby,JavaScript,REST,Python,Vim script,HTML,C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/30130633?v=4",
@@ -766,7 +788,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,HTML,Ruby,C++"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/33699480?u=8e5b96f4c17491aa6b90b0e59be352683cafbbef&v=4",
@@ -783,7 +806,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,Python,HTML,Ruby,Jupyter Notebook,Processing,Go,C"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/35935438?v=4",
@@ -800,7 +824,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,HTML,Java,Ruby"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/47649859?v=4",
@@ -817,7 +842,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/48892251?v=4",
@@ -834,7 +860,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/53416968?u=09e94a3b6acc27cc516caf8cecbb03047c6a3446&v=4",
@@ -851,7 +878,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/55409433?v=4",
@@ -868,7 +896,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,Java,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/65884852?v=4",
@@ -885,7 +914,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "HTML,JavaScript,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/65921601?v=4",
@@ -902,7 +932,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.0.2",
-    "pod_id": "0.0.2"
+    "pod_id": "0.0.2",
+    "skills": "JavaScript,Ruby,Java,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/7469722?u=c97eb8b396c33e560e5b7b3a60f8bab4171bc900&v=4",
@@ -919,7 +950,8 @@
     "website_url": "https://ca.linkedin.com/in/ralphmaamari",
     "company": "@CheaprEats ",
     "pod": "Distributed Dodos",
-    "pod_id": "0.2.1"
+    "pod_id": "0.2.1",
+    "skills": "JavaScript,CSS,Java,Python,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/8850830?u=2ed02d8d3dfb153708a2bc778d4a80a0651d00f0&v=4",
@@ -937,7 +969,7 @@
     "company": null,
     "pod": "Distributed Dodos",
     "pod_id": "0.2.1",
-    "skills": "JavaScript,React,Svelte,Node,Python,Flutter,Dart,Firebase,DevOps"
+    "skills": "JavaScript,React,Svelte,Node,Python,Flutter,Dart,Firebase,DevOps,HTML,Go,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/15938301?u=c1ebf4d4b52a014e8ebc91ac576f5b0abaa5593d&v=4",
@@ -954,7 +986,8 @@
     "website_url": "www.danuwidjaja.com",
     "company": "Northeastern University - CS/BA",
     "pod": "Distributed Dodos",
-    "pod_id": "0.2.1"
+    "pod_id": "0.2.1",
+    "skills": "Java,Python,JavaScript,C#,ASP"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/16248113?u=8d5a4c1e089f7664f06ccff5b99e1958423ff296&v=4",
@@ -971,7 +1004,8 @@
     "website_url": "https://erinmcnulty.tech",
     "company": "@MLH-Fellowship",
     "pod": "Distributed Dodos",
-    "pod_id": "0.2.1"
+    "pod_id": "0.2.1",
+    "skills": "JavaScript,Python,HTML,VBA,Java"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/20131547?u=90fe733b6d501490b786b039f3f9e9e19da042c2&v=4",
@@ -988,7 +1022,8 @@
     "website_url": "sebastiancrossa.com",
     "company": null,
     "pod": "Distributed Dodos",
-    "pod_id": "0.2.1"
+    "pod_id": "0.2.1",
+    "skills": "Python,JavaScript,Swift,C#,HTML,CSS,Ruby,C++"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/22210276?u=4bb2715faced7d343692a12101cca703ea54a4ea&v=4",
@@ -1005,13 +1040,14 @@
     "website_url": "https://shraddha2104.github.io/",
     "company": "University of Southern California",
     "pod": "Distributed Dodos",
-    "pod_id": "0.2.1"
+    "pod_id": "0.2.1",
+    "skills": "C++,C,Java,HTML,PHP,Python,JavaScript,CSS,Jupyter Notebook"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/23684540?u=abcc96944a762071b56cd019c1d947831980412d&v=4",
     "bio": "Computer Engineering @uWaterloo",
     "email": "yaheng.su1@gmail.com",
-    "followers": 35,
+    "followers": 36,
     "following": 41,
     "location": "Waterloo, Ontario, Canada",
     "username": "yahengsu",
@@ -1023,7 +1059,7 @@
     "company": null,
     "pod": "Distributed Dodos",
     "pod_id": "0.2.1",
-    "skills": "Go,JavaScript,TypeScript,React,Node,Swift"
+    "skills": "Go,JavaScript,TypeScript,React,Node,Swift,Java,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/29565555?u=e0b5221e35729e110f778aec03cac9cf4467ed38&v=4",
@@ -1041,7 +1077,7 @@
     "company": null,
     "pod": "Distributed Dodos",
     "pod_id": "0.2.1",
-    "skills": "Front End,JavaScript,React,CSS,Node,Python,AWS,Serverless"
+    "skills": "Front End,JavaScript,React,CSS,Node,Python,AWS,Serverless,TypeScript,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/31291920?u=e6f34a8d6f364407b6e901768e35fbab1a446bad&v=4",
@@ -1059,7 +1095,7 @@
     "company": "@MLH-Fellowship",
     "pod": "Distributed Dodos",
     "pod_id": "0.2.1",
-    "skills": "Go,TypeScript,Redis,Postgres,Mongo,React,Redux,AWS,Go,Node"
+    "skills": "Go,TypeScript,Redis,Postgres,Mongo,React,Redux,AWS,Node,Python,Shell,JavaScript,Ruby,Swift,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/34948511?u=6da332b37c4f6318304c0ee7c68c103c22b84973&v=4",
@@ -1076,7 +1112,8 @@
     "website_url": "https://cedricgrothues.com",
     "company": "@MLH-Fellowship",
     "pod": "Distributed Dodos",
-    "pod_id": "0.2.1"
+    "pod_id": "0.2.1",
+    "skills": "TypeScript,Ruby,Rust,Dart"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/44588767?u=d6fd5f77c00b146cd3bfb1b26e8aafee477ee090&v=4",
@@ -1094,7 +1131,7 @@
     "company": "@MLH-Fellowship",
     "pod": "Distributed Dodos",
     "pod_id": "0.2.1",
-    "skills": "TypeScript,Node,React,Firebase,Flutter,Tailwind"
+    "skills": "TypeScript,Node,React,Firebase,Flutter,Tailwind,Python,JavaScript,Dart"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/10204169?u=9f93e3c77b36243ce0037b41d547f283a8cea82b&v=4",
@@ -1112,7 +1149,7 @@
     "company": "UC San Diego",
     "pod": "JavaScript Jellies",
     "pod_id": "0.2.2",
-    "skills": "Full Stack,JavaScript,Java,Kotlin,Flutter"
+    "skills": "Full Stack,JavaScript,Java,Kotlin,Flutter,C,Jupyter Notebook,Dart,HTML,Ruby,Python,TeX,PowerShell,C++"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/13544676?u=3eecb3a1c1df9eb0fa3316f2ce03166c16344ac8&v=4",
@@ -1129,7 +1166,8 @@
     "website_url": "penguingovernor.github.io",
     "company": null,
     "pod": "JavaScript Jellies",
-    "pod_id": "0.2.2"
+    "pod_id": "0.2.2",
+    "skills": "JavaScript,Go,C,Shell,Ruby,HTML,Dart,TypeScript"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/20747057?u=5e24b83e1495cb91501cc29986d918dfefd3c1e9&v=4",
@@ -1146,7 +1184,8 @@
     "website_url": null,
     "company": "@MLH-Fellowship",
     "pod": "JavaScript Jellies",
-    "pod_id": "0.2.2"
+    "pod_id": "0.2.2",
+    "skills": "C++,Ruby,JavaScript,Vim script,HTML,CSS,Java"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/22751307?u=1c1135cc903766b3c5fb1f140e565e967e78e890&v=4",
@@ -1164,13 +1203,13 @@
     "company": "CS @ uWaterloo '25",
     "pod": "JavaScript Jellies",
     "pod_id": "0.2.2",
-    "skills": "JavaScript,MERN,Azure,AWS,Machine Learning,Go"
+    "skills": "JavaScript,MERN,Azure,AWS,Machine Learning,Go,Python,Jupyter Notebook,Java,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/32067562?u=dcf76c0ca3b7110369a64f497493c77b9ed6c578&v=4",
     "bio": "CS '23 @uWaterloo | @MLH-Fellowship '20 | previously at @workmarket",
     "email": "",
-    "followers": 7,
+    "followers": 8,
     "following": 9,
     "location": "Waterloo, Canada",
     "username": "mohammedsahl",
@@ -1182,7 +1221,7 @@
     "company": "@MLH-Fellowship ",
     "pod": "JavaScript Jellies",
     "pod_id": "0.2.2",
-    "skills": "TypeScript,Python,C++,Artificial Intelligence,Machine Learning"
+    "skills": "TypeScript,Python,C++,Artificial Intelligence,Machine Learning,JavaScript,Ruby,HTML,Dart"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/33047045?u=3e0029f034403d017fb22a7c5d03d5e63c3621fc&v=4",
@@ -1199,7 +1238,8 @@
     "website_url": "anirudhemmadi.com",
     "company": null,
     "pod": "JavaScript Jellies",
-    "pod_id": "0.2.2"
+    "pod_id": "0.2.2",
+    "skills": "TeX,HTML,Java,C++,CSS,Python,JavaScript,Objective-C"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/33412649?u=3cd1d6f31b6dd37ed1c65760da39a10d6ed26fa8&v=4",
@@ -1217,7 +1257,7 @@
     "company": null,
     "pod": "JavaScript Jellies",
     "pod_id": "0.2.2",
-    "skills": "UI,UX,React,Node,JavaScript"
+    "skills": "UI,UX,React,Node,JavaScript,SQLPL,Shell,Python,TypeScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/38193380?u=9450481042c5bc99c1ce699990fbb00a700e17cf&v=4",
@@ -1235,7 +1275,7 @@
     "company": "@MLH-Fellowship",
     "pod": "JavaScript Jellies",
     "pod_id": "0.2.2",
-    "skills": "C++,Python,Go,JavaScript,Rust,Java"
+    "skills": "C++,Python,Go,JavaScript,Rust,Java,Jupyter Notebook,TypeScript,Vim script,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/51036016?v=4",
@@ -1252,7 +1292,8 @@
     "website_url": null,
     "company": null,
     "pod": "JavaScript Jellies",
-    "pod_id": "0.2.2"
+    "pod_id": "0.2.2",
+    "skills": "Ruby,TypeScript,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/15345547?u=519f4ecce9fe1c13675b31a4ce113327d3957521&v=4",
@@ -1269,7 +1310,8 @@
     "website_url": null,
     "company": "University of Waikato",
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "Jupyter Notebook,Dockerfile,Python,JavaScript,Ruby,C#,Shell,Go"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/26637492?v=4",
@@ -1287,7 +1329,7 @@
     "company": null,
     "pod": "Lazy Lobsters",
     "pod_id": "0.3.1",
-    "skills": "C++,Android,Python"
+    "skills": "C++,Android,Python,Jupyter Notebook,Java,JavaScript,Go,Shell,Rust"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/28972442?u=3819b694ed41f8ebe006ce0ad8bfe9252092d72f&v=4",
@@ -1304,7 +1346,8 @@
     "website_url": "https://www.linkedin.com/in/LakshyaKhatri",
     "company": null,
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "C++,Python,Java,Julia,Ruby,Jupyter Notebook,JavaScript,C#,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/29784549?u=813ec654e511cae8fe8302eae1a0153578e98d62&v=4",
@@ -1322,7 +1365,7 @@
     "company": null,
     "pod": "Lazy Lobsters",
     "pod_id": "0.3.1",
-    "skills": "Node,JavaScript,Java,Flask,Spring,Boot,Django,DevOps,Flutter"
+    "skills": "Node,JavaScript,Java,Flask,Spring,Boot,Django,DevOps,Flutter,Jupyter Notebook,Python,Shell,HTML,CSS,C++,C,Ruby"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/30564094?u=96151ef0674f79a4984b96c1ffd2bbe77fc28213&v=4",
@@ -1340,7 +1383,7 @@
     "company": "Indian Institute of Technology, Kanpur",
     "pod": "Lazy Lobsters",
     "pod_id": "0.3.1",
-    "skills": "Machine Learning,Deep Learning"
+    "skills": "Machine Learning,Deep Learning,Shell,Julia,Jupyter Notebook,C,JavaScript,Ruby,Python,C++"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/31562743?u=bec2f2f9b94976a8bf4d486bdc843386ec7a6555&v=4",
@@ -1358,7 +1401,7 @@
     "company": "@MLH",
     "pod": "Lazy Lobsters",
     "pod_id": "0.3.1",
-    "skills": "Machine Learning,Deep Learning,Reinforcement Learning,Julia"
+    "skills": "Machine Learning,Deep Learning,Reinforcement Learning,Julia,C++,Python,Jupyter Notebook,C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/33966400?u=9cd89c5fe8f4c3aef5b09dcaf6f9df6baf27bd7d&v=4",
@@ -1375,7 +1418,8 @@
     "website_url": null,
     "company": "@sdslabs, @SciML",
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "Julia,JavaScript,PHP,Python,C,HTML,CodeQL,Java,C++,Assembly,Swift"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/34703680?u=98cdaafaaad6564fce573064134186adbfa8149b&v=4",
@@ -1392,7 +1436,8 @@
     "website_url": null,
     "company": null,
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "Julia,Jupyter Notebook,C++,Python,C,HTML,TeX"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/38937684?u=72e8f146ac5457af2d85dc21386e836b6a6403ad&v=4",
@@ -1409,7 +1454,8 @@
     "website_url": "https://www.linkedin.com/in/maaz-bin-tahir-saeed-752950197/",
     "company": null,
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "Python,CoffeeScript,Dart,Ruby,TypeScript,Java,C,HTML,JavaScript"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/41114269?u=44408e8e8279b17b8c65a6bb8586ba9fc0af78b5&v=4",
@@ -1426,7 +1472,8 @@
     "website_url": null,
     "company": "@MSPNepal ",
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "Jupyter Notebook,HTML,Python,JavaScript,C++,PHP"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/43912285?u=09f36f2748d967e6021470b754022f1aacf45896&v=4",
@@ -1444,13 +1491,13 @@
     "company": "Major League Hacking",
     "pod": "Lazy Lobsters",
     "pod_id": "0.3.1",
-    "skills": "Python,C++,JavaScript,Django,React,Machine Learning"
+    "skills": "Python,C++,JavaScript,Django,React,Machine Learning,TeX,C,Java,HTML,Ruby,Jupyter Notebook"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/46089948?v=4",
     "bio": "Junior studying Computer Science and Economics, interested in Software Engineering and Data Science.",
     "email": "",
-    "followers": 1,
+    "followers": 2,
     "following": 0,
     "location": "Baltimore, MD",
     "username": "alimalik9599",
@@ -1461,7 +1508,8 @@
     "website_url": null,
     "company": "Johns Hopkins University",
     "pod": "Lazy Lobsters",
-    "pod_id": "0.3.1"
+    "pod_id": "0.3.1",
+    "skills": "C++,Java,Ruby,PHP,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/11258286?u=71f48971938908d9eea9c3e37b1272d0fe4549ed&v=4",
@@ -1479,7 +1527,7 @@
     "company": null,
     "pod": "Otter Overflow",
     "pod_id": "0.3.2",
-    "skills": "Full Stack,React,NextJS,Django,DevOps"
+    "skills": "Full Stack,React,NextJS,Django,DevOps,JavaScript,Python,Shell,CSS,Go"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/12640352?u=185fb7f0b0ac38038b93ddb5fb4307e30b016fbc&v=4",
@@ -1496,13 +1544,14 @@
     "website_url": null,
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "JavaScript,TypeScript,HTML,Dart,Ruby,Go,Python,Standard ML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/25571542?u=9ff5a2506c95a13d0347b13f31e857d5e5bbcade&v=4",
     "bio": "Let's build the future together, one line at a time\r\n",
     "email": "",
-    "followers": 12,
+    "followers": 13,
     "following": 6,
     "location": "Melbourne, Australia",
     "username": "simplyballistic",
@@ -1513,7 +1562,8 @@
     "website_url": "http://ryan-s.me",
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "Java,Arduino,HTML,JavaScript,Lua,TypeScript"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/31643423?u=5ddb7fc6e6542a94cf554cec78337a186feeb708&v=4",
@@ -1530,7 +1580,8 @@
     "website_url": null,
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "JavaScript,Java,C,TeX,TypeScript,Matlab"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/31915056?u=b9c5761b399f12516d6a6b423fd297e50dd8eb26&v=4",
@@ -1547,7 +1598,8 @@
     "website_url": "https://laveesh.js.org/",
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "TypeScript,HTML,PHP,Jupyter Notebook,Ruby,Python,C++,JavaScript,Hack,CSS"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/32068075?u=5cf8138ea734eeaf693bac4b2b6e869a64cae9b4&v=4",
@@ -1565,7 +1617,7 @@
     "company": null,
     "pod": "Otter Overflow",
     "pod_id": "0.3.2",
-    "skills": "Node,React,Golang,Rust"
+    "skills": "Node,React,Golang,Rust,HTML,JavaScript,Dart,C++,Kotlin,Ruby,Go,QML,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/37709578?u=86b3cef8bd4783d28c8fb8c3d5e967e834d4dc4d&v=4",
@@ -1582,7 +1634,8 @@
     "website_url": null,
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "JavaScript,CSS,HTML,Ruby,C++"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/38243574?u=b06ba7a1405f6898ecceb2f38c804e34467657b2&v=4",
@@ -1599,7 +1652,8 @@
     "website_url": null,
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "JavaScript,Python,Vue,C++,Java,C,TypeScript"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/46853051?u=c879a2849ba7b9ea0e87598dd887a87042ca439c&v=4",
@@ -1616,7 +1670,8 @@
     "website_url": null,
     "company": null,
     "pod": "Otter Overflow",
-    "pod_id": "0.3.2"
+    "pod_id": "0.3.2",
+    "skills": "TypeScript,Java,JavaScript,HTML,Ruby,Python,Scala"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/12784593?u=0a8be59a4172b51c0e7c4993eef9b451831c6f56&v=4",
@@ -1633,13 +1688,14 @@
     "website_url": "https://www.eliangtan.com",
     "company": null,
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "Java,OCaml,Vue,Python,C++,Objective-C,C,JavaScript,TypeScript,Ruby,HTML,Swift,Nix"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/14032427?u=9798dbec841cf1d70d57458958b38cb14b415b26&v=4",
     "bio": "Young men, hear an old man to whom old men hearkened when he was young\r\nGoogle Code In Finalist-2017;\r\nMaintainer @fossasia @CircuitVerse",
     "email": "yk.verma2000@gmail.com",
-    "followers": 116,
+    "followers": 117,
     "following": 104,
     "location": "India",
     "username": "yashkumarverma",
@@ -1650,7 +1706,8 @@
     "website_url": "gitstats.me/YashKumarVerma",
     "company": "MLH Fellowship",
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "PHP,C++,TypeScript,JavaScript,CSS,HTML,Python,Ruby,Go"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/22813027?u=47b62e8af120fd810bac1d73a1eb743ed8e415b5&v=4",
@@ -1667,14 +1724,15 @@
     "website_url": "https://anku.netlify.com",
     "company": null,
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "Java,CSS,JavaScript,Jupyter Notebook,TypeScript,Python,Ruby"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/26347874?u=b4bc8c151412ecf8e7376c43504184384ecec622&v=4",
     "bio": "❤️ Open Source | works mainly with javascript | always bet on plugins",
     "email": "anik220798@gmail.com",
     "followers": 107,
-    "following": 130,
+    "following": 131,
     "location": null,
     "username": "anikethsaha",
     "username_original": "anikethsaha",
@@ -1685,7 +1743,7 @@
     "company": null,
     "pod": "Reactive Sea-Son",
     "pod_id": "0.4.1",
-    "skills": "JavaScript,ASTs,Compiler"
+    "skills": "JavaScript,ASTs,Compiler,CSS,TypeScript,PHP,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/28642011?u=410fa98db67e3e52030423c0450ea5583c79506d&v=4",
@@ -1703,7 +1761,7 @@
     "company": "Intern @MLH | @csivitu ",
     "pod": "Reactive Sea-Son",
     "pod_id": "0.4.1",
-    "skills": "DevOps,TypeScript,JavaScript,Node,Go,React,NLP"
+    "skills": "DevOps,TypeScript,JavaScript,Node,Go,React,NLP,HTML,Shell,Python,C++,Jupyter Notebook,Java,CSS"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/31125345?v=4",
@@ -1720,7 +1778,8 @@
     "website_url": null,
     "company": "Delhi Technological University",
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "JavaScript,Swift,HTML,CSS,Python"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/42653703?v=4",
@@ -1738,13 +1797,13 @@
     "company": null,
     "pod": "Reactive Sea-Son",
     "pod_id": "0.4.1",
-    "skills": "JavaScript,Node,React,Python,Machine Learning"
+    "skills": "JavaScript,Node,React,Python,Machine Learning,CSS,HTML,C++,C,Jupyter Notebook,Ruby,Prolog,Verilog"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/42698533?u=0b64f10aa6528ef363a9fe0eb802da40db71cd14&v=4",
-    "bio": "@MLH Fellow | Mentor GSoC, GCI, Student GSoC'19 @JBossOutreach | Mentor @anitab-org | Student Partner @microsoft | Open Source Enthusiast ☀️",
+    "bio": "",
     "email": "kunalkushwaha453@gmail.com",
-    "followers": 234,
+    "followers": 237,
     "following": 87,
     "location": "India",
     "username": "kunal-kushwaha",
@@ -1756,7 +1815,7 @@
     "company": "@JBossOutreach @codeforcauseorg",
     "pod": "Reactive Sea-Son",
     "pod_id": "0.4.1",
-    "skills": "Java,Node,Python,Machine Learning,DevOps,K8s,GitHub"
+    "skills": "Java,Node,Python,Machine Learning,DevOps,K8s,GitHub,JavaScript,Jupyter Notebook,C++,CSS,C"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/44937027?v=4",
@@ -1773,14 +1832,15 @@
     "website_url": null,
     "company": "@MLH-Fellowship ",
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "JavaScript,Go,Dart,C++,Java,Python,CSS"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/47696418?u=fcf97bc3760d3cbb6da2b1f94e363907b4752fe3&v=4",
     "bio": "Software Developer, Open Source Contributor @MLH and an Advocator for Women in Tech.",
     "email": "",
     "followers": 17,
-    "following": 16,
+    "following": 18,
     "location": "Rochester, NY",
     "username": "jessieanhnguyen",
     "username_original": "jessieAnhNguyen",
@@ -1790,7 +1850,8 @@
     "website_url": "https://www.linkedin.com/in/jessieanh/",
     "company": "University of Rochester",
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "JavaScript,Python,Java,HTML,C,Common Lisp,Ruby,MATLAB,PHP,TypeScript"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/48270786?u=dab5f6dc64923f646b354f47f52af65f44fd9e7e&v=4",
@@ -1807,7 +1868,8 @@
     "website_url": "https://kartikcho.github.io/",
     "company": "Intern at @mlh",
     "pod": "Reactive Sea-Son",
-    "pod_id": "0.4.1"
+    "pod_id": "0.4.1",
+    "skills": "JavaScript,HTML,TypeScript,Python,Ruby,CSS,C"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/9303607?u=a62801d11add017631d81a9866bd5b7b2f567ff4&v=4",
@@ -1824,7 +1886,8 @@
     "website_url": "https://siddharthsham.github.io",
     "company": null,
     "pod": "Syntactic Seahorses",
-    "pod_id": "0.4.2"
+    "pod_id": "0.4.2",
+    "skills": "CSS,HTML,Vue,Python,TypeScript,JavaScript,Ruby,Java"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/16922883?u=719b003da1849d25f231b6222df639ffcfa8106b&v=4",
@@ -1841,7 +1904,8 @@
     "website_url": "https://alphaman.me/",
     "company": "@InScrompT and @MLH-Fellowship",
     "pod": "Syntactic Seahorses",
-    "pod_id": "0.4.2"
+    "pod_id": "0.4.2",
+    "skills": "TypeScript,CSS,HTML,JavaScript,Ruby,PHP,Python,Go"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/18901032?u=546d33d850aafdaa676cef8cab206dc0d55bbe85&v=4",
@@ -1859,14 +1923,14 @@
     "company": null,
     "pod": "Syntactic Seahorses",
     "pod_id": "0.4.2",
-    "skills": "JavaScript,React,Vue,Flutter,MongoDB,Firebase,GraphQL"
+    "skills": "JavaScript,React,Vue,Flutter,MongoDB,Firebase,GraphQL,C#,HTML,Java,Dart,Jupyter Notebook,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/26347874?u=b4bc8c151412ecf8e7376c43504184384ecec622&v=4",
     "bio": "❤️ Open Source | works mainly with javascript | always bet on plugins",
     "email": "anik220798@gmail.com",
     "followers": 107,
-    "following": 130,
+    "following": 131,
     "location": null,
     "username": "anikethsaha",
     "username_original": "anikethsaha",
@@ -1877,7 +1941,7 @@
     "company": null,
     "pod": "Syntactic Seahorses",
     "pod_id": "0.4.2",
-    "skills": "JavaScript,ASTs,Compiler"
+    "skills": "JavaScript,ASTs,Compiler,CSS,TypeScript,PHP,HTML"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/29821563?u=b9821b179a06ed58dc8d09bfe9ce1353afb370ea&v=4",
@@ -1894,7 +1958,8 @@
     "website_url": null,
     "company": "Cornell University",
     "pod": "Syntactic Seahorses",
-    "pod_id": "0.4.2"
+    "pod_id": "0.4.2",
+    "skills": "Python,JavaScript,HTML,Swift"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/29942790?u=f6dc49f79d7d53a31cd9b093ef1438d590d1b886&v=4",
@@ -1912,7 +1977,7 @@
     "company": "@MLH",
     "pod": "Syntactic Seahorses",
     "pod_id": "0.4.2",
-    "skills": "Vue,React,Swift,Mobile Development,Express,Flask,Python,Bash"
+    "skills": "Vue,React,Swift,Mobile Development,Express,Flask,Python,Bash,JavaScript,C++,CSS"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/31184591?u=c4e14533d120dbd292833cc820b8fd2e4afb06bb&v=4",
@@ -1930,7 +1995,7 @@
     "company": "@MLH-Fellowship",
     "pod": "Syntactic Seahorses",
     "pod_id": "0.4.2",
-    "skills": "JavaScript,React,RN,Recoil,Redux,GQL,Nodejs,Django,DjangoRF,Blockchain"
+    "skills": "JavaScript,React,RN,Recoil,Redux,GQL,Nodejs,Django,DjangoRF,Blockchain,CSS,C++,HTML,TypeScript,Python"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/32371951?u=1dc0beea3e7a0f3ca7d0f224becd0e70886f1d41&v=4",
@@ -1947,7 +2012,8 @@
     "website_url": "https://saurabhagarwala.github.io",
     "company": "@FOSSEE @IEEE-NITK @WebClub-NITK ",
     "pod": "Syntactic Seahorses",
-    "pod_id": "0.4.2"
+    "pod_id": "0.4.2",
+    "skills": "CSS,JavaScript,Modelica,Go,Python,HTML,Ruby,C,Jupyter Notebook,Java,TypeScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/33171576?u=b49b12805d3d8ac8e6f31ce8547a6002310d625b&v=4",
@@ -1965,7 +2031,7 @@
     "company": "@MLH",
     "pod": "Syntactic Seahorses",
     "pod_id": "0.4.2",
-    "skills": "Full Stack,React,Node,Flask"
+    "skills": "Full Stack,React,Node,Flask,HTML,Python,JavaScript,TypeScript,Visual Basic,C++,Java,CSS,Ruby"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/47635607?u=24b48ef776bbf47c7fc605975c7847eea5d0910d&v=4",
@@ -1982,7 +2048,8 @@
     "website_url": "https://xtremilicious.github.io",
     "company": "Google Developer Students Club",
     "pod": "Syntactic Seahorses",
-    "pod_id": "0.4.2"
+    "pod_id": "0.4.2",
+    "skills": "JavaScript,HTML,Jupyter Notebook,Ruby,Java,Python,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/48270786?u=dab5f6dc64923f646b354f47f52af65f44fd9e7e&v=4",
@@ -1999,14 +2066,15 @@
     "website_url": "https://kartikcho.github.io/",
     "company": "Intern at @mlh",
     "pod": "Syntactic Seahorses",
-    "pod_id": "0.4.2"
+    "pod_id": "0.4.2",
+    "skills": "JavaScript,HTML,TypeScript,Python,Ruby,CSS,C"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/6561327?u=3746478b26e66ebe22eba9ba20097b477c455cc3&v=4",
     "bio": "@MLH Fellowship Intern |\r\n2nd year Computer Science & IT NUIG \r\n| Golang - Python - Javascript\r\n",
     "email": "",
     "followers": 22,
-    "following": 27,
+    "following": 26,
     "location": null,
     "username": "iamcathal",
     "username_original": "IamCathal",
@@ -2016,7 +2084,8 @@
     "website_url": "https://iamcathal.github.io/",
     "company": "@MLH",
     "pod": "Async Alligators",
-    "pod_id": "0.5.1"
+    "pod_id": "0.5.1",
+    "skills": "C,Python,Ruby,Go,HTML,CSS,JavaScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/8129788?u=93725230cac5a1e8eb03f65e548e59d4cd14d70a&v=4",
@@ -2034,7 +2103,7 @@
     "company": "https://github.com/USP",
     "pod": "Async Alligators",
     "pod_id": "0.5.1",
-    "skills": "Python,FastAPI,Flask,BeautifulSoup,Go"
+    "skills": "Python,FastAPI,Flask,BeautifulSoup,Go,Shell,PLpgSQL,C,Jupyter Notebook,JavaScript,Vim script,Ruby,CSS"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/9476284?u=d90950eee0a8a05192758886ed5d94d80eb02b8c&v=4",
@@ -2052,13 +2121,13 @@
     "company": "@agripredict @MLH-Fellowship",
     "pod": "Async Alligators",
     "pod_id": "0.5.1",
-    "skills": "Deep Learning,Artificial Intelligence,Django,Flask,Chalice,AWS"
+    "skills": "Deep Learning,Artificial Intelligence,Django,Flask,Chalice,AWS,HTML,Jupyter Notebook,Go,Python,C++,PHP,Java"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/10504710?v=4",
     "bio": "passionate about mobile & web apps, UX, and autonomous systems 🤖",
     "email": "github@cesare.io",
-    "followers": 296,
+    "followers": 298,
     "following": 887,
     "location": "Milan, Italy",
     "username": "csr",
@@ -2069,7 +2138,8 @@
     "website_url": "https://cesare.io",
     "company": null,
     "pod": "Async Alligators",
-    "pod_id": "0.5.1"
+    "pod_id": "0.5.1",
+    "skills": "C++,Kotlin,Swift,Assembly,C,HTML,Python,JavaScript,Objective-C"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/23391143?u=56ab6bff50be950fa8cae5cf736f2ae66e319ff3&v=4",
@@ -2087,7 +2157,7 @@
     "company": null,
     "pod": "Async Alligators",
     "pod_id": "0.5.1",
-    "skills": "Python,HTML,CSS,JavaScript,React,Node,Ruby,Rails,Machine Learning,Python"
+    "skills": "Python,HTML,CSS,JavaScript,React,Node,Ruby,Rails,Machine Learning,Jupyter Notebook,TypeScript,Java,R"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/23411333?u=c2d6d7f1578b03d01001cfb91300d7e6515d967f&v=4",
@@ -2105,7 +2175,7 @@
     "company": null,
     "pod": "Async Alligators",
     "pod_id": "0.5.1",
-    "skills": "Python,Machine Learning,Swift,C++,JavaScript"
+    "skills": "Python,Machine Learning,Swift,C++,JavaScript,C#,Shell,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/29612423?u=fda9ed2685c73ea5a5b8df34404774377e6ea29e&v=4",
@@ -2123,14 +2193,14 @@
     "company": "Major League Hacking",
     "pod": "Async Alligators",
     "pod_id": "0.5.1",
-    "skills": "Back End,Go,Python,Django,Flask,Node,React"
+    "skills": "Back End,Go,Python,Django,Flask,Node,React,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/38040817?u=a91c8a1a61efb3a83da36b207192e5224f225ab5&v=4",
     "bio": "data science engineer \r\nAI  enthusiastic\r\n\r\n ",
     "email": "",
     "followers": 25,
-    "following": 71,
+    "following": 74,
     "location": "Tunis",
     "username": "hajermahjoub",
     "username_original": "HajerMahjoub",
@@ -2140,13 +2210,14 @@
     "website_url": "https://www.canva.com/design/DAEAMp-x7UA/tobMjmAzEX6t-Wd_YaHtJA/view?website#4",
     "company": "InstaDeep LTD",
     "pod": "Async Alligators",
-    "pod_id": "0.5.1"
+    "pod_id": "0.5.1",
+    "skills": "Ruby,Jupyter Notebook,Go,JavaScript,C++,HTML,Java"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/42674621?u=4752c4c4dd4210dd1c867077ff0d6eb6fc857004&v=4",
     "bio": "Pronouns: he/they",
     "email": "",
-    "followers": 6,
+    "followers": 7,
     "following": 2,
     "location": "London, UK",
     "username": "teymour-aldridge",
@@ -2157,7 +2228,8 @@
     "website_url": "https://teymour.tk",
     "company": null,
     "pod": "Async Alligators",
-    "pod_id": "0.5.1"
+    "pod_id": "0.5.1",
+    "skills": "Python,JavaScript,HTML,Ruby,Rust,OCaml,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/48182195?u=e4875bd088623cb4ddeb7be194ec54b453aff035&v=4",
@@ -2175,13 +2247,13 @@
     "company": null,
     "pod": "Async Alligators",
     "pod_id": "0.5.1",
-    "skills": "React,Django,Python,JavaScript"
+    "skills": "React,Django,Python,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/13385000?u=9620301c7c315835e8be0833eef50d42f1d26898&v=4",
     "bio": "I'm a Software Developer interested in mobile, web and DevOps. \r\nMLH Fellow 👨🏽‍💻.\r\nGitHub Campus Expert 🚩.\r\nDocker Campus Ambassador 🐳.\r\n \r\n\r\n",
     "email": "rodrigo.medina.neri@gmail.com",
-    "followers": 69,
+    "followers": 70,
     "following": 26,
     "location": "Mexico City",
     "username": "roeeyn",
@@ -2193,14 +2265,14 @@
     "company": "Konfio",
     "pod": "Dunder Heads",
     "pod_id": "0.5.2",
-    "skills": "Python,Flask,FastAPI,Node,JS,Python,DevOps,GitHub Actions"
+    "skills": "Python,Flask,FastAPI,Node,JS,DevOps,GitHub Actions,Kotlin,Java,JavaScript,CSS,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/20328484?u=b566029e4327c731e21f07827480554e83a3fb8a&v=4",
     "bio": "Computer Science @uWaterloo",
     "email": "rachel98rl@hotmail.com",
-    "followers": 11,
-    "following": 10,
+    "followers": 12,
+    "following": 13,
     "location": "Waterloo, ON",
     "username": "rch-liu",
     "username_original": "rch-liu",
@@ -2210,7 +2282,8 @@
     "website_url": "http://rch-liu.github.io",
     "company": null,
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "HTML,JavaScript,Python,Java,Ruby,Turing,Racket"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/20774412?u=a21d442ec67cf089792fca8c8d0cdca0da6ebc1e&v=4",
@@ -2227,7 +2300,8 @@
     "website_url": null,
     "company": null,
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Java,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/22359229?u=729956fffe0a58645ef01efc255491c0301ec10c&v=4",
@@ -2244,7 +2318,8 @@
     "website_url": "https://www.linkedin.com/in/kai-xing-chen",
     "company": null,
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Python,JavaScript,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/35744669?u=d1dcdaf6a616df569acd583ba774ce4e6711f932&v=4",
@@ -2261,7 +2336,8 @@
     "website_url": "chris-nguyen.me",
     "company": "@MLH",
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Python,Java,Go,Ruby,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/35948232?u=c788ca417fbdad0fef2c0e3a3aaf274532eafeec&v=4",
@@ -2278,7 +2354,8 @@
     "website_url": null,
     "company": null,
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Ruby,Swift,Python,HTML,JavaScript"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/42730922?u=ffd315fb4b2cfa6d4e5c3537c3cb90f50cd51506&v=4",
@@ -2295,14 +2372,15 @@
     "website_url": "https://www.makeschool.com/portfolio/EbonneCabarrus",
     "company": "Major League Hacking",
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Jupyter Notebook,HTML,JavaScript,Python,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/42757189?u=2bab631086c02ef6afbdf81a3234cf67e8f92d40&v=4",
     "bio": "CS @ MIT",
     "email": "",
-    "followers": 7,
-    "following": 4,
+    "followers": 8,
+    "following": 5,
     "location": null,
     "username": "amy-lei",
     "username_original": "amy-lei",
@@ -2312,7 +2390,8 @@
     "website_url": "http://amylei.com/",
     "company": null,
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Java,JavaScript,CSS"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/43295248?u=b19c58e37c795349bd7209f10b06e749ba734232&v=4",
@@ -2329,7 +2408,8 @@
     "website_url": "http://artesiako.com/",
     "company": null,
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "Swift,Python,OCaml,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/44060682?u=f44909248809315f38f12862332db2b8e8ce02d0&v=4",
@@ -2346,7 +2426,8 @@
     "website_url": "www.shageldi.com",
     "company": "Major League Hacking",
     "pod": "Dunder Heads",
-    "pod_id": "0.5.2"
+    "pod_id": "0.5.2",
+    "skills": "JavaScript,Python,Java,C++,HTML,CSS"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/283496?u=cbf932d9fbc3886202d34ecd232afe6cdca2bacf&v=4",
@@ -2364,7 +2445,7 @@
     "company": "Raise.dev",
     "pod": "The Redux Starfish!",
     "pod_id": "0.6.1",
-    "skills": "Ruby,JavaScript,TypeScript,Bash"
+    "skills": "Ruby,JavaScript,TypeScript,Bash,Emacs Lisp,CoffeeScript,Objective-C"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/15221057?v=4",
@@ -2381,7 +2462,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "HTML,JavaScript,Java,Ruby,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/20908640?v=4",
@@ -2398,14 +2480,15 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,CSS,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/24194862?u=2e7999de20b6eeba69a33273527030c396cfdbc0&v=4",
     "bio": "Undergraduate student studying Computer Science and Linguistics. ",
     "email": "",
     "followers": 48,
-    "following": 164,
+    "following": 165,
     "location": "New York City",
     "username": "rickyc0626",
     "username_original": "RickyC0626",
@@ -2415,7 +2498,8 @@
     "website_url": "https://rickyc0626.github.io/",
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,Ruby,HTML,Java,C#,Rust"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/31644062?v=4",
@@ -2432,7 +2516,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,HTML,Java,Assembly,Ruby"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/41017026?u=5f2fc2f0dcdad96f3c1475c510cb835c0a955c08&v=4",
@@ -2449,14 +2534,15 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,HTML,Ruby,Java"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/44677847?v=4",
     "bio": null,
     "email": "",
     "followers": 3,
-    "following": 15,
+    "following": 16,
     "location": null,
     "username": "rabedatta",
     "username_original": "RabeDatta",
@@ -2466,7 +2552,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/51487626?v=4",
@@ -2483,7 +2570,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/54924600?v=4",
@@ -2500,7 +2588,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "Assembly,JavaScript,HTML,Java,C++,Python,Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/61920144?v=4",
@@ -2517,7 +2606,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,Ruby,HTML,Java"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/64918571?v=4",
@@ -2534,7 +2624,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Redux Starfish!",
-    "pod_id": "0.6.1"
+    "pod_id": "0.6.1",
+    "skills": "JavaScript,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/283496?u=cbf932d9fbc3886202d34ecd232afe6cdca2bacf&v=4",
@@ -2552,7 +2643,7 @@
     "company": "Raise.dev",
     "pod": "The Apex Orcas!",
     "pod_id": "0.6.2",
-    "skills": "Ruby,JavaScript,TypeScript,Bash"
+    "skills": "Ruby,JavaScript,TypeScript,Bash,Emacs Lisp,CoffeeScript,Objective-C"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/24741022?u=4f7e7e9fec5baf3ede68e8256c6fd4afa96f79ac&v=4",
@@ -2569,7 +2660,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "JavaScript,HTML,CSS,Python,Racket,C#,Ruby,C++,Java"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/36236068?v=4",
@@ -2586,7 +2678,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "C++,JavaScript,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/40738727?u=e802b61d5beb60cd6c6fe6f15d09b7adf149cee5&v=4",
@@ -2603,7 +2696,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "C#,Ruby,TypeScript,HTML,JavaScript"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/46112578?v=4",
@@ -2620,7 +2714,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "JavaScript,HTML,Ruby,Racket,Python"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/47614340?v=4",
@@ -2637,7 +2732,8 @@
     "website_url": null,
     "company": "- None -",
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "JavaScript,C++,Jupyter Notebook,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/48933496?u=b8ca1582bd23335e3c2e8d294e4d9005157fe1cf&v=4",
@@ -2654,7 +2750,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "JavaScript,HTML,C++,Java,Ruby,PHP"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/49767917?u=2a260408599041b45fa10b3bb945fbb997cbb702&v=4",
@@ -2671,7 +2768,8 @@
     "website_url": "www.linkedin.com/in/yimni-eli-chan",
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "Java,PHP,Ruby,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/56745538?v=4",
@@ -2688,7 +2786,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "JavaScript,Java,HTML,Ruby,C#,C++"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/60577269?v=4",
@@ -2705,7 +2804,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "Ruby,JavaScript,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/65786984?v=4",
@@ -2722,7 +2822,8 @@
     "website_url": null,
     "company": null,
     "pod": "The Apex Orcas!",
-    "pod_id": "0.6.2"
+    "pod_id": "0.6.2",
+    "skills": "JavaScript,C++,Ruby,HTML"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/396639?u=3938b5c70bbdd5aabf59e6e3cac7afbeb3ce4d31&v=4",
@@ -2739,7 +2840,8 @@
     "website_url": "http://www.jonmarkgo.com/",
     "company": "Major League Hacking",
     "pod": "MLH Staff",
-    "pod_id": "MLH Staff"
+    "pod_id": "MLH Staff",
+    "skills": "Ruby,C++,JavaScript,PHP,CSS,CoffeeScript,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/434373?v=4",
@@ -2757,7 +2859,7 @@
     "company": "Major League Hacking (MLH)",
     "pod": "MLH Staff",
     "pod_id": "MLH Staff",
-    "skills": "JavaScript,Ruby"
+    "skills": "JavaScript,Ruby,Arduino,C,Python,CoffeeScript,PHP,Vim script,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/829864?v=4",
@@ -2774,7 +2876,8 @@
     "website_url": "http://nicholasquinlan.com",
     "company": "Major League Hacking",
     "pod": "MLH Staff",
-    "pod_id": "MLH Staff"
+    "pod_id": "MLH Staff",
+    "skills": "JavaScript,CSS,Ruby,HTML,Shell,Python"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/34094921?u=ad8f85534544fdf290ea07a8a8b02c3b218cfecd&v=4",
@@ -2791,7 +2894,8 @@
     "website_url": "https://wrussell.co.uk",
     "company": "@MLH-Fellowship",
     "pod": "MLH Staff",
-    "pod_id": "MLH Staff"
+    "pod_id": "MLH Staff",
+    "skills": "Java,Kotlin,Go,C#,Python,Dart,JavaScript,CSS"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/66275863?v=4",
@@ -2808,7 +2912,8 @@
     "website_url": null,
     "company": "@MLH-Fellowship ",
     "pod": "MLH Staff",
-    "pod_id": "MLH Staff"
+    "pod_id": "MLH Staff",
+    "skills": "Ruby"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/283496?u=cbf932d9fbc3886202d34ecd232afe6cdca2bacf&v=4",
@@ -2826,7 +2931,7 @@
     "company": "Raise.dev",
     "pod": "Pod 0.6.3",
     "pod_id": "0.6.3",
-    "skills": "Ruby,JavaScript,TypeScript,Bash"
+    "skills": "Ruby,JavaScript,TypeScript,Bash,Emacs Lisp,CoffeeScript,Objective-C"
   },
   {
     "avatar_url": "https://avatars2.githubusercontent.com/u/26606767?u=a5a0032368c43b7b6d687e6ee7aef819de8b81ac&v=4",
@@ -2843,7 +2948,8 @@
     "website_url": "https://zarina2311.github.io/my-website/",
     "company": null,
     "pod": "Pod 0.6.3",
-    "pod_id": "0.6.3"
+    "pod_id": "0.6.3",
+    "skills": "JavaScript,CSS,HTML"
   },
   {
     "avatar_url": "https://avatars3.githubusercontent.com/u/28552912?u=02847c665531c9c09119b6fcc7fa44aaa5242874&v=4",
@@ -2860,7 +2966,8 @@
     "website_url": null,
     "company": null,
     "pod": "Pod 0.6.3",
-    "pod_id": "0.6.3"
+    "pod_id": "0.6.3",
+    "skills": "JavaScript,CSS,Python,HTML,Ruby"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/29719099?u=895e62fa11c64c228c0f5450803a21615180177c&v=4",
@@ -2878,14 +2985,14 @@
     "company": "Techtonica",
     "pod": "Pod 0.6.3",
     "pod_id": "0.6.3",
-    "skills": "JavaScript,React,Node,Go"
+    "skills": "JavaScript,React,Node,Go,HTML,Python,Ruby,CSS"
   },
   {
     "avatar_url": "https://avatars0.githubusercontent.com/u/32846833?u=be636c9455a449a9e30723e271b3226666bcd8cd&v=4",
     "bio": "",
     "email": "",
     "followers": 20,
-    "following": 16,
+    "following": 17,
     "location": null,
     "username": "taleamonet",
     "username_original": "TaLeaMonet",
@@ -2932,21 +3039,22 @@
     "pod_id": "0.6.3"
   },
   {
-    "avatar_url": "https://avatars0.githubusercontent.com/u/44009619?v=4",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/44009619?u=77c51463e8fa0e7cfa52cc58dd70741329b26412&v=4",
     "bio": "",
     "email": "",
-    "followers": 2,
+    "followers": 3,
     "following": 1,
     "location": "Oakland",
     "username": "ari-os310",
     "username_original": "ari-os310",
     "name": "Ariel R.R.M.",
-    "twitter_username": null,
+    "twitter_username": "_ArielRios",
     "github_url": "https://github.com/ari-os310",
     "website_url": null,
     "company": null,
     "pod": "Pod 0.6.3",
-    "pod_id": "0.6.3"
+    "pod_id": "0.6.3",
+    "skills": "HTML,PLSQL,JavaScript"
   },
   {
     "avatar_url": "https://avatars1.githubusercontent.com/u/52065567?v=4",

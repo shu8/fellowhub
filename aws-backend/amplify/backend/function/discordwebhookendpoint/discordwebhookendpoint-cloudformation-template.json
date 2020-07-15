@@ -41,12 +41,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"fellowendpoint",
+						"discordwebhookendpoint",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"fellowendpoint",
+									"discordwebhookendpoint",
 									"-",
 									{
 										"Ref": "env"
@@ -76,7 +76,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-mlhfellowbook-dev-215635-deployment",
-					"S3Key": "amplify-builds/fellowendpoint-3557766e4d5775636c4e-build.zip"
+					"S3Key": "amplify-builds/discordwebhookendpoint-72477367464f51744179-build.zip"
 				}
 			}
 		},
@@ -86,12 +86,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"mlhfellowbookLambdaRole05bfddb5",
+						"mlhfellowbookLambdaRole5196a6ab",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"mlhfellowbookLambdaRole05bfddb5",
+									"mlhfellowbookLambdaRole5196a6ab",
 									"-",
 									{
 										"Ref": "env"
