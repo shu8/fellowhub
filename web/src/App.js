@@ -59,8 +59,8 @@ class App extends React.Component {
             <Route path="/events" render={() =>
               <Events accessToken={this.state.accessToken} />
             } />
-            <Jobs path="/jobs" render={() =>
-              <Events accessToken={this.state.accessToken} />
+            <Route path="/jobs" render={() =>
+              <Jobs accessToken={this.state.accessToken} />
             } />
             <Route path="/">
               <Home

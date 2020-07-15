@@ -13,7 +13,7 @@ export default function Jobs(props) {
       <Heading fontSize={3} mb={5}>
         Monster list of more job search sites, collected for our fellows:
       </Heading>
-      <FilterList sx={{ backgroundColor: "orange" }}>
+      <FilterList>
         <ul style={{ columns: 3, listStyleType: "none" }}>
           {jobSites.map((jobSite) => {
             return (
