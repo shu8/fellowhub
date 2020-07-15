@@ -8,18 +8,24 @@ module.exports = {
 	description:
 		"Randomizes pod member list (with arg) or picks fellow at random (no arg)",
 	async execute(message, args) {
-		const hasPlainFlag = args.length === 2 && args[1] === "--plain";
+		const hasFlag = args.length === 2 && args[1].startsWith("--");
+		if (hasFlag && isInvalidFlag(args[1])) {
+			message.channel.send(
+				"Invalid flag! :grimacing:\nThe flags for `!random` are `--plain` (default) and `--table`."
+			);
+			return;
+		}
 
 		try {
 			if (args.length === 0) {
 				const randomFellowData = await getRandomFellow();
 				message.channel.send("Here's a random fellow for you:");
 				message.channel.send(createRandomFellowEmbed(randomFellowData));
-			} else if (args.length === 1 || (args.length === 2 && hasPlainFlag)) {
+			} else if (args.length === 1 || (args.length === 2 && hasFlag)) {
 				message.channel.send(
 					createRandomizedPodReply({
-						randomizedPodData: await getRandomizedPodMembers(args[0]),
-						plain: hasPlainFlag,
+						randomData: await getRandomizedPodMembers(args[0]),
+						format: hasFlag ? args[1].slice(2) : "plain",
 					})
 				);
 			} else {
@@ -35,9 +41,12 @@ module.exports = {
 			}
 		} catch (error) {
 			message.channel.send("Uh oh, randomization failed miserably.");
+			console.log(error);
 		}
 	},
 };
+
+const isInvalidFlag = (flag) => flag !== "--plain" && flag !== "--table";
 
 // ----------
 // !random
@@ -77,7 +86,7 @@ const createRandomFellowEmbedFields = (randomFellowData) => {
 	embedFields.push({
 		name: getGroupType(randomFellowData.pod),
 		value: isFellow
-			? randomFellowData.pod_id + " " + randomFellowData.pod
+			? randomFellowData.pod_id + " → " + randomFellowData.pod
 			: randomFellowData.pod,
 	});
 
@@ -99,7 +108,12 @@ const createRandomFellowEmbedFields = (randomFellowData) => {
 };
 
 const getGroupType = (groupType) => {
-	if (groupType === "MLH Staff" || groupType === "Mentors") return "Group:";
+	if (
+		groupType === "MLH Staff" ||
+		groupType === "Mentors" ||
+		groupType === "CTF"
+	)
+		return "Group:";
 	return "Pod:";
 };
 
@@ -116,34 +130,33 @@ const getRandomizedPodMembers = async (input) => {
 	return response.json();
 };
 
-const createRandomizedPodReply = ({ randomizedPodData, plain }) => {
-	return plain
-		? createRandomizedPodPlainMessage(randomizedPodData)
-		: createRandomizedPodEmbed(randomizedPodData);
+const createRandomizedPodReply = ({ randomData, format }) => {
+	return format === "table"
+		? createRandomTableEmbed(randomData)
+		: createRandomPlainMessage(randomData);
 };
 
-const createRandomizedPodPlainMessage = (randomizedPodData) => {
+const createRandomPlainMessage = (randomData) => {
 	const isFellowGroup =
-		randomizedPodData[0].pod !== "MLH Staff" &&
-		randomizedPodData[0].pod !== "Mentors";
-	const fellowGroupLabel = `**Pod ${randomizedPodData[0].pod_id} ${randomizedPodData[0].pod}**`;
-	const genericGroupLabel = `**${randomizedPodData[0].pod_id}**`;
+		randomData[0].pod !== "MLH Staff" && randomData[0].pod !== "Mentors";
+	const fellowGroupLabel = `**Pod ${randomData[0].pod_id} → ${randomData[0].pod}**`;
+	const genericGroupLabel = `**${randomData[0].pod_id}**`;
 
 	let message = "Here's a random list of members for:\n";
 	message += isFellowGroup ? fellowGroupLabel : genericGroupLabel;
 	message += "\n";
 
-	for (let i = 0; i < randomizedPodData.length; i++) {
-		const member = randomizedPodData[i];
+	for (let i = 0; i < randomData.length; i++) {
+		const member = randomData[i];
 		message += `${i + 1}. **${member.name || member.username}**\n`;
 	}
 
 	return message;
 };
 
-const createRandomizedPodEmbed = (randomizedPodData) => {
-	let description = createRandomizedPodEmbedMessage(randomizedPodData);
-	description += createRandomizedPodEmbedTable(randomizedPodData);
+const createRandomTableEmbed = (randomData) => {
+	let description = createRandomIntroMessage(randomData);
+	description += createRandomTable(randomData);
 
 	return new MessageEmbed({
 		description,
@@ -152,12 +165,11 @@ const createRandomizedPodEmbed = (randomizedPodData) => {
 	});
 };
 
-const createRandomizedPodEmbedMessage = (randomizedPodData) => {
+const createRandomIntroMessage = (randomData) => {
 	const isFellowGroup =
-		randomizedPodData[0].pod !== "MLH Staff" &&
-		randomizedPodData[0].pod !== "Mentors";
-	const fellowGroupLabel = `**Pod ${randomizedPodData[0].pod_id} → ${randomizedPodData[0].pod}**`;
-	const genericGroupLabel = `**${randomizedPodData[0].pod_id}**`;
+		randomData[0].pod !== "MLH Staff" && randomData[0].pod !== "Mentors";
+	const fellowGroupLabel = `**Pod ${randomData[0].pod_id} → ${randomData[0].pod}**`;
+	const genericGroupLabel = `**${randomData[0].pod_id}**`;
 
 	let message = "Here's a random list of members for:\n";
 	message += isFellowGroup ? fellowGroupLabel : genericGroupLabel;
@@ -166,27 +178,27 @@ const createRandomizedPodEmbedMessage = (randomizedPodData) => {
 	return message;
 };
 
-const createRandomizedPodEmbedTable = (randomizedPodData) => {
-	const names = randomizedPodData.map(
-		(member) => member.name || member.username
-	);
+const createRandomTable = (randomData) => {
+	const names = randomData.map((member) => member.name || member.username);
 	const longestName = [...names].sort((a, b) => b.length - a.length)[0];
+
 	const edgeLine = "═".repeat(longestName.length);
 	const headerWhitespace = " ".repeat(longestName.length - "Name".length);
 
 	let table = "";
-	table += `\`\`\`\n╔═════╦═${edgeLine}═╗\n`; // top
+
+	table += `\`\`\`\n╔═════╦═${edgeLine}═╗\n`; // header top
 	table += `║ No. ║ Name${headerWhitespace} ║\n`; // header content
-	table += `╠═════╬═${edgeLine}═╣\n`; // header divider
+	table += `╠═════╬═${edgeLine}═╣\n`; // header bottom
 
 	for (let i = 0; i < names.length; i++) {
 		const name = names[i];
 		const nameWhitespace = " ".repeat(longestName.length - name.length);
 		const number = i + 1 < 10 ? " " + (i + 1) : i + 1;
-		table += `║ ${number}  ║ ${name}${nameWhitespace} ║\n`;
+		table += `║ ${number}  ║ ${name}${nameWhitespace} ║\n`; // number and name, with whitespace
 	}
 
-	table += `╚═════╩═${edgeLine}═╝\`\`\``; // bottom
+	table += `╚═════╩═${edgeLine}═╝\`\`\``; // table bottom
 
 	return table;
 };

@@ -1,7 +1,7 @@
 const { LIST_OF_PROJECTS } = require("../../constants");
 
-/**Returns an array containing a boolean for whether the command argument roughly matches a project and, if so, the project name.*/
-const isProject = (message, userInput) => {
+/**Returns the properly named project that roughly matches the user's input, or null if no project matches.*/
+const identifyProject = (message, userInput) => {
 	if (isAmbiguousSci(userInput)) {
 		message.channel.send("That may refer to Scikit-Learn or SciML.");
 		return;
@@ -26,4 +26,4 @@ const isAmbiguousSci = (requestedProject) =>
 const isSci = (requestedProject) =>
 	requestedProject.toLowerCase().startsWith("sci");
 
-module.exports = isProject;
+module.exports = identifyProject;

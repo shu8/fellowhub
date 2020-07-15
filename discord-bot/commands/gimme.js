@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const { PLAYLIST_URL, MESSAGE_EMBED_FOOTER } = require("../constants");
-const isProject = require("./utils/isProject");
+const identifyProject = require("./utils/identifyProject");
 const displayMentors = require("./utils/displayMentors");
 const displayProject = require("./utils/displayProject");
 const displayFellow = require("./utils/displayFellow");
@@ -23,7 +23,7 @@ module.exports = {
 				return;
 			}
 
-			const project = isProject(message, arg);
+			const project = identifyProject(message, arg);
 			if (project) {
 				displayProject(message, project);
 				return;
@@ -32,6 +32,7 @@ module.exports = {
 			await displayFellow(message, arg);
 		} catch (error) {
 			message.channel.send(`Nope, ${arg} doesn't ring a bell.`);
+			console.log(error);
 		}
 	},
 };
