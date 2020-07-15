@@ -1,5 +1,9 @@
 @import "./primer.css";
 
+html {
+  overflow-y: scroll;
+}
+
 .App {
   padding-left: 10px;
   padding-right: 10px;
@@ -109,6 +113,23 @@ a.event {
 
 .event .details span {
   display: block;
+}
+
+.techs-filter {
+  position: relative !important;
+  left: unset !important;
+  right: unset !important;
+  margin: auto;
+  width: 25%;
+}
+
+.choose-tech-btn {
+  background-color: #1d539f !important;
+  color: white !important;
+}
+
+.choose-tech-btn:hover {
+  background-color: #357ee6 !important;
 }
 
 @media screen and (max-width: 900px) {
