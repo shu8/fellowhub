@@ -20,7 +20,7 @@ export default function GetHelp(props) {
       ));
 
   return (
-    <div style={{ backgroundColor: "", margin: "50px" }}>
+    <div className="App">
       <Heading fontSize={7} mb={3}>
         Get Help
       </Heading>
