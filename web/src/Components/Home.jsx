@@ -5,6 +5,12 @@ import Profile from "./Profile";
 import SimpleAvatar from "./SimpleAvatar";
 import Pods from "./Pods";
 import Projects from "./Projects";
+import babel from "../img/babel.png";
+import amplify from "../img/amplify.png";
+import docsify from "../img/docsify.png";
+import n8n from "../img/n8n.png";
+import sheetjs from "../img/sheetjs.png";
+import webaverse from "../img/webaverse.ico";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -110,12 +116,48 @@ export default function Home(props) {
               gridGap: "20px",
             }}
           >
-            <Projects />
-            <Projects />
-            <Projects />
-            <Projects />
-            <Projects />
-            <Projects />
+            <Projects
+              name="Babel"
+              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              alt="Babel"
+              image={babel}
+              link="https://github.com/babel"
+            />
+            <Projects
+              name="Amplify"
+              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              alt="Amplify"
+              image={amplify}
+              link="https://github.com/babel"
+            />
+            <Projects
+              name="Sheetjs"
+              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              alt="Sheetjs"
+              image={sheetjs}
+              link="https://github.com/babel"
+            />
+            <Projects
+              name="N8N"
+              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              alt="N8N"
+              image={n8n}
+              link="https://github.com/babel"
+            />
+            <Projects
+              name="Webaverse"
+              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              alt="Webaverse"
+              image={webaverse}
+              link="https://github.com/babel"
+            />
+            <Projects
+              name="Docsify"
+              description="Babel is a popular tool for using the newest features of the JavaScript programming language."
+              alt="Docsify"
+              image={docsify}
+              link="https://github.com/babel"
+            />
           </div>
         </TabPanel>
       </div>
