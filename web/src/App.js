@@ -52,9 +52,10 @@ class App extends React.Component {
         <div>
           <Header />
           <Switch>
-            <Route path="/fellows/:username" component={props =>
-              <Portfolio accessToken={this.state.accessToken} {...props} />
-            } />
+            <Route path="/fellows/:username" component={props => {
+              const username = props.match && props.match.params ? props.match.params.username : null;
+              return <Portfolio username={username} accessToken={this.state.accessToken} />
+            }} />
             <Route path="/fellows" component={() =>
               <Fellows accessToken={this.state.accessToken} />
             } />

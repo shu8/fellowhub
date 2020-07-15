@@ -132,6 +132,44 @@ a.event {
   background-color: #357ee6 !important;
 }
 
+.portfolio .portfolio-header {
+  width: fit-content;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio .portfolio-header img {
+  height: 100%;
+}
+
+.portfolio .portfolio-header .details span {
+  display: block;
+}
+
+.portfolio .portfolio-header .username {
+  padding-top: 25px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.portfolio .bio {
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+.portfolio .portfolio-tabs {
+  margin-top: 10px;
+}
+
+.portfolio .standup ul {
+  padding-left: 30px;
+}
+
 @media screen and (max-width: 900px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
