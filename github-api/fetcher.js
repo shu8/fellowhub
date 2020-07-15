@@ -97,8 +97,13 @@ const addExtraData = async users => {
   if (fs.existsSync('./allUsersSkills.json')) {
     const userSkillsString = fs.readFileSync('./allUsersSkills.json', 'utf-8');
     const skills = JSON.parse(userSkillsString);
-    users.forEach(u => {
-      if (skills[u.username]) u.skills = skills[u.username].join(',');
+    users.forEach((u, i) => {
+      if (skills[u.username]) {
+        u.skills = [...u.skills.split(','), ...skills[u.username]];
+
+        // Remove duplicates
+        u.skills = [...new Set(u.skills)].join(',');
+      }
     });
   }
 
