@@ -3,14 +3,19 @@ const { API_BASE_URL, MESSAGE_EMBED_FOOTER } = require("../constants");
 const fetch = require("node-fetch");
 const { githubToken } = require("../config");
 const isPodNickname = require("./utils/isPodNickname");
+const identifyProject = require("./utils/identifyProject");
+const getProjectData = require("./utils/getProjectData");
 
 module.exports = {
 	name: "standup",
 	description: "Fetches user standup data and returns it as an embed",
 	async execute(message, args) {
 		const arg = validateArgs(args, message);
+		const project = identifyProject(message, arg);
 
-		if (isPodNumber(arg)) {
+		if (project) {
+			displayProjectTeamStandups(project, message);
+		} else if (isPodNumber(arg)) {
 			displayEntirePodStandups(arg, message);
 		} else if (isPodNickname(arg)) {
 			const podNumber = isPodNickname(arg);
@@ -37,6 +42,19 @@ const validateArgs = (args, message) => {
 };
 
 const isPodNumber = (string) => /^\d\.\d\.\d$/.test(string);
+
+const displayProjectTeamStandups = async (project, message) => {
+	const projectData = getProjectData(project);
+	for (let username of projectData.fellows) {
+		try {
+			const standupData = await getStandupData({ type: "user", arg: username });
+			const userPicture = await getUserPictureUrl(username);
+			message.channel.send(createUserStandupEmbed(standupData, userPicture));
+		} catch (error) {
+			continue; // ignore missing standups when showing team standups
+		}
+	}
+};
 
 const displaySingleUserStandup = async (username, message) => {
 	const standupData = await getStandupData({ type: "user", arg: username });

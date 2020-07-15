@@ -2,9 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const { MessageEmbed } = require("discord.js");
 const { MESSAGE_EMBED_FOOTER } = require("../../constants");
+const getProjectData = require("./getProjectData");
 
 const displayProject = (message, args) => {
-	const projectData = getProjectDataFromJSON(args);
+	const projectData = getProjectData(args);
 	message.channel.send({
 		files: getImageFiles(projectData),
 		embed: createProjectEmbed(projectData),
@@ -25,19 +26,6 @@ const getImageFiles = ({ language, project }) => {
 			name: "tech.png", // name for referencing image inside embed
 		},
 	];
-};
-
-// TODO: Replace with API data retrieval.
-const getProjectDataFromJSON = (requestedProject) => {
-	const projectsPath = path.join(process.env.PWD, "tempData", "projects.json");
-	const jsonData = JSON.parse(fs.readFileSync(projectsPath));
-
-	for (let storedProject of Object.keys(jsonData)) {
-		if (storedProject === requestedProject) {
-			jsonData[storedProject].project = storedProject;
-			return jsonData[storedProject];
-		}
-	}
 };
 
 const createProjectEmbed = (projectData) => {
