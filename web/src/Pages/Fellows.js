@@ -1,6 +1,5 @@
 import React from "react";
 
-import Header from "../Components/Header";
 import Search from "../Components/Search";
 
 export default class Fellows extends React.Component {
@@ -17,9 +16,6 @@ export default class Fellows extends React.Component {
     if (username) {
       return (
         <div className="App">
-          <header className="App-header">
-            <Header />
-          </header>
           <main className="container">Fellow: {username}</main>
         </div>
       );
@@ -28,7 +24,6 @@ export default class Fellows extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Header />
           <div className="Search">
             <Search handleInput={this.handleInput} />
           </div>

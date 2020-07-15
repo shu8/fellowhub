@@ -6,7 +6,7 @@ export default function PrimarySearchAppBar() {
     <div style={{ marginBottom: "20px" }}>
       <div className="Header" style={{ backgroundColor: "#1d539f" }}>
         <div className="Header-item">
-          <a href="#" className="Header-link f4 d-flex flex-items-center">
+          <a href="/" className="Header-link f4 d-flex flex-items-center">
             <svg
               height="32"
               className="octicon octicon-mark-github mr-2"

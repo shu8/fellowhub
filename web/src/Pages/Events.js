@@ -16,9 +16,6 @@ export default class Events extends React.Component {
     if (id) {
       return (
         <div className="App">
-          <header className="App-header">
-            <Header />
-          </header>
           <main className="container">Event: {id}</main>
         </div>
       );
@@ -27,7 +24,6 @@ export default class Events extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Header />
           <div className="Search">
             <Search handleInput={this.handleInput} />
           </div>
