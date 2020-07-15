@@ -56,7 +56,7 @@ export default function Home(props) {
   const [tab, setTab] = React.useState("home");
 
   const createAvatars = () =>
-    props.data.map((fellow, i) => (
+    props.fellows.map((fellow, i) => (
       <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" key={i} />
     ));
 
