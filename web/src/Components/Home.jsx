@@ -11,6 +11,7 @@ import docsify from "../img/docsify.png";
 import n8n from "../img/n8n.png";
 import sheetjs from "../img/sheetjs.png";
 import webaverse from "../img/webaverse.ico";
+import homebrew from "../img/homebrew.png";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -157,6 +158,126 @@ export default function Home(props) {
               alt="Docsify"
               image={docsify}
               link="https://github.com/docsifyjs"
+            />
+            <Projects
+              name="Homebrew"
+              description="The Missing Package Manager for macOS (or Linux)."
+              alt="Homebrew"
+              image={homebrew}
+              link="https://github.com/Homebrew"
+            />
+            <Projects
+              name="Dev.to"
+              description="A constructive and inclusive social network. Open source and radically transparent."
+              alt="Dev.to"
+              image={docsify}
+              link="https://github.com/thepracticaldev"
+            />
+            <Projects
+              name="Oh-My-Zsh"
+              description="Oh-My-Zsh is a delightful, open source, community-driven framework for managing your ZSH configuration."
+              alt="Oh-My-Zsh"
+              image={docsify}
+              link="https://github.com/ohmyzsh"
+            />
+            <Projects
+              name="CircuitPython"
+              description="CircuitPython is a programming language designed to simplify
+              experimenting and learning to code on low-cost microcontroller
+              boards."
+              alt="CircuitPython"
+              image={docsify}
+              link="https://github.com/adafruit/circuitpython"
+            />
+            <Projects
+              name="BeagleBoard"
+              description="The BeagleBoard is a low-power open-source single-board computer produced by Texas Instruments in association with Digi-Key and Newark element14."
+              image={docsify}
+              link="https://github.com/beagleboard/"
+            />
+            <Projects
+              name="AliceVision"
+              description="AliceVision is a Photogrammetric Computer Vision framework for 3D Reconstruction and Camera Tracking."
+              alt="AliceVision"
+              image={docsify}
+              link="https://github.com/alicevision"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="BentoML"
+              description="BentoML is an open-source framework for high-performance machine learning model serving.."
+              alt="BentoML"
+              image={docsify}
+              link="https://github.com/bentoml"
+            />
+            <Projects
+              name="Scikit-learn"
+              description="Scikit-learn is a free software machine learning library for the Python programming language."
+              alt="Scikit-learn"
+              image={docsify}
+              link="https://github.com/scikit-learn"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
+            />
+            <Projects
+              name="Keras"
+              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              alt="Keras"
+              image={docsify}
+              link="https://github.com/keras-team"
             />
           </div>
         </TabPanel>
