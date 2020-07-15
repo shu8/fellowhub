@@ -56,23 +56,21 @@ module.exports = {
 		// 	return;
 		// }
 
-		if ([MLH_STAFF_GITHUB_IDS].includes(recipientGithubId)) {
+		if (MLH_STAFF_GITHUB_IDS.includes(recipientGithubId)) {
 			message.channel.send(
 				"Oh that is an MLH staffer! Only fellows can receive votes!"
 			);
 			return;
 		}
 
-		if ([MENTOR_GITHUB_IDS].includes(recipientGithubId)) {
+		if (MENTOR_GITHUB_IDS.includes(recipientGithubId)) {
 			message.channel.send(
 				"Oh that is a mentor! Only fellows can receive votes!"
 			);
 			return;
 		}
 
-		if (
-			[GITHUB_IDS_OF_FELLOWS_WITHOUT_DISCORD_IDS].includes(recipientGithubId)
-		) {
+		if (GITHUB_IDS_OF_FELLOWS_WITHOUT_DISCORD_IDS.includes(recipientGithubId)) {
 			message.channel.send(
 				"Oh we have you in our database but without a Discord ID! Paging @<716842220648661012>"
 			);
