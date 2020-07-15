@@ -76,7 +76,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-mlhfellowbook-dev-215635-deployment",
-					"S3Key": "amplify-builds/discordwebhookendpoint-6b766f695954346d4943-build.zip"
+					"S3Key": "amplify-builds/discordwebhookendpoint-72477367464f51744179-build.zip"
 				}
 			}
 		},

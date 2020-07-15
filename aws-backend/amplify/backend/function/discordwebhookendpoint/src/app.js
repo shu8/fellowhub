@@ -18,6 +18,19 @@ const app = express();
 app.use(bodyParser.json());
 app.use(awsServerlessExpressMiddleware.eventContext());
 
+const getDiscordMessage = (data) => {
+  switch (data.messageType) {
+    case 'star':
+      return { content: `Hey <@${data.recipientDiscordId}>, <@${data.senderDiscordId}> just starred your project \`${data.project}\` on GitHub!` };
+    case 'linkedin':
+      return { content: `Hey <@${data.recipientDiscordId}>, <@${data.senderDiscordId}> just endorsed you on LinkedIn!` };
+    case 'mvf':
+      return { content: `Hey <@${data.recipientDiscordId}>, you've made the most commits to open source project this week, congratulations!` };
+    default:
+      return {};
+  }
+}
+
 // Enable CORS for all methods
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -50,7 +63,12 @@ app.post(path, function (req, res) {
         await fetch(process.env.DISCORD_WEBHOOK_URL, {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ content: `Hey <@${recipientDiscordId}>, <@${senderDiscordId}> just starred your project \`${req.body.project}\` on GitHub!` }),
+          body: JSON.stringify(getDiscordMessage({
+            messageType: req.body.message_type,
+            recipientDiscordId,
+            senderDiscordId,
+            project: req.body.project,
+          })),
         });
         res.json({ success: true });
       } catch (err) {
