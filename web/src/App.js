@@ -11,14 +11,16 @@ import Events from './Pages/Events';
 import Jobs from './Pages/Jobs';
 import About from './Pages/About';
 import GetHelp from './Pages/GetHelp';
+import Templates from './Pages/Templates';
 
 import "./App.css";
 import Header from "./Components/Header";
 import "font-awesome/css/font-awesome.min.css";
-import { fetchFellows, fetchEvents } from "./Components";
+import { fetchFellows, fetchEvents, fetchActiveFellow, fetchSingleFellow } from "./Components";
 
 class App extends React.Component {
   state = {
+    activeFellow: "",
     fellows: [],
     accessToken: null,
     events: {},
@@ -36,9 +38,13 @@ class App extends React.Component {
 
     if (accessToken) {
       const fellows = await fetchFellows(accessToken);
+
+      const activeFellowGithubId = await fetchActiveFellow(accessToken);
+      const fellow = await fetchSingleFellow(accessToken, activeFellowGithubId);
+
       const events = await fetchEvents(accessToken);
-      console.log(events, fellows);
-      this.setState({ fellows, accessToken, events });
+      // console.log(events, fellows);
+      this.setState({ fellows, accessToken, events, fellow });
     }
   }
 
@@ -62,6 +68,9 @@ class App extends React.Component {
             } />
             <Route path="/events" component={() =>
               <Events accessToken={this.state.accessToken} events={this.state.events} />
+            } />
+            <Route path="/templates" component={() =>
+              <Templates accessToken={this.state.accessToken} fellow={this.state.fellow} />
             } />
             <Route path="/jobs" component={Jobs} />
             <Route path="/about" component={About} />
