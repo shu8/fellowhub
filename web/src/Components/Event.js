@@ -18,7 +18,7 @@ export default function Event(props) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    history.push(`/events/${props.event.id}`)
+    if (!props.extended) history.push(`/events/${props.event.id}`)
   };
 
   return (
@@ -37,6 +37,9 @@ export default function Event(props) {
         <span className="summary">
           {props.event.summary}
         </span>
+        {props.extended && (
+          <a href={props.event.location}>Join event!</a>
+        )}
       </div>
     </a>
   )

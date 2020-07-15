@@ -85,9 +85,8 @@ export default function Events(props) {
     if (event) {
       return (
         <div className="App">
-          <main className="container">
-            Event: {event.summary}
-          </main>
+          <Event event={event} extended />
+          <div className="description" dangerouslySetInnerHTML={{ __html: event.description }} />
         </div>
       );
     } else {
@@ -103,8 +102,6 @@ export default function Events(props) {
 
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
       {createEvents()}
     </div>
   );
