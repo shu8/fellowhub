@@ -1,5 +1,6 @@
 import React from "react";
-import { Heading, FilterList } from "@primer/components";
+import { Heading, FilterList, StyledOcticon } from "@primer/components";
+import { HeartFillIcon } from "@primer/octicons-react";
 
 import jobsData from "../data/jobs.json";
 
@@ -11,7 +12,7 @@ export default function Jobs(props) {
         Jobs!
       </Heading>
       <Heading fontSize={3} mb={5}>
-        Monster list of more job search sites, collected for our fellows:
+        Monster list of job search sites, collected with <StyledOcticon icon={HeartFillIcon} size={24} color="#1d539f" mr={1} /> for our fellows:
       </Heading>
       <FilterList>
         <ul style={{ columns: 3, listStyleType: "none" }}>
