@@ -51,7 +51,7 @@ export default function PrimarySearchAppBar() {
           </a>
         </div>
         <div className="Header-item">
-          <a href="#" className="Header-link">
+          <a href="/about" className="Header-link">
             About
           </a>
         </div>

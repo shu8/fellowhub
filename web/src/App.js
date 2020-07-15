@@ -8,6 +8,7 @@ import Home from './Pages/Home.jsx';
 import Fellows from './Pages/Fellows';
 import Events from './Pages/Events';
 import Jobs from './Pages/Jobs';
+import About from './Pages/About';
 
 import "./App.css";
 import Header from "./Components/Header";
@@ -60,7 +61,8 @@ class App extends React.Component {
             <Route path="/events" component={() =>
               <Events accessToken={this.state.accessToken} events={this.state.events} />
             } />
-            <Route path="/jobs" component={Jobs}/>
+            <Route path="/jobs" component={Jobs} />
+            <Route path="/about" component={About} />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}
