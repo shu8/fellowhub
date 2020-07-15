@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import Profile from "./Profile";
-import SimpleAvatar from "./SimpleAvatar";
-import Pods from "./Pods";
-import Projects from "./Projects";
+import Profile from "../Components/Profile";
+import SimpleAvatar from "../Components/SimpleAvatar";
+import Pods from "../Components/Pods";
+import Projects from "../Components/Projects";
 import babel from "../img/babel.png";
 import amplify from "../img/amplify.png";
 import docsify from "../img/docsify.png";
@@ -14,6 +14,8 @@ import webaverse from "../img/webaverse.ico";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
+
+import octocat from "../img/octocat-white.png";
 
 function TabPanel(props) {
   const { children, tab, value, ...other } = props;
@@ -57,6 +59,32 @@ export default function Home(props) {
     props.data.map((fellow, i) => (
       <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" key={i} />
     ));
+
+  if (!props.accessToken) {
+    return (
+      <div className="App">
+        <div className="login">
+          <h1>Login</h1>
+          <p>
+            You must be a <a href="https://fellowship.mlh.io/">MLH Fellow</a>,
+            and a member of the{" "}
+            <a href="https://github.com/MLH-Fellowship">
+              MLH Fellowship GitHub organisation
+            </a>{" "}
+            to use the MLH Fellowbook.
+          </p>
+          <p>Please login with GitHub below</p>
+          <a
+            href="https://github.com/login/oauth/authorize?client_id=22d8bad72f3469cd766c&scope=user&allow_signup=false"
+            className="login-btn"
+          >
+            <img src={octocat} alt="octacat" />
+            <span>Login with GitHub</span>
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>

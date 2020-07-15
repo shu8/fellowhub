@@ -1,19 +1,22 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from './Pages/Home.jsx';
+import Fellows from './Pages/Fellows';
+import Events from './Pages/Events';
+
 import "./App.css";
 import Header from "./Components/Header";
-import Home from "./Components/Home";
 import "font-awesome/css/font-awesome.min.css";
 import { fetchData } from "./Components";
 
 class App extends React.Component {
   state = {
     data: [],
-    search: "",
     accessToken: null,
-  };
-
-  handleInput = (e) => {
-    this.setState({ search: e.target.value.toLowerCase() });
   };
 
   async componentDidMount() {
@@ -34,12 +37,37 @@ class App extends React.Component {
     }
   }
 
+  setAccessToken = token => this.setState({ accessToken: token });
+  setFetchedFellows = data => this.setState({ data });
+
   render() {
     return (
-      <div>
-        <Header />
-        <Home accessToken={this.state.accessToken} data={this.state.data} />
-      </div>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route path="/fellows/:username" render={props =>
+              <Fellows accessToken={this.state.accessToken} {...props} />
+            } />
+            <Route path="/fellows" render={() =>
+              <Fellows accessToken={this.state.accessToken} />
+            } />
+            <Route path="/events/:id" render={props =>
+              <Events accessToken={this.state.accessToken} {...props} />
+            } />
+            <Route path="/events" render={() =>
+              <Events accessToken={this.state.accessToken} />
+            } />
+            <Route path="/">
+              <Home
+                setAccessToken={this.setAccessToken}
+                setFetchedFellows={this.setFetchedFellows}
+                data={this.state.data}
+                accessToken={this.state.accessToken} />
+            </Route>
+          </Switch>
+        </div>
+      </Router >
     );
   }
 }
