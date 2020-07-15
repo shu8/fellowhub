@@ -38,7 +38,7 @@ export default function Event(props) {
           {props.event.summary}
         </span>
         {props.extended && (
-          <a href={props.event.location}>Join event!</a>
+          <a href={props.event.location} target="_blank" rel="noopener noreferrer">Join event!</a>
         )}
       </div>
     </a>

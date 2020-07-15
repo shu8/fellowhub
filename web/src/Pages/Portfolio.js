@@ -25,7 +25,7 @@ function Pull(props) {
         <span style={{ fontWeight: 'bold' }}>{pull.title}</span>
       </Box>
       <Box>
-        <a href={pull.url}>#{number}</a> on GitHub.
+        <a href={pull.url} target="_blank" rel="noopener noreferrer">#{number}</a> on GitHub.
       </Box>
     </BorderBox>
   )
@@ -42,7 +42,7 @@ function Issue(props) {
         <span style={{ fontWeight: 'bold' }}>{issue.title}</span>
       </Box>
       <Box>
-        <a href={issue.url}>#{number}</a> on GitHub.
+        <a href={issue.url} target="_blank" rel="noopener noreferrer">#{number}</a> on GitHub.
       </Box>
     </BorderBox>
   )
@@ -55,7 +55,7 @@ function Standup(props) {
     <BorderBox style={{ padding: '5px', width: '400px', margin: '5px' }} className="standup">
       <Box>
         <Label variant="medium" mr={2} bg={stateColors.OPEN}>{new Date(standup.createdAt).toLocaleString()}</Label>
-        <a href={standup.url}>View on GitHub</a>.
+        <a href={standup.url} target="_blank" rel="noopener noreferrer">View on GitHub</a>.
       </Box>
       <div dangerouslySetInnerHTML={{ __html: standup.body }} />
     </BorderBox>
