@@ -4,11 +4,13 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+
 import Home from './Pages/Home.jsx';
 import Fellows from './Pages/Fellows';
 import Events from './Pages/Events';
 import Jobs from './Pages/Jobs';
 import About from './Pages/About';
+import GetHelp from './Pages/GetHelp';
 
 import "./App.css";
 import Header from "./Components/Header";
@@ -63,6 +65,9 @@ class App extends React.Component {
             } />
             <Route path="/jobs" component={Jobs} />
             <Route path="/about" component={About} />
+            <Route path="/get-help" render={() =>
+              <GetHelp fellows={this.state.fellows} />
+            } />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}
