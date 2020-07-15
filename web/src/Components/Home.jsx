@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Profile from "./Profile";
 import SimpleAvatar from "./SimpleAvatar";
+import Pods from "./Pods";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -82,7 +83,7 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "auto auto auto auto auto",
+              gridTemplateColumns: "auto auto auto auto auto auto",
               gridRowGap: "20px",
             }}
           >
@@ -90,7 +91,10 @@ export default function Home(props) {
           </div>
         </TabPanel>
         <TabPanel tab={tab} value={"pods"}>
-          Pods
+          <Pods
+            name="Mentors"
+            description="The mentors for the MLH Fellowship class."
+          />
         </TabPanel>
         <TabPanel tab={tab} value={"projects"}>
           Projects
