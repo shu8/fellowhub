@@ -1,15 +1,15 @@
 import React from "react";
+import { BorderBox } from "@primer/components";
 
 const Pods = (props) => {
   return (
-    <div
+    <BorderBox
       style={{
         display: "flex",
         justifyContent: "space-between",
-        backgroundColor: "#C0C0C0	",
       }}
     >
-      <div>
+      <div style={{ padding: "20px" }}>
         <p class="h2">{props.name}</p>
         <p class="h5">{props.description}</p>
       </div>
@@ -44,7 +44,7 @@ const Pods = (props) => {
           />
         </div>
       </div>
-    </div>
+    </BorderBox>
   );
 };
 
