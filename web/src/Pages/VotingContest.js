@@ -1,7 +1,12 @@
 import React from "react";
 import { Heading, Box, Text, StyledOcticon } from "@primer/components";
-import { HeartFillIcon, RepoIcon, GitBranchIcon, StarFillIcon } from "@primer/octicons-react";
-import bookPromo from "../img/book-promo.png"
+import {
+  HeartFillIcon,
+  RepoIcon,
+  GitBranchIcon,
+  StarFillIcon,
+} from "@primer/octicons-react";
+import bookPromo from "../img/book-promo.png";
 
 export default function VotingContest() {
   return (
@@ -26,13 +31,18 @@ export default function VotingContest() {
         is
         <b> the most loved fellow</b>: the most positive attitude, the most
         productive contributor, the most patient reviewer, the most diligent
-        organizer, <b>the fellow who does the most to make the MLH Fellowship
-        experience the best it can be — your favorite fellow</b>.
+        organizer,{" "}
+        <b>
+          the fellow who does the most to make the MLH Fellowship experience the
+          best it can be — your favorite fellow
+        </b>
+        .
       </Text>
       <Text as="p" sx={{ fontSize: 2 }}>
         Based on the result of the voting contest, we will be{" "}
         <b>rewarding the Fellowship's favorite fellow</b> by helping them get a
-        job! We have <b>real-world prizes</b> here in store. Read on to find out more!
+        job! We have <b>real-world prizes</b> here in store. Read on to find out
+        more!
       </Text>
 
       <Heading fontSize={4} mb={3} mt={5}>
@@ -64,8 +74,11 @@ export default function VotingContest() {
             are legit!
           </li>
         </ol>
-        <div style={{marginTop: "10px"}}>
-        <b>The fellow who has received the most votes by the end of the voting period wins!</b>
+        <div style={{ marginTop: "10px" }}>
+          <b>
+            The fellow who has received the most votes by the end of the voting
+            period wins!
+          </b>
         </div>
       </Box>
 
@@ -87,20 +100,28 @@ export default function VotingContest() {
       </Box>
 
       <Heading fontSize={4} mb={3} mt={5}>
-        <StyledOcticon icon={StarFillIcon} size={28} color="#1d539f" mr={1} /> Prizes
+        <StyledOcticon icon={StarFillIcon} size={28} color="#1d539f" mr={1} />{" "}
+        Prizes
       </Heading>
       <Box sx={{ fontSize: 2 }}>
         <Text>
-         <b>
-            The biggest prize is knowing that you are the
-            most loved fellow of the entire 160-fellow Fellowship!
-          </b> <StyledOcticon icon={HeartFillIcon} size={18} color="#1d539f" />
+          <b>
+            The biggest prize is knowing that you are the most loved fellow of
+            the entire 160-fellow Fellowship!
+          </b>{" "}
+          <StyledOcticon icon={HeartFillIcon} size={18} color="#1d539f" />
         </Text>
         <Text as="p" mt={2}>
-          Added to that is the <b>Future Makers Creator Package, worth USD
-          250</b>, which includes:
+          Added to that is the{" "}
+          <b>Future Makers Creator Package, worth USD 250</b>, which includes:
         </Text>
-        <ul style={{marginLeft: "30px", marginTop: "15px", marginBottom: "20px"}}>
+        <ul
+          style={{
+            marginLeft: "30px",
+            marginTop: "15px",
+            marginBottom: "20px",
+          }}
+        >
           <li>
             The Coding Career Handbook by Swyx at{" "}
             <a href="https://www.learninpublic.org/#buy">LearnInPublic.org</a>
@@ -128,8 +149,8 @@ export default function VotingContest() {
           </li>
         </ul>
         Generously donated by <a href="https://twitter.com/swyx">Swyx</a>!
-        <div style={{marginTop: "20px"}}>
-        <img src={bookPromo}/>
+        <div style={{ marginTop: "20px" }}>
+          <img src={bookPromo} />
         </div>
       </Box>
     </div>
