@@ -20,6 +20,9 @@ import AliceVision from "../img/AliceVision.png";
 import keras from "../img/keras.png";
 import bentoml from "../img/bentoml.png";
 import scikit_learn from "../img/scikit_learn.png";
+import julia from "../img/julia.svg";
+import docusaurus from "../img/docusaurus.png";
+import Nextjs from "../img/Nextjs.png";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -235,7 +238,7 @@ export default function Home(props) {
               name="Julia"
               description="Julia is a high-level, high-performance, dynamic programming language."
               alt="Julia"
-              image={docsify}
+              image={julia}
               link="https://github.com/JuliaLang"
             />
             <Projects
@@ -249,14 +252,14 @@ export default function Home(props) {
               name="Next.js"
               description="Next.js is a Production grade React applications that scale."
               alt="Next.js"
-              image={docsify}
+              image={Nextjs}
               link="https://github.com/vercel"
             />
             <Projects
               name="Docusaurus"
               description="Docusaurus is an open-source static site generator that converts Markdown files to a documentation website."
               alt="Docusaurus"
-              image={docsify}
+              image={docusaurus}
               link="https://github.com/facebook/docusaurus"
             />
             <Projects
@@ -267,16 +270,16 @@ export default function Home(props) {
               link="https://github.com/oviohub/opportunities/issues/10"
             />
             <Projects
-              name="Keras"
+              name="React"
               description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              alt="React"
               image={docsify}
               link="https://github.com/keras-team"
             />
             <Projects
-              name="Keras"
+              name="React Native"
               description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              alt="ReactNative"
               image={docsify}
               link="https://github.com/keras-team"
             />
