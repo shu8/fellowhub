@@ -12,6 +12,14 @@ import n8n from "../img/n8n.png";
 import sheetjs from "../img/sheetjs.png";
 import webaverse from "../img/webaverse.ico";
 import homebrew from "../img/homebrew.png";
+import devto from "../img/devto.png";
+import ohmyzsh from "../img/ohmyzsh.png";
+import circuitPython from "../img/circuitPython.png";
+import beagleBoard from "../img/beagleBoard.png";
+import AliceVision from "../img/AliceVision.png";
+import keras from "../img/keras.png";
+import bentoml from "../img/bentoml.png";
+import scikit_learn from "../img/scikit_learn.png";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -170,14 +178,14 @@ export default function Home(props) {
               name="Dev.to"
               description="A constructive and inclusive social network. Open source and radically transparent."
               alt="Dev.to"
-              image={docsify}
+              image={devto}
               link="https://github.com/thepracticaldev"
             />
             <Projects
               name="Oh-My-Zsh"
               description="Oh-My-Zsh is a delightful, open source, community-driven framework for managing your ZSH configuration."
               alt="Oh-My-Zsh"
-              image={docsify}
+              image={ohmyzsh}
               link="https://github.com/ohmyzsh"
             />
             <Projects
@@ -186,84 +194,77 @@ export default function Home(props) {
               experimenting and learning to code on low-cost microcontroller
               boards."
               alt="CircuitPython"
-              image={docsify}
+              image={circuitPython}
               link="https://github.com/adafruit/circuitpython"
             />
             <Projects
               name="BeagleBoard"
               description="The BeagleBoard is a low-power open-source single-board computer produced by Texas Instruments in association with Digi-Key and Newark element14."
-              image={docsify}
+              image={beagleBoard}
               link="https://github.com/beagleboard/"
             />
             <Projects
               name="AliceVision"
               description="AliceVision is a Photogrammetric Computer Vision framework for 3D Reconstruction and Camera Tracking."
               alt="AliceVision"
-              image={docsify}
+              image={AliceVision}
               link="https://github.com/alicevision"
             />
             <Projects
               name="Keras"
               description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
               alt="Keras"
-              image={docsify}
-              link="https://github.com/keras-team"
-            />
-            <Projects
-              name="Keras"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
-              image={docsify}
+              image={keras}
               link="https://github.com/keras-team"
             />
             <Projects
               name="BentoML"
               description="BentoML is an open-source framework for high-performance machine learning model serving.."
               alt="BentoML"
-              image={docsify}
+              image={bentoml}
               link="https://github.com/bentoml"
             />
             <Projects
               name="Scikit-learn"
               description="Scikit-learn is a free software machine learning library for the Python programming language."
               alt="Scikit-learn"
-              image={docsify}
+              image={scikit_learn}
               link="https://github.com/scikit-learn"
             />
             <Projects
-              name="Keras"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              name="Julia"
+              description="Julia is a high-level, high-performance, dynamic programming language."
+              alt="Julia"
               image={docsify}
-              link="https://github.com/keras-team"
+              link="https://github.com/JuliaLang"
             />
             <Projects
-              name="Keras"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              name="SciML"
+              description="SciML is anOpen source software for scientific machine learning"
+              alt="SciML"
               image={docsify}
-              link="https://github.com/keras-team"
+              link="https://github.com/SciML"
             />
             <Projects
-              name="Keras"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              name="Next.js"
+              description="Next.js is a Production grade React applications that scale."
+              alt="Next.js"
               image={docsify}
-              link="https://github.com/keras-team"
+              link="https://github.com/vercel"
             />
             <Projects
-              name="Keras"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              name="Docusaurus"
+              description="Docusaurus is an open-source static site generator that converts Markdown files to a documentation website."
+              alt="Docusaurus"
               image={docsify}
-              link="https://github.com/keras-team"
+              link="https://github.com/facebook/docusaurus"
             />
             <Projects
-              name="Keras"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
-              alt="Keras"
+              name="World Food Programme's PRISM project"
+              description="The World Food Programme (WFP) is the food-assistance branch of the United Nations and the world's largest humanitarian organization addressing hunger and promoting food security."
+              alt="WFP"
               image={docsify}
-              link="https://github.com/keras-team"
+              link="https://github.com/oviohub/opportunities/issues/10"
             />
             <Projects
               name="Keras"
