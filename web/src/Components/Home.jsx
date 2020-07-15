@@ -95,8 +95,11 @@ export default function Home(props) {
             name="Mentors"
             description="The mentors for the MLH Fellowship class."
           />
-          <Pods name="0.0.1" description="Sea Saws." />
-          <Pods name="0.0.2" description="The Podist" />
+          <Pods name="0.0.1" description="Sudo Seals" />
+          <Pods name="0.1.1" description="Smart Sea Cucumbers" />
+          <Pods name="0.1.2" description="Baby Shark" />
+          <Pods name="0.2.1" description="Distributed Dodos" />
+          <Pods name="0.2.2" description="JavaScript Jellies" />
         </TabPanel>
         <TabPanel tab={tab} value={"projects"}>
           Projects
