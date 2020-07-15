@@ -1,8 +1,11 @@
 import React from "react"
+import { useHistory, Link } from "react-router-dom";
 import { StyledOcticon, Heading } from "@primer/components";
 import { HeartFillIcon } from "@primer/octicons-react";
 
 export default function Home(props) {
+  const history = useHistory();
+
   return (
     <div className='App'>
       <Heading fontSize={7} mb={3}>
@@ -14,16 +17,24 @@ export default function Home(props) {
         <strong>FellowHub</strong> is your all-in-one resource for all things Fellowship-related:
         <ul style={{ paddingLeft: '25px' }}>
           <li>
-            <a href="/">Find your fellow Fellows</a>
+            <Link onClick={() => history.push("/")}>
+              Find your fellow Fellows
+            </Link>
           </li>
           <li>
-            <a href="/events">Keep track of upcoming events from the MLH Fellowship Events Calendar</a>
+            <Link onClick={() => history.push("/events")}>
+              Keep track of upcoming events from the MLH Fellowship Events Calendar
+            </Link>
           </li>
           <li>
-            <a href="/jobs">Find job sites curated for the Fellows</a>
+            <Link onClick={() => history.push("/jobs")}>
+              Find job sites curated for the Fellows
+            </Link>
           </li>
           <li>
-            <a href="/portfolio">Share your own or view other Fellows' personalised portfolios, reflecting all the amazing work done during the Fellowship!</a>
+            <Link onClick={() => history.push("/fellows")}>
+              Share your own or view other Fellows' personalised portfolios, reflecting all the amazing work done during the Fellowship!
+            </Link>
           </li>
         </ul>
       </p>

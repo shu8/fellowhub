@@ -31,7 +31,12 @@ export default function Home(props) {
 
   const createAvatars = () =>
     props.fellows.map((fellow, i) => (
-      <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" key={i} />
+      <SimpleAvatar
+        bgPhoto={fellow.avatar_url}
+        cta="View profile"
+        ctaUrl={`/fellows/${fellow.username}`}
+        key={i}
+      />
     ));
 
   if (!props.accessToken) {
@@ -40,9 +45,20 @@ export default function Home(props) {
         <div className="login">
           <h1>Login</h1>
           <p>
-            You must be a <a href="https://fellowship.mlh.io/">MLH Fellow</a>,
-            and a member of the{" "}
-            <a href="https://github.com/MLH-Fellowship">
+            You must be a{" "}
+            <a
+              href="https://fellowship.mlh.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MLH Fellow
+            </a>
+            , and a member of the{" "}
+            <a
+              href="https://github.com/MLH-Fellowship"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               MLH Fellowship GitHub organisation
             </a>{" "}
             to use the MLH Fellowbook.
