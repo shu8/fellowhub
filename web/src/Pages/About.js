@@ -21,7 +21,7 @@ export default function Home(props) {
             <a href="/jobs">Find job sites curated for the Fellows</a>
           </li>
           <li>
-            <a href="/portfolio">Share your own or view other Fellows' personalised portfolios, reflecting all the amazing work done during the Fellowship!</a>
+            <a href="/fellows">Share your own or view other Fellows' personalised portfolios, reflecting all the amazing work done during the Fellowship!</a>
           </li>
         </ul>
       </p>
