@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Avatar } from "@primer/components";
+import { useHistory } from 'react-router-dom';
 
 const CTA = styled.div`
   font-size: 15px;
@@ -21,27 +21,26 @@ const CTAText = styled.span`
   font-weight: 500;
 `;
 
-const SimpleAvatar = ({
+export default function SimpleAvatar({
   bgPhoto,
   cta,
   ctaColor = "white",
   ctaBg = "#006EFE",
-}) => (
-  <div className='custom-avatar'>
-    <Avatar src={bgPhoto} size={100} mb={4} />
-    {cta && (
-      <CTA bgColor={ctaBg} color={ctaColor} className='cta'>
-        <CTAText>{cta}</CTAText>
-      </CTA>
-    )}
-  </div>
-);
+  ctaUrl,
+} = {}) {
+  const history = useHistory();
+  const handleCTAClick = () => {
+    if (ctaUrl) history.push(ctaUrl);
+  }
 
-SimpleAvatar.propTypes = {
-  bgPhoto: PropTypes.string,
-  cta: PropTypes.string,
-  ctaColor: PropTypes.string,
-  ctaBg: PropTypes.string,
+  return (
+    <div className='custom-avatar'>
+      <Avatar src={bgPhoto} size={100} mb={4} />
+      {cta && (
+        <CTA bgColor={ctaBg} color={ctaColor} className='cta' onClick={handleCTAClick}>
+          <CTAText>{cta}</CTAText>
+        </CTA>
+      )}
+    </div>
+  );
 };
-
-export default SimpleAvatar;

@@ -31,7 +31,12 @@ export default function Home(props) {
 
   const createAvatars = () =>
     props.fellows.map((fellow, i) => (
-      <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" key={i} />
+      <SimpleAvatar
+        bgPhoto={fellow.avatar_url}
+        cta="View profile"
+        ctaUrl={`/fellows/${fellow.username}`}
+        key={i}
+      />
     ));
 
   if (!props.accessToken) {
