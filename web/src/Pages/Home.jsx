@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Profile from "../Components/Profile";
 import SimpleAvatar from "../Components/SimpleAvatar";
@@ -12,36 +11,11 @@ import n8n from "../img/n8n.png";
 import sheetjs from "../img/sheetjs.png";
 import webaverse from "../img/webaverse.ico";
 
-import { TabNav, Box, Text } from "@primer/components";
+import TabPanel from "../Components/TabPanel";
+import { TabNav } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
 
 import octocat from "../img/octocat-white.png";
-
-function TabPanel(props) {
-  const { children, tab, value, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={tab !== value}
-      id={`scrollable-force-tabpanel-${value}`}
-      aria-labelledby={`scrollable-force-tab-${value}`}
-      {...other}
-    >
-      {tab === value && (
-        <Box p={3} as="div">
-          <Text as="div">{children}</Text>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  tab: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-};
 
 const useStyles = makeStyles((theme) => ({
   root: {

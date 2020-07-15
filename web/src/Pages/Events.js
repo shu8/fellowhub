@@ -1,67 +1,111 @@
 import React from "react";
-import Search from "../Components/Search";
+import { SubNav, TextInput } from "@primer/components";
 
 import Event from "../Components/Event";
+import TabPanel from "../Components/TabPanel";
 
-export default class Events extends React.Component {
-  state = { search: "" };
+import { SearchIcon } from "@primer/octicons-react";
 
-  handleInput = (e) => {
-    this.setState({ search: e.target.value.toLowerCase() });
-  };
+export default function Events(props) {
+  const [tab, setTab] = React.useState("upcoming");
+  const [search, setSearch] = React.useState("");
 
-  createEvents() {
-    return this.props.events.items.filter(e => e.summary && e.start.dateTime).map((event, i) => (
-      <Event event={event} key={i} />
-    ));
-  }
+  const createEvents = () => {
+    const events = props.events.items
+      .filter(e => e.summary && e.start.dateTime)
+      .filter(e => search ? e.summary.toLowerCase().includes(search) : true)
+      .sort((a, b) => new Date(a.end.dateTime) - new Date(b.end.dateTime));
 
-  render() {
-    if (!this.props.events.items) return <div />
-
-    const id = this.props.match && this.props.match.params
-      ? this.props.match.params.id
-      : null;
-
-    if (id) {
-      const event = this.props.events.items.find(e => e.id === id);
-      if (event) {
-        return (
-          <div className="App">
-            <main className="container">
-              Event: {event.summary}
-            </main>
-          </div>
-        );
-      } else {
-        return (
-          <div className="App">
-            <main className="container">
-              <h1>No event found for ID {id}!</h1>
-            </main>
-          </div>
-        );
-      }
-    }
+    const pastEvents = events.filter(e => new Date(e.end.dateTime).getTime() < new Date().getTime());
+    const futureEvents = events.filter(e => new Date(e.end.dateTime).getTime() >= new Date().getTime());
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <div className="Search">
-            <Search handleInput={this.handleInput} />
+      <div>
+        <SubNav aria-label="Main">
+          <SubNav.Links>
+            <SubNav.Link
+              href="#upcoming"
+              selected={tab === "upcoming"}
+              onClick={() => setTab("upcoming")}>
+              Upcoming Events
+          </SubNav.Link>
+            <SubNav.Link
+              href="#past"
+              selected={tab === "past"}
+              onClick={() => setTab("past")}>
+              Past Events
+          </SubNav.Link>
+          </SubNav.Links>
+
+          <TextInput
+            type="search"
+            icon={SearchIcon}
+            width={320}
+            onInput={(e) => setSearch(e.target.value.toLowerCase())} />
+        </SubNav>
+
+        <TabPanel tab={tab} value={"upcoming"}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto auto",
+              gridRowGap: "20px",
+            }}
+          >
+            {futureEvents.map((event, i) => (
+              <Event event={event} key={i} />
+            ))}
           </div>
-        </header>
-        <h1>Events</h1>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "auto auto auto",
-            gridRowGap: "20px",
-          }}
-        >
-          {this.createEvents()}
-        </div>
-      </div>
+        </TabPanel>
+        <TabPanel tab={tab} value={"past"}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto auto",
+              gridRowGap: "20px",
+            }}
+          >
+            {pastEvents.map((event, i) => (
+              <Event event={event} key={i} />
+            ))}
+          </div>
+        </TabPanel>
+      </div >
     );
+  };
+
+  if (!props.events.items) return <div />
+
+  const id = props.match && props.match.params
+    ? props.match.params.id
+    : null;
+
+  if (id) {
+    const event = props.events.items.find(e => e.id === id);
+    if (event) {
+      return (
+        <div className="App">
+          <main className="container">
+            Event: {event.summary}
+          </main>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <main className="container">
+            <h1>No event found for ID {id}!</h1>
+          </main>
+        </div>
+      );
+    }
   }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+      </header>
+      {createEvents()}
+    </div>
+  );
 }
