@@ -107,11 +107,6 @@ const addExtraData = async users => {
 
 // If we want to upload from existing file, just don't pass in anything!
 const uploadUsers = async (users) => {
-  if (!users) {
-    const usersFile = fs.readFileSync('./allUsers.json', 'utf8');
-    users = JSON.parse(usersFile);
-  }
-
   const usersCount = users.length;
 
   // Batch of 20s, avoid API timeouts
@@ -158,7 +153,10 @@ const saveUsers = async users => {
 
 const useSaved = true;
 if (useSaved) {
-  uploadUsers();
+  fs.promises.readFile('./allUsers.json', 'utf8')
+    .then(users => JSON.parse(users))
+    .then(users => addExtraData(users))
+    .then(users => uploadUsers(users));
 } else {
   fetchUsers()
     .then(users => addExtraData(users))
