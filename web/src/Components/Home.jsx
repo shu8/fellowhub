@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Profile from "./Profile";
 import SimpleAvatar from "./SimpleAvatar";
 import Pods from "./Pods";
+import Projects from "./Projects";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -102,7 +103,20 @@ export default function Home(props) {
           <Pods name="0.2.2" description="JavaScript Jellies" />
         </TabPanel>
         <TabPanel tab={tab} value={"projects"}>
-          Projects
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto",
+              gridGap: "20px",
+            }}
+          >
+            <Projects />
+            <Projects />
+            <Projects />
+            <Projects />
+            <Projects />
+            <Projects />
+          </div>
         </TabPanel>
       </div>
     </div>
