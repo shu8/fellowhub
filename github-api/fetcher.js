@@ -99,7 +99,7 @@ const addExtraData = async users => {
     const skills = JSON.parse(userSkillsString);
     users.forEach((u, i) => {
       if (skills[u.username]) {
-        u.skills = [...u.skills.split(','), ...skills[u.username]];
+        u.skills = [...(u.skills ? u.skills.split(',') : []), ...skills[u.username]];
 
         // Remove duplicates
         u.skills = [...new Set(u.skills)].join(',');
@@ -161,6 +161,7 @@ if (useSaved) {
   fs.promises.readFile('./allUsers.json', 'utf8')
     .then(users => JSON.parse(users))
     .then(users => addExtraData(users))
+    .then(users => saveUsers(users))
     .then(users => uploadUsers(users));
 } else {
   fetchUsers()
