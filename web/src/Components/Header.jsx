@@ -31,12 +31,12 @@ export default function PrimarySearchAppBar() {
           />
         </div>
         <div className="Header-item">
-          <a href="#" className="Header-link">
+          <a href="/" className="Header-link">
             Home
           </a>
         </div>
         <div className="Header-item">
-          <a href="#" className="Header-link">
+          <a href="/events" className="Header-link">
             Events
           </a>
         </div>

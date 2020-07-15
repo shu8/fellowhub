@@ -12,12 +12,13 @@ import Jobs from './Pages/Jobs';
 import "./App.css";
 import Header from "./Components/Header";
 import "font-awesome/css/font-awesome.min.css";
-import { fetchData } from "./Components";
+import { fetchFellows, fetchEvents } from "./Components";
 
 class App extends React.Component {
   state = {
-    data: [],
+    fellows: [],
     accessToken: null,
+    events: {},
   };
 
   async componentDidMount() {
@@ -31,15 +32,15 @@ class App extends React.Component {
     }
 
     if (accessToken) {
-      const fetchedData = await fetchData(accessToken);
-      console.log(fetchedData);
-      if (!fetchedData || !fetchedData.length) accessToken = null;
-      this.setState({ data: fetchedData, accessToken });
+      const fellows = await fetchFellows(accessToken);
+      const events = await fetchEvents(accessToken);
+      console.log(events, fellows);
+      this.setState({ fellows, accessToken, events });
     }
   }
 
-  setAccessToken = token => this.setState({ accessToken: token });
-  setFetchedFellows = data => this.setState({ data });
+  setAccessToken = accessToken => this.setState({ accessToken });
+  setFetchedFellows = fellows => this.setState({ fellows });
 
   render() {
     return (
@@ -47,29 +48,29 @@ class App extends React.Component {
         <div>
           <Header />
           <Switch>
-            <Route path="/fellows/:username" render={props =>
+            <Route path="/fellows/:username" component={props =>
               <Fellows accessToken={this.state.accessToken} {...props} />
             } />
-            <Route path="/fellows" render={() =>
+            <Route path="/fellows" component={() =>
               <Fellows accessToken={this.state.accessToken} />
             } />
-            <Route path="/events/:id" render={props =>
-              <Events accessToken={this.state.accessToken} {...props} />
+            <Route path="/events/:id" component={props =>
+              <Events accessToken={this.state.accessToken} events={this.state.events} {...props} />
             } />
-            <Route path="/events" render={() =>
-              <Events accessToken={this.state.accessToken} />
+            <Route path="/events" component={() =>
+              <Events accessToken={this.state.accessToken} events={this.state.events} />
             } />
             <Route path="/jobs" component={Jobs}/>
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}
                 setFetchedFellows={this.setFetchedFellows}
-                data={this.state.data}
+                fellows={this.state.fellows}
                 accessToken={this.state.accessToken} />
             </Route>
           </Switch>
         </div>
-      </Router >
+      </Router>
     );
   }
 }
