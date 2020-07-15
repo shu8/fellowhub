@@ -13,7 +13,7 @@ export const fetchData = async (accessToken) => {
 
     return response.data;
   } catch (error) {
-    return [];
     console.log(error);
+    return [];
   }
 };

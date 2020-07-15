@@ -1,3 +1,5 @@
+@import "./primer.css";
+
 .App {
   /* border: 2px solid; */
 }
@@ -52,6 +54,10 @@
   color: white;
   background-color: gray;
   text-transform: uppercase;
+}
+
+.custom-avatar:hover .cta {
+  opacity: 1;
 }
 
 @media screen and (max-width: 900px) {
