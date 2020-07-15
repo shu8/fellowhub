@@ -45,6 +45,36 @@ export const fetchFellows = async (accessToken) => {
   }
 };
 
+export const fetchFellow = async (username, accessToken) => {
+  try {
+    const response = await axios.get(`${apiUrl}/fellows/${username}`, {
+      headers: {
+        Authorization: accessToken,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+export const fetchStandups = async (username, accessToken, limit = 10) => {
+  try {
+    const response = await axios.get(`${apiUrl}/standups?user=${username}&limit=${limit}`, {
+      headers: {
+        Authorization: accessToken,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
 export const fetchEvents = async (accessToken) => {
   try {
     const response = await axios.get(`${apiUrl}/events`, {

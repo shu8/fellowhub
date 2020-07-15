@@ -20,7 +20,7 @@ export default function Jobs(props) {
             return (
               <FilterList.Item>
                 <li>
-                  <a href={jobsData[jobSite]}>{jobSite}</a>
+                  <a href={jobsData[jobSite]} target="_blank" rel="noopener noreferrer">{jobSite}</a>
                 </li>
               </FilterList.Item>
             );

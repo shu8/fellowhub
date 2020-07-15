@@ -57,6 +57,13 @@
             "privacy": {
                 "open": true
             }
+        },
+        {
+            "name": "/discord-message",
+            "lambdaFunction": "discordwebhookendpoint",
+            "privacy": {
+                "open": true
+            }
         }
     ],
     "resourceName": "fellowbookapi",
@@ -79,6 +86,9 @@
         },
         {
             "lambdaFunction": "calendarendpoint"
+        },
+        {
+            "lambdaFunction": "discordwebhookendpoint"
         }
     ],
     "privacy": {
@@ -135,7 +145,15 @@
                 "Name",
                 "Arn"
             ]
+        },
+        {
+            "category": "function",
+            "resourceName": "discordwebhookendpoint",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
         }
     ],
-    "uuid": "ed49f10a"
+    "uuid": "5e2dbfdd"
 }

@@ -115,6 +115,25 @@
             "build": true,
             "providerPlugin": "awscloudformation",
             "service": "Lambda"
+        },
+        "discordwebhookendpoint": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda",
+            "dependsOn": [
+                {
+                    "category": "storage",
+                    "resourceName": "fellowsdb",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ],
+                    "attributeEnvMap": {
+                        "Name": "TABLE_NAME",
+                        "Arn": "TABLE_ARN"
+                    }
+                }
+            ]
         }
     },
     "auth": {},
@@ -166,6 +185,14 @@
                 {
                     "category": "function",
                     "resourceName": "calendarendpoint",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                },
+                {
+                    "category": "function",
+                    "resourceName": "discordwebhookendpoint",
                     "attributes": [
                         "Name",
                         "Arn"

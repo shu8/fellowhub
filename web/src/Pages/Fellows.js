@@ -1,6 +1,6 @@
 import React from "react";
 
-import Search from "../Components/Search";
+import SimpleAvatar from "../Components/SimpleAvatar";
 
 export default class Fellows extends React.Component {
   state = { search: "" };
@@ -9,26 +9,30 @@ export default class Fellows extends React.Component {
     this.setState({ search: e.target.value.toLowerCase() });
   };
 
+  createAvatars() {
+    console.log(this.props)
+    return this.props.fellows.map((fellow, i) => (
+      <SimpleAvatar
+        bgPhoto={fellow.avatar_url}
+        cta="View profile"
+        ctaUrl={`/fellows/${fellow.username}`}
+        key={i}
+      />
+    ));
+  }
+
   render() {
-    let username;
-    if (this.props.match && this.props.match.params) username = this.props.match.params.username;
-
-    if (username) {
-      return (
-        <div className="App">
-          <main className="container">Fellow: {username}</main>
-        </div>
-      );
-    }
-
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="Search">
-            <Search handleInput={this.handleInput} />
-          </div>
-        </header>
-        <main className="container">Fellows</main>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "auto auto auto auto auto auto",
+            gridRowGap: "20px",
+          }}
+        >
+          {this.createAvatars()}
+        </div>
       </div>
     );
   }
