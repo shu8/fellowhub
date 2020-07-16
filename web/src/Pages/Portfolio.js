@@ -181,7 +181,7 @@ export default class Portfolio extends React.Component {
     );
   }
 
-  renderGithubExchangeTab(props) {
+  renderGithubExchangeTab() {
     let repos;
     if (this.state.fellow.pinnedRepos && this.state.fellow.pinnedRepos.length) {
       repos = this.state.fellow.pinnedRepos;
@@ -196,9 +196,9 @@ export default class Portfolio extends React.Component {
         {repos.map(r =>
           <Repo
             repo={r}
-            accessToken={props.accessToken}
-            recipient={props.username}
-            sender={props.loggedInUser.username}
+            accessToken={this.props.accessToken}
+            recipient={this.props.username}
+            sender={this.props.loggedInUser.username}
           />
         )}
       </div>
@@ -306,7 +306,7 @@ export default class Portfolio extends React.Component {
                 <br />
                 You can even use FellowHub to discover open source projects by Fellows you work with.
               </p>
-              {this.renderGithubExchangeTab(this.props)}
+              {this.renderGithubExchangeTab()}
             </TabPanel>
 
             <TabPanel tab={this.state.exchangeTab} value={"linkedin"}>
@@ -315,7 +315,7 @@ export default class Portfolio extends React.Component {
                 <br />
                 You can easily copy and paste personalised templates below to make the process quick and simple! You are encouraged to edit these to include your personal experiences with the Fellow.
               </p>
-              {this.renderLinkedinExchangeTab(this.props)}
+              {this.renderLinkedinExchangeTab()}
             </TabPanel>
           </div>
         </TabPanel>
