@@ -80,9 +80,7 @@ class App extends React.Component {
             <Route path="/get-help" render={() =>
               <GetHelp fellows={this.state.fellows} />
             } />
-            <Route path="/voting-contest" render={() =>
-              <VotingContest accessToken={this.state.accessToken} />
-            } />
+            <Route path="/voting-contest" component={VotingContest} />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}
