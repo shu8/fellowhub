@@ -68,7 +68,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-mlhfellowbook-dev-215635-deployment",
-					"S3Key": "amplify-builds/mostvaluablefellow-5665576f2b6663655657-build.zip"
+					"S3Key": "amplify-builds/mostvaluablefellow-77633644526546774a4e-build.zip"
 				}
 			}
 		},
