@@ -22,9 +22,18 @@ import bentoml from "../img/bentoml.png";
 import scikit_learn from "../img/scikit_learn.png";
 import julia from "../img/julia.svg";
 import docusaurus from "../img/docusaurus.png";
+import wfp from "../img/wfp.png";
 import Nextjs from "../img/Nextjs.png";
-import sciml from "../img/sciml.png";
-import wtp from "../img/wfp.png";
+import react from "../img/react.png";
+import reactNative from "../img/react-native.png";
+import relay from "../img/relay.svg";
+import jest from "../img/jest.png";
+import reactJson from "../img/react-jsonschema-form.png";
+import httpie from "../img/httpie.jpg";
+import pallets from "../img/pallets.png";
+import fastApi from "../img/fastApi.png";
+import typer from "../img/typer.svg";
+import hdi from "../img/HDI.png";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -247,7 +256,7 @@ export default function Home(props) {
               name="SciML"
               description="SciML is anOpen source software for scientific machine learning"
               alt="SciML"
-              image={sciml}
+              image={docsify}
               link="https://github.com/SciML"
             />
             <Projects
@@ -266,24 +275,80 @@ export default function Home(props) {
             />
             <Projects
               name="WFP PRISM project"
-              description="The World Food Programme (WFP) is the food-assistance branch of the United Nations."
+              description="The World Food Programme (WFP) is the food-assistance branch of the United Nations and the world's largest humanitarian organization addressing hunger and promoting food security."
               alt="WFP"
-              image={wtp}
+              image={wfp}
               link="https://github.com/oviohub/opportunities/issues/10"
             />
             <Projects
               name="React"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              description="React is a JavaScript library for building user interfaces. Declarative: React makes it painless to create interactive UIs."
               alt="React"
-              image={docsify}
-              link="https://github.com/keras-team"
+              image={react}
+              link="https://github.com/facebook/react"
             />
             <Projects
               name="React Native"
-              description="Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+              description="A framework for building native apps with React."
               alt="ReactNative"
-              image={docsify}
-              link="https://github.com/keras-team"
+              image={reactNative}
+              link="https://github.com/facebook/react-native"
+            />
+            <Projects
+              name="Relay"
+              description="A JavaScript framework for building data-driven React applications powered by GraphQL, designed from the ground up to be easy to use, extensible and, most of all, performant."
+              alt="relay"
+              image={relay}
+              link="https://github.com/facebook/relay"
+            />
+            <Projects
+              name="Jest"
+              description="A comprehensive JavaScript testing solution. Works out of the box for most JavaScript projects."
+              alt="Jest"
+              image={jest}
+              link="https://github.com/facebook/jest"
+            />
+            <Projects
+              name="React-Jsonschema-Form"
+              description="A React component for building Web forms from JSON Schema."
+              alt="react-jsonschema-form"
+              image={reactJson}
+              link="https://github.com/rjsf-team/react-jsonschema-form"
+            />
+            <Projects
+              name="HTTPie"
+              description="HTTPie is a command-line HTTP client that will make you smile."
+              alt="HTTPie"
+              image={httpie}
+              link="https://github.com/jakubroztocil/httpie"
+            />
+            <Projects
+              name="Pallets"
+              description="The Pallets Projects are a collection of Python web development libraries that were independently developed by Armin Ronacher and later used as the basis of the Flask microframework. "
+              alt="ReactNative"
+              image={pallets}
+              link="https://github.com/pallets"
+            />
+            <Projects
+              name="FastAPI"
+              description="FastAPI framework, high performance, easy to learn, fast to code, ready for production."
+              alt="FastAPI"
+              image={fastApi}
+              link="https://github.com/tiangolo/fastapi"
+            />
+            <Projects
+              name="Typer"
+              description="Typer is a library for building CLI applications that users will love using and developers will love creating."
+              alt="Typer"
+              image={typer}
+              link="https://github.com/tiangolo/typer"
+            />
+            <Projects
+              name="howdoi"
+              description="instant coding answers via the command line."
+              alt="howdoi"
+              image={hdi}
+              link="https://github.com/gleitz/howdoi"
             />
           </div>
         </TabPanel>
