@@ -73,6 +73,7 @@ class App extends React.Component {
                   <Portfolio
                     username={username}
                     accessToken={this.state.accessToken}
+                    loggedInUser={this.state.fellow}
                   />
                 );
               }}

@@ -127,13 +127,17 @@ a.event {
   width: 25%;
 }
 
-.choose-tech-btn {
+.blue-btn {
   background-color: #1d539f !important;
   color: white !important;
 }
 
-.choose-tech-btn:hover {
+.blue-btn:hover {
   background-color: #357ee6 !important;
+}
+
+.blue-btn:disabled {
+  background-color: grey !important;
 }
 
 .portfolio .portfolio-header {
@@ -172,6 +176,42 @@ a.event {
 
 .portfolio .standup ul {
   padding-left: 30px;
+}
+
+.portfolio .repo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.portfolio .repo .stats-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio .repo .stats-wrapper .stars-forks {
+  padding-top: 5px;
+}
+
+.portfolio .repo .stats-wrapper .stars-forks a {
+  text-decoration: none;
+}
+
+.portfolio .linkedin-template-expander {
+  padding: 5px;
+  margin: 5px;
+}
+
+.portfolio .linkedin-template-expander summary {
+  display: block;
+  max-width: 100%;
+  font-style: italic;
+}
+
+.portfolio button.copy-to-clipboard {
+  float: right;
+  padding: 3px;
 }
 
 @media screen and (max-width: 900px) {

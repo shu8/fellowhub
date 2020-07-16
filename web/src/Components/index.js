@@ -105,3 +105,42 @@ export const fetchEvents = async (accessToken) => {
     return [];
   }
 };
+
+export const starRepo = async (repo, accessToken) => {
+  try {
+    const response = await fetch(`https://api.github.com/user/starred/${repo.owner}/${repo.name}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: "token " + accessToken,
+        'Content-Length': 0,
+      },
+    });
+    console.log(response.status);
+    return response.status === 204;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+export const sendDiscordMessage = async (sender, recipient, messageType, project, accessToken) => {
+  const res = await fetch('https://ld48eii9kk.execute-api.eu-central-1.amazonaws.com/dev/discord-message',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: accessToken,
+      },
+      body: JSON.stringify({
+        sender,
+        recipient,
+        message_type: messageType,
+        project,
+      }),
+    },
+  );
+
+  const json = await res.json();
+  console.log(json);
+  return json.success;
+}

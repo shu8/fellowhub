@@ -34,7 +34,7 @@ export default function GetHelp(props) {
         </h3>
         {!selected && (<p>Choose a technology to filter Fellows and Mentors.</p>)}
         <SelectMenu>
-          <Button as="summary" className="choose-tech-btn">Choose your tech</Button>
+          <Button as="summary" className="blue-btn">Choose your tech</Button>
           <SelectMenu.Modal className="techs-filter">
             <SelectMenu.Header>Filter by Tech</SelectMenu.Header>
             <SelectMenu.Filter placeholder="Filter projects" value={search} aria-label="Filter Projects" onInput={(e) => setSearch(e.target.value.toLowerCase())} onChange={(e) => setSearch(e.target.value.toLowerCase())} />
