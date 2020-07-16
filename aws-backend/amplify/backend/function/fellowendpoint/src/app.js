@@ -66,6 +66,9 @@ const query = username => `
           forks {
             totalCount
           }
+          owner {
+            login
+          }
           shortDescriptionHTML
           stargazers {
             totalCount
@@ -79,6 +82,9 @@ const query = username => `
         url
         stargazers {
           totalCount
+        }
+        owner {
+          login
         }
         name
         forks {
@@ -121,6 +127,7 @@ const addExtraLiveData = async user => {
     if (!r) return;
     r.forks = r.forks.totalCount;
     r.stars = r.stargazers.totalCount;
+    r.owner = r.owner.login;
     delete r.stargazers;
   });
 
@@ -130,6 +137,7 @@ const addExtraLiveData = async user => {
     if (!r) return;
     r.forks = r.forks.totalCount;
     r.stars = r.stargazers.totalCount;
+    r.owner = r.owner.login;
     delete r.stargazers;
   });
 };

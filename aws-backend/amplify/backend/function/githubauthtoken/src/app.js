@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
 
 app.get('/authorise', (req, res) => {
   const code = req.query.code;
-  const url = `https://github.com/login/oauth/access_token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}`;
+  const url = `https://github.com/login/oauth/access_token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}&scope=public_repo`;
 
   fetch(
     url,

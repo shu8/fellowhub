@@ -2,7 +2,7 @@ import React from "react";
 
 import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav } from "@primer/components";
 import {
-  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon
+  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon
 } from "@primer/octicons-react";
 
 import { fetchFellow, fetchStandups } from '../Components';
@@ -62,6 +62,28 @@ function Standup(props) {
   )
 }
 
+function Repo(props) {
+  const { repo } = props;
+
+  return (
+    <BorderBox style={{ padding: '5px', width: '400px', margin: '5px' }} className="repo">
+      <Box>
+        <a href={repo.url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
+      </Box>
+      <div dangerouslySetInnerHTML={{ __html: repo.shortDescriptionHTML }} />
+      <Box style={{ position: 'absolute', bottom: 0 }}>
+        <a href={`${repo.url}/stargazers`}>
+          <StarIcon /> {repo.stars}
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href={`${repo.url}/network/members`}>
+          <GitForkIcon /> {repo.forks}
+        </a>
+      </Box>
+    </BorderBox>
+  )
+}
+
 export default class Portfolio extends React.Component {
   state = {
     fellow: null,
@@ -89,6 +111,23 @@ export default class Portfolio extends React.Component {
 
   setTab(tab) { this.setState({ tab }) }
   setExchangeTab(exchangeTab) { this.setState({ exchangeTab }) };
+
+  renderGithubExchangeTab() {
+    let repos;
+    if (this.state.fellow.pinnedRepos && this.state.fellow.pinnedRepos.length) {
+      repos = this.state.fellow.pinnedRepos;
+    } else if (this.state.fellow.topRepos && this.state.fellow.topRepos.length) {
+      repos = this.state.fellow.topRepos;
+    } else {
+      return <div>Looks like this Fellow doesn't have any active repositories -- you could start a project together!</div>
+    }
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+        {repos.map(r => <Repo repo={r} />)}
+      </div>
+    );
+  }
 
   render() {
     if (!this.props.username) return this.renderError();
@@ -191,6 +230,7 @@ export default class Portfolio extends React.Component {
                 <br />
                 You can even use FellowHub to discover open source projects by Fellows you work with.
               </p>
+              {this.renderGithubExchangeTab()}
             </TabPanel>
 
             <TabPanel tab={this.state.exchangeTab} value={"linkedin"}>
