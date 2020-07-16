@@ -7,7 +7,7 @@ const Projects = (props) => {
       <BorderBox
         style={{
           padding: "20px",
-          height: "250px",
+          minHeight: "250px",
         }}
       >
         <div class="d-table col-12">

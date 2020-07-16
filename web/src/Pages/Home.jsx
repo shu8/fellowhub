@@ -30,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home(props) {
   const classes = useStyles();
-  const [tab, setTab] = React.useState("home");
+  const [tab, setTab] = React.useState(
+    window.location.hash.substr(1) || "home"
+  );
 
   const createAvatars = () =>
     props.fellows
@@ -140,8 +142,9 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "auto auto auto auto auto auto",
-              gridRowGap: "20px",
+              columnGap: "15px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(90px, 1fr))",
+              gridTemplateRows: "repeat(4, 110px)",
             }}
           >
             {createAvatars()}
@@ -154,8 +157,9 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "auto auto",
-              gridGap: "20px",
+              columnGap: "15px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gridTemplateRows: "repeat(4, 400px)",
             }}
           >
             {createProjects()}
