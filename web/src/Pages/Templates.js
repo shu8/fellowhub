@@ -8,26 +8,21 @@ import {
   ChecklistIcon,
   BriefcaseIcon,
   BookmarkFillIcon,
+  HourglassIcon,
 } from "@primer/octicons-react";
 
 const getSkill = (string, number) => string.split(",")[number];
 
 export default function Templates(props) {
   return (
-    <div style={{ backgroundColor: "", margin: "50px", width: "800px" }}>
+    <div className="App">
       {props.fellow === undefined ? (
-        "Loading..."
+        <Heading fontSize={7} mb={3} style={{ textAlign: 'center' }}>
+          <HourglassIcon size={55} /> Loading...
+        </Heading>
       ) : (
-        <>
-          <Heading
-            fontSize={6}
-            mb={3}
-            sx={{
-              borderBottomWidth: 1,
-              borderBottomColor: "border.gray",
-              borderBottomStyle: "solid",
-            }}
-          >
+          <>
+          <Heading fontSize={7} mb={3}>
             Jobhunt Templates!
           </Heading>
 

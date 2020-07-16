@@ -10,7 +10,7 @@ import bookPromo from "../img/book-promo.png";
 
 export default function VotingContest() {
   return (
-    <div style={{ backgroundColor: "", margin: "50px", width: "800px" }}>
+    <div className="App">
       <Heading fontSize={7} mb={3}>
         Voting Contest!
       </Heading>

@@ -7,7 +7,7 @@ import jobsData from "../data/jobs.json";
 export default function Jobs(props) {
   const jobSites = Object.keys(jobsData);
   return (
-    <div style={{ backgroundColor: "", margin: "50px" }}>
+    <div className="App">
       <Heading fontSize={7} mb={3}>
         Jobs!
       </Heading>
