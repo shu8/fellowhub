@@ -8,7 +8,7 @@ import { SearchIcon } from "@primer/octicons-react";
 
 export default function Events(props) {
   const [tab, setTab] = React.useState("upcoming");
-  const [search, setSearch] = React.useState("");
+  const [search, setSearch] = React.useState(props.search);
 
   const createEvents = () => {
     const events = props.events.items

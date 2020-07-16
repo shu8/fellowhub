@@ -102,6 +102,8 @@ class App extends React.Component {
                 <Events
                   accessToken={this.state.accessToken}
                   events={this.state.events}
+                  search={this.state.search}
+                  setSearch={(s) => this.setState({ search: s })}
                 />
               )}
             />
