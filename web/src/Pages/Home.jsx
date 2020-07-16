@@ -102,7 +102,7 @@ export default function Home(props) {
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <Profile />
+      <Profile fellows={props.fellows} />
       <div className={classes.root}>
         <TabNav aria-label="Main">
           <TabNav.Link

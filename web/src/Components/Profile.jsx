@@ -3,7 +3,11 @@ import image from "../img/mlh-logo-color.svg";
 
 import { BorderBox, CounterLabel } from "@primer/components";
 
-function profile() {
+function profile(props) {
+  const mentorsCount = props.fellows.filter((f) => f.pod === "Mentors").length;
+  const staffCount = props.fellows.filter((f) => f.pod === "MLH Staff").length;
+  const fellowsCount = props.fellows.length - mentorsCount - staffCount;
+
   return (
     <div>
       <div>
@@ -35,7 +39,7 @@ function profile() {
                 fontSize: "15px",
               }}
             >
-              160
+              {fellowsCount}
             </CounterLabel>{" "}
             Fellows
           </h3>
@@ -48,7 +52,7 @@ function profile() {
                 fontSize: "15px",
               }}
             >
-              20
+              {mentorsCount}
             </CounterLabel>{" "}
             Mentors
           </h3>
@@ -61,7 +65,7 @@ function profile() {
                 fontSize: "15px",
               }}
             >
-              5
+              {staffCount}
             </CounterLabel>{" "}
             MLH Staff
           </h3>
