@@ -5,7 +5,7 @@ import {
   HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon
 } from "@primer/octicons-react";
 
-import { fetchFellow, fetchStandups, starRepo } from '../Components';
+import { fetchFellow, fetchStandups, starRepo, sendDiscordMessage } from '../Components';
 import TabPanel from "../Components/TabPanel";
 
 const stateColors = {
@@ -62,15 +62,18 @@ function Standup(props) {
   )
 }
 
-const performStar = async (repo, accessToken, setStars) => {
-  const success = await starRepo(repo, accessToken);
-  console.log(success);
-  if (success) setStars(repo.stars + 1);
-  else window.alert('There was an error starring the repo, please try starring directly on GitHub');
+const performStar = async (repo, accessToken, sender, recipient, setStars) => {
+  const success = await starRepo(repo, accessToken, sender, recipient);
+  if (success) {
+    await sendDiscordMessage(sender, recipient, 'star', repo.name, accessToken);
+    setStars(repo.stars + 1);
+  } else {
+    window.alert('There was an error starring the repo, please try starring directly on GitHub');
+  }
 }
 
 function Repo(props) {
-  const { repo, accessToken } = props;
+  const { repo, accessToken, recipient, sender } = props;
   const [stars, setStars] = React.useState(repo.stars);
 
   return (
@@ -90,7 +93,13 @@ function Repo(props) {
           </a>
         </div>
         <div className="star-repo">
-          <Button className="blue-btn" onClick={() => performStar(repo, accessToken, setStars)} disabled={stars !== repo.stars}>
+          <Button
+            className="blue-btn"
+            onClick={() => {
+              performStar(repo, accessToken, sender, recipient, setStars);
+            }}
+            disabled={stars !== repo.stars}
+          >
             <StarIcon /> Star this repo!
           </Button>
         </div>
@@ -127,7 +136,11 @@ export default class Portfolio extends React.Component {
   setTab(tab) { this.setState({ tab }) }
   setExchangeTab(exchangeTab) { this.setState({ exchangeTab }) };
 
-  renderGithubExchangeTab(accessToken) {
+  renderLinkedinExchangeTab(props) {
+    return <div />
+  }
+
+  renderGithubExchangeTab(props) {
     let repos;
     if (this.state.fellow.pinnedRepos && this.state.fellow.pinnedRepos.length) {
       repos = this.state.fellow.pinnedRepos;
@@ -139,7 +152,14 @@ export default class Portfolio extends React.Component {
 
     return (
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-        {repos.map(r => <Repo repo={r} accessToken={accessToken} />)}
+        {repos.map(r =>
+          <Repo
+            repo={r}
+            accessToken={props.accessToken}
+            recipient={props.username}
+            sender={props.loggedInUser.username}
+          />
+        )}
       </div>
     );
   }
@@ -245,7 +265,7 @@ export default class Portfolio extends React.Component {
                 <br />
                 You can even use FellowHub to discover open source projects by Fellows you work with.
               </p>
-              {this.renderGithubExchangeTab(this.props.accessToken)}
+              {this.renderGithubExchangeTab(this.props)}
             </TabPanel>
 
             <TabPanel tab={this.state.exchangeTab} value={"linkedin"}>
@@ -254,6 +274,7 @@ export default class Portfolio extends React.Component {
                 <br />
                 FellowHub provides personalised templates you can use to make the process quick and simple! You are encouraged to edit these to include your personal experiences with the Fellow.
               </p>
+              {this.renderLinkedinExchangeTab(this.props.accessToken)}
             </TabPanel>
           </div>
         </TabPanel>

@@ -106,3 +106,25 @@ export const starRepo = async (repo, accessToken) => {
     return null;
   }
 }
+
+export const sendDiscordMessage = async (sender, recipient, messageType, project, accessToken) => {
+  const res = await fetch('https://ld48eii9kk.execute-api.eu-central-1.amazonaws.com/dev/discord-message',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: accessToken,
+      },
+      body: JSON.stringify({
+        sender,
+        recipient,
+        message_type: messageType,
+        project,
+      }),
+    },
+  );
+
+  const json = await res.json();
+  console.log(json);
+  return json.success;
+}
