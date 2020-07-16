@@ -25,6 +25,8 @@ const UNAUTH = 'UNAUTH';
 const hashKeyPath = '/:' + partitionKeyName;
 const sortKeyPath = hasSortKey ? '/:' + sortKeyName : '';
 
+const fellowshipStartDate = new Date('2020-06-01').getTime();
+
 // declare a new express app
 const app = express()
 app.use(bodyParser.json())
@@ -40,7 +42,7 @@ app.use(function (req, res, next) {
 const query = username => `
 {
   user(login: "${username}") {
-    pullRequests(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
+    pullRequests(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
       nodes {
         bodyHTML
         url
@@ -49,7 +51,7 @@ const query = username => `
         createdAt
       }
     }
-    issues(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
+    issues(first: 40, orderBy: {field: CREATED_AT, direction: DESC}) {
       nodes {
         bodyHTML
         url
@@ -118,8 +120,10 @@ const addExtraLiveData = async user => {
     },
   );
   const json = await res.json();
-  user.pullsActivity = json.data.user.pullRequests.nodes;
-  user.issuesActivity = json.data.user.issues.nodes;
+
+  // Only get pulls/issues since the beginning of the Fellowship
+  user.pullsActivity = json.data.user.pullRequests.nodes.filter(n => new Date(n.createdAt).getTime() > fellowshipStartDate);
+  user.issuesActivity = json.data.user.issues.nodes.filter(n => new Date(n.createdAt).getTime() > fellowshipStartDate);
 
   // Filter to ensure not null
   user.pinnedRepos = json.data.user.pinnedItems.nodes.filter(r => r);
