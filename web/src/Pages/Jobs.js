@@ -19,9 +19,9 @@ export default function Jobs(props) {
           {jobSites.filter(j => {
             if (!props.search) return true;
             return j.toLowerCase().includes(props.search);
-          }).map((jobSite) => {
+          }).map((jobSite, i) => {
             return (
-              <FilterList.Item>
+              <FilterList.Item as="span" key={i}>
                 <li>
                   <a href={jobsData[jobSite]} target="_blank" rel="noopener noreferrer">{jobSite}</a>
                 </li>

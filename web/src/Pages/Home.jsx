@@ -56,8 +56,9 @@ export default function Home(props) {
         if (!props.search) return true;
         return name.toLowerCase().includes(props.search);
       })
-      .map(([name, details]) => (
+      .map(([name, details], i) => (
         <Projects
+          key={i}
           name={name}
           description={details.description}
           alt={name}
