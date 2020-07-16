@@ -11,15 +11,7 @@ import bookPromo from "../img/book-promo.png";
 export default function VotingContest() {
   return (
     <div style={{ backgroundColor: "", margin: "50px", width: "800px" }}>
-      <Heading
-        fontSize={6}
-        mb={3}
-        sx={{
-          borderBottomWidth: 1,
-          borderBottomColor: "border.gray",
-          borderBottomStyle: "solid",
-        }}
-      >
+      <Heading fontSize={7} mb={3}>
         Voting Contest!
       </Heading>
       <Text as="p" sx={{ fontSize: 2 }}>
@@ -150,7 +142,7 @@ export default function VotingContest() {
         </ul>
         Generously donated by <a href="https://twitter.com/swyx">Swyx</a>!
         <div style={{ marginTop: "20px" }}>
-          <img src={bookPromo} />
+          <img src={bookPromo} style={{ width: "100%" }} />
         </div>
       </Box>
     </div>
