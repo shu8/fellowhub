@@ -2,13 +2,13 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 const days = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 const mapDay = (n) => days[n];
 
