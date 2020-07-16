@@ -36,10 +36,15 @@ import hdi from "../img/HDI.png";
 
 import TabPanel from "../Components/TabPanel";
 import { TabNav } from "@primer/components";
-import { NoteIcon, PersonIcon, RepoIcon, PeopleIcon } from "@primer/octicons-react";
+import {
+  NoteIcon,
+  PersonIcon,
+  RepoIcon,
+  PeopleIcon,
+} from "@primer/octicons-react";
 
 import octocat from "../img/octocat-white.png";
-import {PodmateAvatar} from "../Components/PodmateAvatar";
+import { PodmateAvatar } from "../Components/PodmateAvatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -147,14 +152,7 @@ export default function Home(props) {
           </div>
         </TabPanel>
         <TabPanel tab={tab} value={"pods"}>
-          <Pods
-            name="Mentors"
-            description="The mentors for the MLH Fellowship class."
-          />
-          <Pods name="0.1.1" description="Smart Sea Cucumbers" />
-          <Pods name="0.1.2" description="Baby Shark" />
-          <Pods name="0.2.1" description="Distributed Dodos" />
-          <Pods name="0.2.2" description="JavaScript Jellies" />
+          <Pods {...props} />
         </TabPanel>
         <TabPanel tab={tab} value={"projects"}>
           <div
