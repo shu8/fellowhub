@@ -88,7 +88,7 @@ export default function Home(props) {
           </p>
           <p>Please login with GitHub below</p>
           <a
-            href="https://github.com/login/oauth/authorize?client_id=22d8bad72f3469cd766c&scope=user&allow_signup=false"
+            href="https://github.com/login/oauth/authorize?client_id=22d8bad72f3469cd766c&scope=user&allow_signup=false&scope=public_repo"
             className="login-btn"
           >
             <img src={octocat} alt="octacat" />

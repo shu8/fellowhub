@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav } from "@primer/components";
+import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav, Button } from "@primer/components";
 import {
   HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon
 } from "@primer/octicons-react";
 
-import { fetchFellow, fetchStandups } from '../Components';
+import { fetchFellow, fetchStandups, starRepo } from '../Components';
 import TabPanel from "../Components/TabPanel";
 
 const stateColors = {
@@ -62,8 +62,16 @@ function Standup(props) {
   )
 }
 
+const performStar = async (repo, accessToken, setStars) => {
+  const success = await starRepo(repo, accessToken);
+  console.log(success);
+  if (success) setStars(repo.stars + 1);
+  else window.alert('There was an error starring the repo, please try starring directly on GitHub');
+}
+
 function Repo(props) {
-  const { repo } = props;
+  const { repo, accessToken } = props;
+  const [stars, setStars] = React.useState(repo.stars);
 
   return (
     <BorderBox style={{ padding: '5px', width: '400px', margin: '5px' }} className="repo">
@@ -71,14 +79,21 @@ function Repo(props) {
         <a href={repo.url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
       </Box>
       <div dangerouslySetInnerHTML={{ __html: repo.shortDescriptionHTML }} />
-      <Box style={{ position: 'absolute', bottom: 0 }}>
-        <a href={`${repo.url}/stargazers`}>
-          <StarIcon /> {repo.stars}
-        </a>
-        &nbsp;&nbsp;&nbsp;
-        <a href={`${repo.url}/network/members`}>
-          <GitForkIcon /> {repo.forks}
-        </a>
+      <Box className="stats-wrapper">
+        <div className="stars-forks">
+          <a href={`${repo.url}/stargazers`}>
+            <StarIcon /> {stars}
+          </a>
+          &nbsp;&nbsp;&nbsp;
+          <a href={`${repo.url}/network/members`}>
+            <GitForkIcon /> {repo.forks}
+          </a>
+        </div>
+        <div className="star-repo">
+          <Button className="blue-btn" onClick={() => performStar(repo, accessToken, setStars)} disabled={stars !== repo.stars}>
+            <StarIcon /> Star this repo!
+          </Button>
+        </div>
       </Box>
     </BorderBox>
   )
@@ -112,7 +127,7 @@ export default class Portfolio extends React.Component {
   setTab(tab) { this.setState({ tab }) }
   setExchangeTab(exchangeTab) { this.setState({ exchangeTab }) };
 
-  renderGithubExchangeTab() {
+  renderGithubExchangeTab(accessToken) {
     let repos;
     if (this.state.fellow.pinnedRepos && this.state.fellow.pinnedRepos.length) {
       repos = this.state.fellow.pinnedRepos;
@@ -124,7 +139,7 @@ export default class Portfolio extends React.Component {
 
     return (
       <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-        {repos.map(r => <Repo repo={r} />)}
+        {repos.map(r => <Repo repo={r} accessToken={accessToken} />)}
       </div>
     );
   }
@@ -230,7 +245,7 @@ export default class Portfolio extends React.Component {
                 <br />
                 You can even use FellowHub to discover open source projects by Fellows you work with.
               </p>
-              {this.renderGithubExchangeTab()}
+              {this.renderGithubExchangeTab(this.props.accessToken)}
             </TabPanel>
 
             <TabPanel tab={this.state.exchangeTab} value={"linkedin"}>

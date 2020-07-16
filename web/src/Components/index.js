@@ -89,3 +89,20 @@ export const fetchEvents = async (accessToken) => {
     return [];
   }
 };
+
+export const starRepo = async (repo, accessToken) => {
+  try {
+    const response = await fetch(`https://api.github.com/user/starred/${repo.owner}/${repo.name}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: "token " + accessToken,
+        'Content-Length': 0,
+      },
+    });
+    console.log(response.status);
+    return response.status === 204;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}

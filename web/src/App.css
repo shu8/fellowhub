@@ -123,13 +123,17 @@ a.event {
   width: 25%;
 }
 
-.choose-tech-btn {
+.blue-btn {
   background-color: #1d539f !important;
   color: white !important;
 }
 
-.choose-tech-btn:hover {
+.blue-btn:hover {
   background-color: #357ee6 !important;
+}
+
+.blue-btn:disabled {
+  background-color: grey !important;
 }
 
 .portfolio .portfolio-header {
@@ -171,8 +175,23 @@ a.event {
 }
 
 .portfolio .repo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  height: 115px;
+}
+
+.portfolio .repo .stats-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio .repo .stats-wrapper .stars-forks {
+  padding-top: 5px;
+}
+
+.portfolio .repo .stats-wrapper .stars-forks a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 900px) {
