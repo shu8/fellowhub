@@ -18,6 +18,7 @@ import logo061 from "../img/podLogos/061.png";
 import logo062 from "../img/podLogos/062.png";
 import logoStaff from "../img/podLogos/staff.jpg";
 import logoMentors from "../img/podLogos/mentors.png";
+import { Link } from "react-router-dom";
 
 const Pods = ({ fellows }) => {
   const pods = {
@@ -108,10 +109,10 @@ const Pods = ({ fellows }) => {
                   <b>Podmates</b>:{" "}
                   <span style={{ color: "#808080" }}>
                     {pods[podId].map((fellow, index) => (
-                      <a href={`/fellows/${fellow.username}`} target="_blank" rel="noopener noreferrer">
+                      <Link to={`/fellows/${fellow.username}`}>
                         {(fellow.name || fellow.username) +
                           (index === pods[podId].length - 1 ? "" : " · ")}
-                      </a>
+                      </Link>
                     ))}
                   </span>
                   <br />
