@@ -32,7 +32,7 @@ export default function Templates(props) {
             Blitz Pitch Template
           </Heading>
 
-          <Text as="p" sx={{ fontSize: 2 }}>
+          <Text as="div" sx={{ fontSize: 2 }}>
             Hey{" "}
             <Label variant="large" bg="yellow.3" color="black">
               CONTACT_NAME
@@ -89,7 +89,7 @@ export default function Templates(props) {
             Casual E-Mail Template
           </Heading>
 
-          <Text as="p" sx={{ fontSize: 2 }}>
+          <Text as="div" sx={{ fontSize: 2 }}>
             <p>
               Hi{" "}
               <Label variant="large" bg="yellow.3" color="black">
@@ -143,7 +143,7 @@ export default function Templates(props) {
             />{" "}
             Cover Letter Template
           </Heading>
-          <Text as="p" sx={{ fontSize: 2 }}>
+          <Text as="div" sx={{ fontSize: 2 }}>
             <p>
               Dear{" "}
               <Label variant="large" bg="yellow.3" color="black">
@@ -237,7 +237,7 @@ export default function Templates(props) {
             />{" "}
             CV Section Template
           </Heading>
-          <Text as="p" sx={{ fontSize: 2 }}>
+          <Text as="div" sx={{ fontSize: 2 }}>
             <p>
               <b>Major League Hacking</b>
             </p>
@@ -285,7 +285,7 @@ export default function Templates(props) {
             LinkedIn Message Template
           </Heading>
 
-          <Text as="p" sx={{ fontSize: 2 }}>
+          <Text as="div" sx={{ fontSize: 2 }}>
             <p>
               <b>Subject:</b> Interested in{" "}
               <Label variant="large" bg="yellow.3" color="black">

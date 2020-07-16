@@ -378,7 +378,11 @@ export default function Home(props) {
           </div>
         </TabPanel>
         <TabPanel tab={tab} value={"podmates"}>
-            {props.podmates.map( (mate) => <PodmateAvatar mate={mate}>{mate.name || mate.username}</PodmateAvatar>)}
+          {props.podmates.map((mate, i) => (
+            <PodmateAvatar key={i} mate={mate}>
+              {mate.name || mate.username}
+            </PodmateAvatar>
+          ))}
         </TabPanel>
       </div>
     </div>

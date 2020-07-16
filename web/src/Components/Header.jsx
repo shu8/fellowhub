@@ -1,17 +1,12 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function PrimarySearchAppBar() {
-  const history = useHistory();
-
   return (
     <div style={{ marginBottom: "20px" }}>
       <div className="Header" style={{ backgroundColor: "#1d539f" }}>
         <div className="Header-item">
-          <Link
-            onClick={() => history.push("/")}
-            className="Header-link f4 d-flex flex-items-center"
-          >
+          <Link to="/" className="Header-link f4 d-flex flex-items-center">
             <svg
               height="32"
               className="octicon octicon-mark-github mr-2"
@@ -36,46 +31,37 @@ export default function PrimarySearchAppBar() {
           />
         </div>
         <div className="Header-item">
-          <Link onClick={() => history.push("/")} className="Header-link">
+          <Link to="/" className="Header-link">
             Home
           </Link>
         </div>
         <div className="Header-item">
-          <Link onClick={() => history.push("/events")} className="Header-link">
+          <Link to="/events" className="Header-link">
             Events
           </Link>
         </div>
         <div className="Header-item">
-          <Link
-            onClick={() => history.push("/voting-contest")}
-            className="Header-link"
-          >
+          <Link to="/voting-contest" className="Header-link">
             Voting
           </Link>
         </div>
         <div className="Header-item">
-          <Link onClick={() => history.push("/jobs")} className="Header-link">
+          <Link to="/jobs" className="Header-link">
             Jobs
           </Link>
         </div>
         <div className="Header-item">
-          <Link
-            onClick={() => history.push("/get-help")}
-            className="Header-link"
-          >
+          <Link to="/get-help" className="Header-link">
             Get Help
           </Link>
         </div>
         <div className="Header-item">
-          <Link
-            onClick={() => history.push("/templates")}
-            className="Header-link"
-          >
+          <Link to="/templates" className="Header-link">
             Templates
           </Link>
         </div>
         <div className="Header-item">
-          <Link onClick={() => history.push("/about")} className="Header-link">
+          <Link to="/about" className="Header-link">
             About
           </Link>
         </div>
