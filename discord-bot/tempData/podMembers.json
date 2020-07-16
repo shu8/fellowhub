@@ -1,0 +1,20 @@
+{
+	"0.0.1": {
+		"podName": "Sudo Seals",
+		"members": [
+			{ "fullName": "Matthew Bunday", "github": "zencephalon" },
+			{ "fullName": "William Ma", "github": "whoiswillma" },
+			{ "fullName": "Awasum Yannick", "github": "awasum" },
+			{ "fullName": "Elizabeth Tackett", "github": "emctackett" },
+			{ "fullName": "Larson Carter", "github": "larson-carter" },
+			{ "fullName": "Baffour Adu Boampong", "github": "BaffourAdu" },
+			{ "fullName": "Alberto Pérez de Rada Fiol", "github": "AlbertoPdRF" },
+			{ "fullName": "Lionell Loh Jian An", "github": "lionellloh" },
+			{ "fullName": "Prosper Opara", "github": "kodekage" },
+			{ "fullName": "A.D. Faris", "github": "adfaris" },
+			{ "fullName": "Raphael Noriode", "github": "Oghenebrume50" },
+			{ "fullName": "Bartek Pacia", "github": "bartekpacia" }
+		]
+	},
+	"0.0.2": []
+}

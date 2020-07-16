@@ -1,13 +1,47 @@
+const projectsData = require("./tempData/projects.json");
+
 const API_BASE_URL =
 	"https://ld48eii9kk.execute-api.eu-central-1.amazonaws.com/dev";
+
+const VOTING_SERVER_API_BASE_URL = "https://fellow-voting-system.herokuapp.com";
+
+const REPORTER_BASE_URL = "https://github-reporter.now.sh";
 
 const PLAYLIST_URL =
 	"https://www.youtube.com/playlist?list=PLPDgudJ_VDUfjmLIe9vasB6miSL1ggWkH";
 
 const MESSAGE_EMBED_FOOTER = {
-	text: "Project 0.2.1-fellowbook",
+	text: "Project 0.2.1-fellowhub",
 	icon_url: "https://avatars.githubusercontent.com/mlh",
 };
+
+const MENTOR_GITHUB_IDS = [
+	"juped",
+	"flosincapite",
+	"ianjennings",
+	"arcofdescent",
+	"zencephalon",
+	"jevakallio",
+];
+
+const MLH_STAFF_GITHUB_IDS = [
+	"theycallmeswift",
+	"jonmarkgo",
+	"lcaputo6",
+	"wrussell1999",
+	"nquinlan",
+];
+
+const GITHUB_IDS_OF_FELLOWS_WITHOUT_DISCORD_IDS = [
+	"gitburd",
+	"ari-os310",
+	"primenoodles",
+	"jkrsn98",
+	"veggier",
+	"kfatmakausar",
+	"arslanm786",
+	"wackychomp",
+];
 
 const POD_NICKNAME_TO_ID = [
 	{ nickname: "Sudo Seals", number: "0.0.1" },
@@ -23,30 +57,7 @@ const POD_NICKNAME_TO_ID = [
 	{ nickname: "Dunder Heads", number: "0.5.2" },
 ];
 
-const LIST_OF_PROJECTS = [
-	"Amplify",
-	"Scikit-Learn",
-	"BentoML",
-	"Pallets",
-	"Docsify",
-	"Circuit Python",
-	"Julia",
-	"HTTPie",
-	"React Native",
-	"Homebrew",
-	"Beagleboard",
-	"Next",
-	"Howdoi",
-	"Babel",
-	"SciML",
-	"Dev.to",
-	"N8N",
-	"Oh My Zsh",
-	"Fast API",
-	"Jest",
-	"Webaverse",
-	"Sheet",
-];
+const LIST_OF_PROJECTS = Object.keys(projectsData);
 
 const GOOD_BOT_REACTIONS = [
 	":grin:",
@@ -108,10 +119,15 @@ const BAD_BOT_REACTIONS = [
 
 module.exports = {
 	API_BASE_URL,
+	REPORTER_BASE_URL,
 	PLAYLIST_URL,
 	POD_NICKNAME_TO_ID,
 	MESSAGE_EMBED_FOOTER,
 	LIST_OF_PROJECTS,
 	GOOD_BOT_REACTIONS,
 	BAD_BOT_REACTIONS,
+	VOTING_SERVER_API_BASE_URL,
+	MENTOR_GITHUB_IDS,
+	MLH_STAFF_GITHUB_IDS,
+	GITHUB_IDS_OF_FELLOWS_WITHOUT_DISCORD_IDS,
 };

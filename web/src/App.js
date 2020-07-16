@@ -1,19 +1,30 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Home from './Pages/Home.jsx';
+import Fellows from './Pages/Fellows';
+import Events from './Pages/Events';
+import Jobs from './Pages/Jobs';
+import About from './Pages/About';
+import GetHelp from './Pages/GetHelp';
+import Templates from './Pages/Templates';
+import Portfolio from './Pages/Portfolio';
+
 import "./App.css";
 import Header from "./Components/Header";
-import Home from "./Components/Home";
 import "font-awesome/css/font-awesome.min.css";
-import { fetchData } from "./Components";
+import { fetchFellows, fetchEvents, fetchActiveFellow, fetchSingleFellow } from "./Components";
 
 class App extends React.Component {
   state = {
-    data: [],
-    search: "",
+    activeFellow: "",
+    fellows: [],
     accessToken: null,
-  };
-
-  handleInput = (e) => {
-    this.setState({ search: e.target.value.toLowerCase() });
+    events: {},
   };
 
   async componentDidMount() {
@@ -27,19 +38,57 @@ class App extends React.Component {
     }
 
     if (accessToken) {
-      const fetchedData = await fetchData(accessToken);
-      console.log(fetchedData);
-      if (!fetchedData || !fetchedData.length) accessToken = null;
-      this.setState({ data: fetchedData, accessToken });
+      const fellows = await fetchFellows(accessToken);
+
+      const activeFellowGithubId = await fetchActiveFellow(accessToken);
+      const fellow = await fetchSingleFellow(accessToken, activeFellowGithubId);
+
+      const events = await fetchEvents(accessToken);
+      // console.log(events, fellows);
+      this.setState({ fellows, accessToken, events, fellow });
     }
   }
 
+  setAccessToken = accessToken => this.setState({ accessToken });
+  setFetchedFellows = fellows => this.setState({ fellows });
+
   render() {
     return (
-      <div>
-        <Header />
-        <Home accessToken={this.state.accessToken} data={this.state.data} />
-      </div>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route path="/fellows/:username" component={props => {
+              const username = props.match && props.match.params ? props.match.params.username : null;
+              return <Portfolio username={username} accessToken={this.state.accessToken} />
+            }} />
+            <Route path="/fellows" component={() =>
+              <Fellows fellows={this.state.fellows} accessToken={this.state.accessToken} />
+            } />
+            <Route path="/events/:id" component={props =>
+              <Events accessToken={this.state.accessToken} events={this.state.events} {...props} />
+            } />
+            <Route path="/events" component={() =>
+              <Events accessToken={this.state.accessToken} events={this.state.events} />
+            } />
+            <Route path="/templates" component={() =>
+              <Templates accessToken={this.state.accessToken} fellow={this.state.fellow} />
+            } />
+            <Route path="/jobs" component={Jobs} />
+            <Route path="/about" component={About} />
+            <Route path="/get-help" render={() =>
+              <GetHelp fellows={this.state.fellows} />
+            } />
+            <Route path="/">
+              <Home
+                setAccessToken={this.setAccessToken}
+                setFetchedFellows={this.setFetchedFellows}
+                fellows={this.state.fellows}
+                accessToken={this.state.accessToken || window.sessionStorage.getItem("accessToken")} />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

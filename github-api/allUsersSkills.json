@@ -1,0 +1,1286 @@
+{
+  "juped": [
+    "C",
+    "JavaScript",
+    "Solidity",
+    "Ruby"
+  ],
+  "johndbritton": [
+    "Ruby",
+    "JavaScript",
+    "Objective-C",
+    "PHP",
+    "Shell",
+    "HTML",
+    "Python",
+    "Swift",
+    "C++"
+  ],
+  "arcofdescent": [
+    "JavaScript",
+    "Go",
+    "Perl",
+    "Julia",
+    "Elixir",
+    "Python",
+    "VimL",
+    "Vim script"
+  ],
+  "mkcode": [
+    "Emacs Lisp",
+    "JavaScript",
+    "Ruby",
+    "CoffeeScript",
+    "Objective-C"
+  ],
+  "ianjennings": [
+    "C++",
+    "JavaScript",
+    "HTML"
+  ],
+  "nquinlan": [
+    "JavaScript",
+    "CSS",
+    "Ruby",
+    "HTML",
+    "Shell",
+    "Python"
+  ],
+  "jevakallio": [
+    "TypeScript",
+    "Java",
+    "Objective-C",
+    "Ruby",
+    "JavaScript",
+    "HTML"
+  ],
+  "zencephalon": [
+    "Vim script",
+    "JavaScript",
+    "Ruby",
+    "HTML",
+    "C",
+    "Python"
+  ],
+  "whoiswillma": [
+    "Swift",
+    "OCaml",
+    "Python",
+    "Ruby",
+    "Dockerfile",
+    "Java",
+    "HTML",
+    "CSS"
+  ],
+  "prabhanshuattri": [
+    "C#",
+    "JavaScript",
+    "Python",
+    "Java",
+    "Shell",
+    "CSS",
+    "PHP",
+    "TypeScript"
+  ],
+  "iamcathal": [
+    "C",
+    "Python",
+    "Ruby",
+    "Go",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "ralph-dev": [
+    "JavaScript",
+    "CSS",
+    "Java",
+    "Python",
+    "HTML"
+  ],
+  "rithvikrao": [
+    "Python",
+    "Java",
+    "Jupyter Notebook",
+    "HTML"
+  ],
+  "gmelodie": [
+    "Python",
+    "Shell",
+    "Go",
+    "PLpgSQL",
+    "C",
+    "Jupyter Notebook",
+    "JavaScript",
+    "Vim script",
+    "Ruby",
+    "CSS"
+  ],
+  "shu8": [
+    "JavaScript",
+    "HTML",
+    "Python",
+    "Dart",
+    "Go",
+    "CSS"
+  ],
+  "siddharthsham": [
+    "CSS",
+    "HTML",
+    "Vue",
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Ruby",
+    "Java"
+  ],
+  "mwizasimbeye11": [
+    "HTML",
+    "Jupyter Notebook",
+    "Go",
+    "Python",
+    "C++",
+    "PHP",
+    "Java"
+  ],
+  "garrettluu": [
+    "Kotlin",
+    "JavaScript",
+    "C",
+    "Jupyter Notebook",
+    "Dart",
+    "HTML",
+    "Ruby",
+    "Python",
+    "TeX",
+    "PowerShell",
+    "Java",
+    "C++"
+  ],
+  "csr": [
+    "C++",
+    "Kotlin",
+    "Swift",
+    "Assembly",
+    "C",
+    "HTML",
+    "Python",
+    "JavaScript",
+    "Objective-C"
+  ],
+  "darshkpatel": [
+    "JavaScript",
+    "Python",
+    "Shell",
+    "CSS",
+    "Go"
+  ],
+  "honsontran": [
+    "Java",
+    "Arduino",
+    "C++",
+    "TypeScript",
+    "C",
+    "Ruby",
+    "Matlab",
+    "Jupyter Notebook",
+    "HTML"
+  ],
+  "daschachter": [
+    "C",
+    "Ruby",
+    "Python",
+    "HTML"
+  ],
+  "chuabingquan": [
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "Dart",
+    "Ruby",
+    "Go",
+    "Python",
+    "Standard ML"
+  ],
+  "taneliang": [
+    "Java",
+    "OCaml",
+    "Vue",
+    "Python",
+    "C++",
+    "Objective-C",
+    "C",
+    "JavaScript",
+    "TypeScript",
+    "Ruby",
+    "HTML",
+    "Swift",
+    "Nix"
+  ],
+  "roeeyn": [
+    "Kotlin",
+    "Java",
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "Ruby"
+  ],
+  "penguingovernor": [
+    "JavaScript",
+    "Go",
+    "C",
+    "Shell",
+    "Ruby",
+    "HTML",
+    "Dart",
+    "TypeScript"
+  ],
+  "yashkumarverma": [
+    "PHP",
+    "C++",
+    "TypeScript",
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "Python",
+    "Ruby",
+    "Go"
+  ],
+  "lincolnmroth": [
+    "C++",
+    "Ruby",
+    "JavaScript",
+    "Swift",
+    "Python",
+    "HTML",
+    "Java"
+  ],
+  "korusuke": [
+    "Python",
+    "CSS",
+    "Jupyter Notebook",
+    "Dart",
+    "Java",
+    "JavaScript",
+    "HTML",
+    "Dockerfile",
+    "Tcl",
+    "C++"
+  ],
+  "kpolnitz": [
+    "C++",
+    "C",
+    "Go",
+    "JavaScript"
+  ],
+  "parthivc": [
+    "C++",
+    "Python",
+    "Java",
+    "Ruby",
+    "JavaScript",
+    "Jupyter Notebook",
+    "HTML"
+  ],
+  "amiryalamov": [
+    "HTML",
+    "JavaScript",
+    "Java",
+    "Python",
+    "C++"
+  ],
+  "rubywerman": [
+    "Jupyter Notebook",
+    "JavaScript",
+    "Python",
+    "Ruby",
+    "HTML",
+    "CSS"
+  ],
+  "stellaw1": [
+    "Python",
+    "JavaScript",
+    "HTML",
+    "Ruby",
+    "Java",
+    "CSS"
+  ],
+  "joshuacwnewton": [
+    "MATLAB",
+    "Python",
+    "Ruby",
+    "HTML"
+  ],
+  "akainth015": [
+    "JavaScript",
+    "Kotlin",
+    "HTML",
+    "C#",
+    "Rust",
+    "CSS",
+    "Java",
+    "Shell"
+  ],
+  "jackyzha0": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Dockerfile",
+    "Go",
+    "HTML",
+    "Jupyter Notebook",
+    "CSS"
+  ],
+  "ktakattack": [
+    "C",
+    "Ruby",
+    "HTML",
+    "C++",
+    "Python",
+    "R",
+    "TypeScript"
+  ],
+  "yashika51": [
+    "Jupyter Notebook",
+    "HTML",
+    "Ruby",
+    "Python",
+    "C++"
+  ],
+  "ngojason9": [
+    "Python",
+    "HTML",
+    "Java",
+    "Mathematica"
+  ],
+  "xiwang129": [
+    "Jupyter Notebook",
+    "Python",
+    "Ruby",
+    "HTML",
+    "JavaScript"
+  ],
+  "awasum": [
+    "Ruby",
+    "Java",
+    "TypeScript",
+    "JavaScript",
+    "Erlang",
+    "PHP",
+    "HTML"
+  ],
+  "emctackett": [
+    "HTML",
+    "Ruby",
+    "CSS",
+    "JavaScript",
+    "Python"
+  ],
+  "larson-carter": [
+    "Python",
+    "Shell",
+    "Swift",
+    "Java",
+    "C++",
+    "JavaScript",
+    "Ruby",
+    "Vue",
+    "C",
+    "PowerShell",
+    "HTML"
+  ],
+  "baffouradu": [
+    "JavaScript",
+    "CSS",
+    "PHP",
+    "Ruby"
+  ],
+  "albertopdrf": [
+    "Ruby",
+    "TeX",
+    "JavaScript",
+    "HTML"
+  ],
+  "lionellloh": [
+    "Jupyter Notebook",
+    "Verilog",
+    "Python",
+    "JavaScript",
+    "C",
+    "Java",
+    "Go",
+    "Ruby",
+    "CSS"
+  ],
+  "kodekage": [
+    "Shell",
+    "HTML",
+    "JavaScript",
+    "C#",
+    "Ruby"
+  ],
+  "mdmjg": [
+    "JavaScript",
+    "Python",
+    "HTML",
+    "Ruby",
+    "Jupyter Notebook",
+    "Processing",
+    "Go",
+    "C"
+  ],
+  "adfaris": [
+    "CSS",
+    "HTML",
+    "Python",
+    "JavaScript",
+    "C"
+  ],
+  "oghenebrume50": [
+    "JavaScript",
+    "Ruby"
+  ],
+  "bartekpacia": [
+    "CSS",
+    "Dart",
+    "Kotlin",
+    "C",
+    "TypeScript",
+    "Python",
+    "C++",
+    "C#",
+    "JavaScript",
+    "Shell",
+    "Ruby",
+    "Java"
+  ],
+  "uniq1st": [
+    "JavaScript",
+    "Ruby"
+  ],
+  "dengaku12": [
+    "JavaScript",
+    "Ruby",
+    "Java",
+    "HTML"
+  ],
+  "nicoledanuwidjaja": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "ASP"
+  ],
+  "erin2722": [
+    "JavaScript",
+    "Python",
+    "HTML",
+    "VBA",
+    "Java"
+  ],
+  "sebastiancrossa": [
+    "Python",
+    "JavaScript",
+    "Swift",
+    "C#",
+    "HTML",
+    "CSS",
+    "Ruby",
+    "C++"
+  ],
+  "shraddha2104": [
+    "C++",
+    "C",
+    "Java",
+    "HTML",
+    "PHP",
+    "Python",
+    "JavaScript",
+    "CSS",
+    "Jupyter Notebook"
+  ],
+  "yahengsu": [
+    "JavaScript",
+    "Java",
+    "Ruby",
+    "Go",
+    "HTML"
+  ],
+  "kendevops": [
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "Ruby"
+  ],
+  "nchaloult": [
+    "Go",
+    "Python",
+    "Shell",
+    "JavaScript",
+    "Ruby",
+    "Swift",
+    "HTML"
+  ],
+  "cedricgrothues": [
+    "TypeScript",
+    "Ruby",
+    "Rust",
+    "Dart"
+  ],
+  "ivov": [
+    "Python",
+    "JavaScript",
+    "Dart",
+    "TypeScript"
+  ],
+  "kirbygit": [
+    "C++",
+    "Ruby",
+    "JavaScript",
+    "Vim script",
+    "HTML",
+    "CSS",
+    "Java"
+  ],
+  "wlawt": [
+    "Python",
+    "Jupyter Notebook",
+    "JavaScript",
+    "Java",
+    "Ruby",
+    "HTML"
+  ],
+  "mohammedsahl": [
+    "JavaScript",
+    "TypeScript",
+    "Ruby",
+    "Python",
+    "HTML",
+    "Dart"
+  ],
+  "aemmadi": [
+    "TeX",
+    "HTML",
+    "Java",
+    "C++",
+    "CSS",
+    "Python",
+    "JavaScript",
+    "Objective-C"
+  ],
+  "srijonsaha": [
+    "SQLPL",
+    "Shell",
+    "Python",
+    "TypeScript",
+    "JavaScript"
+  ],
+  "barronwei": [
+    "JavaScript",
+    "Go",
+    "Jupyter Notebook",
+    "TypeScript",
+    "Vim script",
+    "Python",
+    "Ruby",
+    "HTML"
+  ],
+  "lakshyakhatri": [
+    "C++",
+    "Python",
+    "Java",
+    "Julia",
+    "Ruby",
+    "Jupyter Notebook",
+    "JavaScript",
+    "C#",
+    "HTML"
+  ],
+  "mgautam98": [
+    "Jupyter Notebook",
+    "Python",
+    "Shell",
+    "HTML",
+    "CSS",
+    "C++",
+    "JavaScript",
+    "C",
+    "Ruby"
+  ],
+  "avik-pal": [
+    "Shell",
+    "Julia",
+    "Jupyter Notebook",
+    "C",
+    "JavaScript",
+    "Ruby",
+    "Python",
+    "C++"
+  ],
+  "dnabanita7": [
+    "Julia",
+    "C++",
+    "Python",
+    "Jupyter Notebook",
+    "C"
+  ],
+  "kanav99": [
+    "Julia",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "C",
+    "HTML",
+    "CodeQL",
+    "Java",
+    "C++",
+    "Assembly",
+    "Swift"
+  ],
+  "biswajitghosh98": [
+    "Julia",
+    "Jupyter Notebook",
+    "C++",
+    "Python",
+    "C",
+    "HTML",
+    "TeX"
+  ],
+  "diaga": [
+    "Python",
+    "CoffeeScript",
+    "Dart",
+    "Ruby",
+    "TypeScript",
+    "Java",
+    "C",
+    "HTML",
+    "JavaScript"
+  ],
+  "rashikakarki": [
+    "Jupyter Notebook",
+    "HTML",
+    "Python",
+    "JavaScript",
+    "C++",
+    "PHP"
+  ],
+  "jiviteshjain": [
+    "C++",
+    "TeX",
+    "C",
+    "Java",
+    "JavaScript",
+    "Python",
+    "HTML",
+    "Ruby",
+    "Jupyter Notebook"
+  ],
+  "alimalik9599": [
+    "C++",
+    "Java",
+    "Ruby",
+    "PHP",
+    "HTML"
+  ],
+  "simplyballistic": [
+    "Java",
+    "Arduino",
+    "HTML",
+    "JavaScript",
+    "Lua",
+    "TypeScript"
+  ],
+  "laveesh": [
+    "TypeScript",
+    "HTML",
+    "PHP",
+    "Jupyter Notebook",
+    "Ruby",
+    "Python",
+    "C++",
+    "JavaScript",
+    "Hack",
+    "CSS"
+  ],
+  "anshulrgoyal": [
+    "HTML",
+    "JavaScript",
+    "Rust",
+    "Dart",
+    "C++",
+    "Kotlin",
+    "Ruby",
+    "Go",
+    "QML",
+    "CSS"
+  ],
+  "ekhattak": [
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "Ruby",
+    "C++"
+  ],
+  "drewbi": [
+    "JavaScript",
+    "Python",
+    "Vue",
+    "C++",
+    "Java",
+    "C",
+    "TypeScript"
+  ],
+  "teikjun": [
+    "TypeScript",
+    "Java",
+    "JavaScript",
+    "HTML",
+    "Ruby",
+    "Python",
+    "Scala"
+  ],
+  "anku255": [
+    "Java",
+    "CSS",
+    "JavaScript",
+    "Jupyter Notebook",
+    "TypeScript",
+    "Python",
+    "Ruby"
+  ],
+  "sauravhiremath": [
+    "HTML",
+    "JavaScript",
+    "Shell",
+    "Python",
+    "C++",
+    "Jupyter Notebook",
+    "Java",
+    "Go",
+    "TypeScript",
+    "CSS"
+  ],
+  "saphal1998": [
+    "JavaScript",
+    "Swift",
+    "HTML",
+    "CSS",
+    "Python"
+  ],
+  "chirag-singhal": [
+    "CSS",
+    "JavaScript",
+    "HTML",
+    "C++",
+    "C",
+    "Jupyter Notebook",
+    "Ruby",
+    "Prolog",
+    "Verilog"
+  ],
+  "kunal-kushwaha": [
+    "JavaScript",
+    "Jupyter Notebook",
+    "C++",
+    "CSS",
+    "Java",
+    "Python",
+    "C"
+  ],
+  "manyaagarwal": [
+    "JavaScript",
+    "Go",
+    "Dart",
+    "C++",
+    "Java",
+    "Python",
+    "CSS"
+  ],
+  "jessieanhnguyen": [
+    "JavaScript",
+    "Python",
+    "Java",
+    "HTML",
+    "C",
+    "Common Lisp",
+    "Ruby",
+    "MATLAB",
+    "PHP",
+    "TypeScript"
+  ],
+  "kartikcho": [
+    "JavaScript",
+    "HTML",
+    "TypeScript",
+    "Python",
+    "Ruby",
+    "CSS",
+    "C"
+  ],
+  "smartclash": [
+    "TypeScript",
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "Ruby",
+    "PHP",
+    "Python",
+    "Go"
+  ],
+  "harshil1712": [
+    "C#",
+    "JavaScript",
+    "HTML",
+    "Java",
+    "Dart",
+    "Jupyter Notebook",
+    "CSS"
+  ],
+  "anshg714": [
+    "Python",
+    "JavaScript",
+    "HTML",
+    "Swift"
+  ],
+  "stealthanthrax": [
+    "Swift",
+    "JavaScript",
+    "C++",
+    "Python",
+    "CSS"
+  ],
+  "ani4aniket": [
+    "CSS",
+    "JavaScript",
+    "C++",
+    "HTML",
+    "TypeScript",
+    "Python"
+  ],
+  "saurabhagarwala": [
+    "CSS",
+    "JavaScript",
+    "Modelica",
+    "Go",
+    "Python",
+    "HTML",
+    "Ruby",
+    "C",
+    "Jupyter Notebook",
+    "Java",
+    "TypeScript"
+  ],
+  "ayushjainrksh": [
+    "HTML",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Visual Basic",
+    "C++",
+    "Java",
+    "CSS",
+    "Ruby"
+  ],
+  "xtremilicious": [
+    "JavaScript",
+    "HTML",
+    "Jupyter Notebook",
+    "Ruby",
+    "Java",
+    "Python",
+    "CSS"
+  ],
+  "rkbeatss": [
+    "Jupyter Notebook",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "HTML",
+    "Java",
+    "R"
+  ],
+  "kbanc": [
+    "C#",
+    "Shell",
+    "Ruby",
+    "JavaScript",
+    "Python",
+    "HTML"
+  ],
+  "tayoogunbiyi": [
+    "Python",
+    "Go",
+    "JavaScript",
+    "HTML"
+  ],
+  "hajermahjoub": [
+    "Ruby",
+    "Jupyter Notebook",
+    "Go",
+    "JavaScript",
+    "C++",
+    "HTML",
+    "Java"
+  ],
+  "teymour-aldridge": [
+    "Python",
+    "JavaScript",
+    "HTML",
+    "Ruby",
+    "Rust",
+    "OCaml",
+    "CSS"
+  ],
+  "victorphoenix3": [
+    "JavaScript",
+    "Python",
+    "HTML"
+  ],
+  "rch-liu": [
+    "HTML",
+    "JavaScript",
+    "Python",
+    "Java",
+    "Ruby",
+    "Turing",
+    "Racket"
+  ],
+  "fawziyahalebiosu": [
+    "Java",
+    "HTML",
+    "Ruby"
+  ],
+  "kx-chen": [
+    "Python",
+    "JavaScript",
+    "Ruby",
+    "HTML"
+  ],
+  "chrisngyn": [
+    "Python",
+    "Java",
+    "Go",
+    "Ruby",
+    "JavaScript",
+    "HTML"
+  ],
+  "ebonnecab": [
+    "Jupyter Notebook",
+    "HTML",
+    "JavaScript",
+    "Python",
+    "CSS"
+  ],
+  "amy-lei": [
+    "Java",
+    "JavaScript",
+    "CSS"
+  ],
+  "yko20010": [
+    "Swift",
+    "Python",
+    "OCaml",
+    "HTML"
+  ],
+  "ovezovs": [
+    "JavaScript",
+    "Python",
+    "Java",
+    "C++",
+    "HTML",
+    "CSS"
+  ],
+  "grimlock123": [
+    "HTML",
+    "JavaScript",
+    "Java",
+    "Ruby",
+    "CSS"
+  ],
+  "rickyc0626": [
+    "JavaScript",
+    "Ruby",
+    "HTML",
+    "Java",
+    "C#",
+    "Rust"
+  ],
+  "victorffff": [
+    "JavaScript",
+    "HTML",
+    "Java",
+    "Assembly",
+    "Ruby"
+  ],
+  "mathewdavidov": [
+    "JavaScript",
+    "HTML",
+    "Ruby",
+    "Java"
+  ],
+  "chunhz": [
+    "JavaScript",
+    "HTML",
+    "Ruby",
+    "Racket",
+    "Python"
+  ],
+  "omarujawara": [
+    "JavaScript",
+    "C++",
+    "Jupyter Notebook",
+    "Ruby",
+    "HTML"
+  ],
+  "yosephahmed": [
+    "JavaScript",
+    "HTML",
+    "C++",
+    "Java",
+    "Ruby",
+    "PHP"
+  ],
+  "yimnichan": [
+    "Java",
+    "PHP",
+    "Ruby",
+    "JavaScript",
+    "HTML"
+  ],
+  "janmarkusmilan": [
+    "JavaScript",
+    "Java",
+    "HTML",
+    "Ruby",
+    "C#",
+    "C++"
+  ],
+  "jonmarkgo": [
+    "Ruby",
+    "C++",
+    "JavaScript",
+    "PHP",
+    "CSS",
+    "CoffeeScript",
+    "HTML"
+  ],
+  "wrussell1999": [
+    "Java",
+    "Kotlin",
+    "Go",
+    "C#",
+    "Python",
+    "Dart",
+    "JavaScript",
+    "CSS"
+  ],
+  "lcaputo6": [
+    "Ruby"
+  ],
+  "gitburd": [
+    "JavaScript",
+    "HTML",
+    "Python",
+    "Ruby",
+    "Go",
+    "CSS"
+  ],
+  "janiewang26": [
+    "Ruby",
+    "TypeScript",
+    "HTML"
+  ],
+  "zzj0402": [
+    "Jupyter Notebook",
+    "Dockerfile",
+    "Python",
+    "JavaScript",
+    "Ruby",
+    "C#",
+    "Shell",
+    "Go"
+  ],
+  "michiboo": [
+    "Jupyter Notebook",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Shell",
+    "Rust"
+  ],
+  "focalchord": [
+    "JavaScript",
+    "Java",
+    "C",
+    "TeX",
+    "TypeScript",
+    "Matlab"
+  ],
+  "anikethsaha": [
+    "CSS",
+    "TypeScript",
+    "JavaScript",
+    "PHP",
+    "HTML"
+  ],
+  "diarreola": [
+    "Ruby",
+    "Swift",
+    "Python",
+    "HTML",
+    "JavaScript"
+  ],
+  "theycallmeswift": [
+    "Ruby",
+    "Arduino",
+    "C",
+    "Python",
+    "JavaScript",
+    "CoffeeScript",
+    "PHP",
+    "Vim script",
+    "CSS"
+  ],
+  "flosincapite": [
+    "Python"
+  ],
+  "lucylow": [
+    "JavaScript",
+    "Python",
+    "Assembly",
+    "Objective-C",
+    "Arduino",
+    "C++",
+    "Makefile",
+    "Jupyter Notebook",
+    "C"
+  ],
+  "sahaldos1": [
+    "JavaScript",
+    "Java",
+    "HTML",
+    "Ruby"
+  ],
+  "andreahabib": [
+    "Assembly",
+    "JavaScript",
+    "HTML",
+    "Java",
+    "C++",
+    "Python",
+    "Ruby"
+  ],
+  "pokelegocuber": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Python",
+    "Racket",
+    "C#",
+    "Ruby",
+    "C++",
+    "Java"
+  ],
+  "kachengieong": [
+    "C++",
+    "JavaScript",
+    "Ruby",
+    "HTML"
+  ],
+  "alextan331": [
+    "C#",
+    "Ruby",
+    "TypeScript",
+    "HTML",
+    "JavaScript"
+  ],
+  "zarina2311": [
+    "JavaScript",
+    "CSS",
+    "HTML"
+  ],
+  "karolina-benitez": [
+    "JavaScript",
+    "CSS",
+    "Python",
+    "HTML",
+    "Ruby"
+  ],
+  "ari-os310": [
+    "HTML",
+    "PLSQL",
+    "JavaScript"
+  ],
+  "primenoodles": [
+    "JavaScript",
+    "HTML",
+    "Java",
+    "Ruby"
+  ],
+  "johnakasquib": [
+    "JavaScript",
+    "Ruby",
+    "HTML",
+    "Java"
+  ],
+  "edalinee": [
+    "HTML",
+    "Ruby",
+    "C++",
+    "Java"
+  ],
+  "imma-olly": [
+    "JavaScript",
+    "Ruby"
+  ],
+  "ryan4summer": [
+    "JavaScript",
+    "CSS",
+    "Ruby",
+    "HTML"
+  ],
+  "lamarr20": [
+    "JavaScript",
+    "Ruby",
+    "HTML"
+  ],
+  "rabedatta": [
+    "JavaScript",
+    "HTML",
+    "Ruby"
+  ],
+  "rehangh": [
+    "HTML",
+    "JavaScript",
+    "Ruby"
+  ],
+  "jkrsn98": [
+    "JavaScript",
+    "HTML",
+    "Ruby",
+    "C++"
+  ],
+  "veggier": [
+    "JavaScript",
+    "HTML",
+    "Ruby"
+  ],
+  "kfatmakausar": [
+    "JavaScript",
+    "Ruby",
+    "HTML"
+  ],
+  "arslanm786": [
+    "Ruby",
+    "JavaScript",
+    "HTML"
+  ],
+  "wackychomp": [
+    "JavaScript",
+    "C++",
+    "Ruby",
+    "HTML"
+  ]
+}

@@ -1,7 +1,12 @@
 @import "./primer.css";
 
+html {
+  overflow-y: scroll;
+}
+
 .App {
-  /* border: 2px solid; */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .Search {
@@ -58,6 +63,111 @@
 
 .custom-avatar:hover .cta {
   opacity: 1;
+}
+
+.event {
+  display: flex;
+}
+
+a.event {
+  color: initial;
+}
+
+a.event {
+  text-decoration: none;
+}
+
+.event .calendar {
+  box-sizing: border-box;
+  min-width: 85px;
+  min-height: 85px;
+  background-color: lightgrey;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.event .calendar span {
+  display: block;
+}
+
+.event .calendar .day {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+}
+
+.event .calendar .date {
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+.event .calendar .month {
+  margin-top: -10px;
+}
+
+.event .details {
+  padding-left: 10px;
+}
+
+.event .details span {
+  display: block;
+}
+
+.techs-filter {
+  position: relative !important;
+  left: unset !important;
+  right: unset !important;
+  margin: auto;
+  width: 25%;
+}
+
+.choose-tech-btn {
+  background-color: #1d539f !important;
+  color: white !important;
+}
+
+.choose-tech-btn:hover {
+  background-color: #357ee6 !important;
+}
+
+.portfolio .portfolio-header {
+  width: fit-content;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio .portfolio-header img {
+  height: 100%;
+}
+
+.portfolio .portfolio-header .details span {
+  display: block;
+}
+
+.portfolio .portfolio-header .username {
+  padding-top: 25px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.portfolio .bio {
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+.portfolio .portfolio-tabs {
+  margin-top: 10px;
+}
+
+.portfolio .standup ul {
+  padding-left: 30px;
 }
 
 @media screen and (max-width: 900px) {

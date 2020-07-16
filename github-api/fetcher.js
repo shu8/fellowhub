@@ -93,13 +93,25 @@ const fetchUsers = async () => {
   return users;
 }
 
-// If we want to upload from existing file, just don't pass in anything!
-const uploadUsers = async (users) => {
-  if (!users) {
-    const usersFile = fs.readFileSync('./allUsers.json', 'utf8');
-    users = JSON.parse(usersFile);
+const addExtraData = async users => {
+  if (fs.existsSync('./allUsersSkills.json')) {
+    const userSkillsString = fs.readFileSync('./allUsersSkills.json', 'utf-8');
+    const skills = JSON.parse(userSkillsString);
+    users.forEach((u, i) => {
+      if (skills[u.username]) {
+        u.skills = [...(u.skills ? u.skills.split(',') : []), ...skills[u.username]];
+
+        // Remove duplicates
+        u.skills = [...new Set(u.skills)].join(',');
+      }
+    });
   }
 
+  return users;
+};
+
+// If we want to upload from existing file, just don't pass in anything!
+const uploadUsers = async (users) => {
   const usersCount = users.length;
 
   // Batch of 20s, avoid API timeouts
@@ -146,9 +158,14 @@ const saveUsers = async users => {
 
 const useSaved = true;
 if (useSaved) {
-  uploadUsers();
+  fs.promises.readFile('./allUsers.json', 'utf8')
+    .then(users => JSON.parse(users))
+    .then(users => addExtraData(users))
+    .then(users => saveUsers(users))
+    .then(users => uploadUsers(users));
 } else {
   fetchUsers()
+    .then(users => addExtraData(users))
     .then(users => saveUsers(users))
     .then(users => uploadUsers(users))
     ;

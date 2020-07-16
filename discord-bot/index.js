@@ -1,7 +1,23 @@
 const { discordToken } = require("./config");
 const client = require("./Client");
 
-client.once("ready", () => console.log("Client ready!"));
+client.once("ready", () => {
+	console.log("Client ready!");
+	// client.guilds.cache
+	// 	.first()
+	// 	.members.fetch()
+	// 	.then((fetchedMembers) => {
+	// 		let output = [];
+	// 		for (let member of fetchedMembers) {
+	// 			output.push({
+	// 				fullName: member[1].user.username,
+	// 				discordId: member[1].user.id,
+	// 			});
+	// 		}
+	// 		process.stdout.write(JSON.stringify(output) + "\n");
+	// 	});
+});
+
 client.login(discordToken);
 
 client.on("message", (message) => {
@@ -10,7 +26,12 @@ client.on("message", (message) => {
 	const args = message.content.slice(1).split(/ +/);
 	const command = args.shift().toLowerCase();
 
-	if (!client.commands.has(command)) return;
+	if (command === "invite") return;
+
+	if (!client.commands.has(command)) {
+		message.channel.send("Fellowbot does not have that command!");
+		return;
+	}
 
 	try {
 		client.commands.get(command).execute(message, args);
