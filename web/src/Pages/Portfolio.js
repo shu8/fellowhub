@@ -59,9 +59,27 @@ function Standup(props) {
         <Label variant="medium" mr={2} bg={stateColors.OPEN}>{new Date(standup.createdAt).toLocaleString()}</Label>
         <a href={standup.url} target="_blank" rel="noopener noreferrer">View on GitHub</a>.
       </Box>
-      <div dangerouslySetInnerHTML={{ __html: standup.body }} />
+      <div dangerouslySetInnerHTML={{ __html: fixStandupIfEmail(standup.body) }} />
     </BorderBox>
   )
+}
+
+/**Hotfix for standup formatting if the fellow posted their standup via e-mail.*/
+function fixStandupIfEmail(standup) {
+  if (/class="email-fragment"/.test(standup)) {
+    const match = standup.match(/<div class="email-fragment">([\s\S]*?)<\/div>/);
+    if (match) {
+      return match[1]
+        .replace(/\*\*:/g, "</b>")
+        .replace(/\*\*/g, "<br><b>")
+        .replace(/-/g, "<br>-")
+        .replace(/$\n<b>/, "<b>");
+    } else {
+      // unexpected formatting :(
+      return standup;
+    }
+  }
+  return standup;
 }
 
 const performStar = async (repo, accessToken, sender, recipient, setStars) => {
@@ -122,7 +140,6 @@ export default class Portfolio extends React.Component {
     if (this.props.username && this.props.accessToken) {
       const fellow = await fetchFellow(this.props.username, this.props.accessToken);
       const standups = await fetchStandups(this.props.username, this.props.accessToken);
-      console.log(standups);
       this.setState({ fellow, standups });
     }
   }
