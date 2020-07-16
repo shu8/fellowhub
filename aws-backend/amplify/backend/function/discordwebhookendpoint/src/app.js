@@ -25,7 +25,7 @@ const getDiscordMessage = (data) => {
     case 'linkedin':
       return { content: `Hey <@${data.recipientDiscordId}>, <@${data.senderDiscordId}> just endorsed you on LinkedIn!` };
     case 'mvf':
-      return { content: `Hey <@${data.recipientDiscordId}>, you've made the most commits to open source project this week, congratulations!` };
+      return { content: `Hey <@${data.recipientDiscordId}>, you've made ${data.number} commits to open source projects this week, the most out of all the Fellows! Congratulations!` };
     default:
       return {};
   }
@@ -39,8 +39,8 @@ app.use(function (req, res, next) {
 });
 
 app.post(path, function (req, res) {
-  const sender = req.body.sender.toLowerCase();
-  const recipient = req.body.recipient.toLowerCase();
+  const sender = req.body.sender ? req.body.sender.toLowerCase() : null;
+  const recipient = req.body.recipient ? req.body.recipient.toLowerCase() : null;
 
   dynamodb.scan({
     TableName: tableName,
@@ -56,8 +56,12 @@ app.post(path, function (req, res) {
       res.json({ error: 'Could not load items: ' + err.message });
     } else {
       const fellows = data.Items;
-      const recipientDiscordId = fellows.find(u => u.username === recipient).discord_id;
-      const senderDiscordId = fellows.find(u => u.username === sender).discord_id;
+
+      const recipientFellow = fellows.find(u => u.username === recipient);
+      const recipientDiscordId = recipientFellow ? recipientFellow.discord_id : null;
+
+      const senderFellow = fellows.find(u => u.username === sender);
+      const senderDiscordId = senderFellow ? senderFellow.discord_id : null;
 
       try {
         await fetch(process.env.DISCORD_WEBHOOK_URL, {
@@ -68,6 +72,7 @@ app.post(path, function (req, res) {
             recipientDiscordId,
             senderDiscordId,
             project: req.body.project,
+            number: req.body.number,
           })),
         });
         res.json({ success: true });

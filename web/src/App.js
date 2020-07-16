@@ -13,6 +13,7 @@ import About from './Pages/About';
 import GetHelp from './Pages/GetHelp';
 import Templates from './Pages/Templates';
 import Portfolio from './Pages/Portfolio';
+import VotingContest from './Pages/VotingContest';
 
 import "./App.css";
 import Header from "./Components/Header";
@@ -79,6 +80,7 @@ class App extends React.Component {
             <Route path="/get-help" render={() =>
               <GetHelp fellows={this.state.fellows} />
             } />
+            <Route path="/voting-contest" component={VotingContest} />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}

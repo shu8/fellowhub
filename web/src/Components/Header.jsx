@@ -46,6 +46,11 @@ export default function PrimarySearchAppBar() {
           </Link>
         </div>
         <div className="Header-item">
+          <Link onClick={() => history.push("/voting-contest")} className="Header-link">
+            Voting
+          </Link>
+        </div>
+        <div className="Header-item">
           <Link onClick={() => history.push("/jobs")} className="Header-link">
             Jobs
           </Link>
@@ -64,14 +69,9 @@ export default function PrimarySearchAppBar() {
           </a>
         </div>
         <div className="Header-item">
-          <a href="/about" className="Header-link">
-            <Link
-              onClick={() => history.push("/about")}
-              className="Header-link"
-            >
-              About
-            </Link>
-          </a>
+          <Link onClick={() => history.push("/about")} className="Header-link">
+            About
+          </Link>
         </div>
       </div>
     </div>
