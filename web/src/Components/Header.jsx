@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
   return (
     <div style={{ marginBottom: "20px" }}>
       <div className="Header" style={{ backgroundColor: "#1d539f" }}>
@@ -28,6 +28,7 @@ export default function PrimarySearchAppBar() {
             type="search"
             className="form-control input-dark"
             placeholder="Search"
+            onInput={e => props.onSearchInput(e.target.value.toLowerCase())}
           />
         </div>
         <div className="Header-item">

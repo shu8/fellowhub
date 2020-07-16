@@ -23,6 +23,7 @@ class App extends React.Component {
     fellows: [],
     accessToken: null,
     events: {},
+    search: "",
   };
 
   async componentDidMount() {
@@ -51,11 +52,15 @@ class App extends React.Component {
   setAccessToken = (accessToken) => this.setState({ accessToken });
   setFetchedFellows = (fellows) => this.setState({ fellows });
 
+  onSearchInput = search => this.setState({ search });
+
   render() {
     return (
       <Router>
         <div>
-          <Header />
+          <Header
+            onSearchInput={this.onSearchInput}
+          />
           <Switch>
             <Route
               path="/fellows/:username"
@@ -122,7 +127,9 @@ class App extends React.Component {
                 setFetchedFellows={this.setFetchedFellows}
                 fellows={this.state.fellows}
                 podmates={this.state.podmates}
-                accessToken={this.state.accessToken || window.sessionStorage.getItem("accessToken")} />
+                accessToken={this.state.accessToken || window.sessionStorage.getItem("accessToken")}
+                search={this.state.search}
+              />
             </Route>
           </Switch>
         </div>
