@@ -91,6 +91,7 @@ exports.handler = async (event) => {
     }
   }
 
+  console.log(JSON.stringify(allCommitCounts));
   const mvf = findMostValuable(allCommitCounts);
   console.log(mvf);
   await sendDiscordMessage(mvf);
