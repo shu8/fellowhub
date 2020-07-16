@@ -86,7 +86,7 @@ export default function Events(props) {
       return (
         <div className="App">
           <Event event={event} extended />
-          <div className="description" dangerouslySetInnerHTML={{ __html: event.description }} />
+          <div className="description" dangerouslySetInnerHTML={{ __html: event.description.replace(/\n/g, '<br/>') }} />
         </div>
       );
     } else {
