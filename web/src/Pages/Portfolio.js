@@ -242,7 +242,7 @@ export default class Portfolio extends React.Component {
           <img src={fellow.avatar_url} />
           <div className="details">
             <span className="username">{fellow.username}</span>
-            <span className="pod-info">{fellow.pod} {fellow.pod !== fellow.pod_id ? `(${fellow.pod_id})` : ''}</span>
+            <span className="pod-info" style={{marginLeft: "10px"}}>{fellow.pod} {fellow.pod !== fellow.pod_id ? `(${fellow.pod_id})` : ''}</span>
           </div>
         </div>
         <Box className="bio">
