@@ -13,9 +13,10 @@ import webaverse from "../img/webaverse.ico";
 
 import TabPanel from "../Components/TabPanel";
 import { TabNav } from "@primer/components";
-import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
+import { NoteIcon, PersonIcon, RepoIcon, PeopleIcon } from "@primer/octicons-react";
 
 import octocat from "../img/octocat-white.png";
+import {PodmateAvatar} from "../Components/PodmateAvatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -94,6 +95,13 @@ export default function Home(props) {
             onClick={() => setTab("pods")}
           >
             <PersonIcon /> Pods
+          </TabNav.Link>
+          <TabNav.Link
+            href="#podmates"
+            selected={tab === "podmates"}
+            onClick={() => setTab("podmates")}
+          >
+            <PeopleIcon /> Podmates
           </TabNav.Link>
           <TabNav.Link
             href="#projects"
@@ -177,6 +185,9 @@ export default function Home(props) {
               link="https://github.com/babel"
             />
           </div>
+        </TabPanel>
+        <TabPanel tab={tab} value={"podmates"}>
+            {props.podmates.map( (mate) => <PodmateAvatar mate={mate}>{mate.name || mate.username}</PodmateAvatar>)}
         </TabPanel>
       </div>
     </div>

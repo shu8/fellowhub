@@ -18,11 +18,12 @@ import VotingContest from './Pages/VotingContest';
 import "./App.css";
 import Header from "./Components/Header";
 import "font-awesome/css/font-awesome.min.css";
-import { fetchFellows, fetchEvents, fetchActiveFellow, fetchSingleFellow } from "./Components";
+import { fetchFellows, fetchEvents, fetchActiveFellow, fetchSingleFellow, getPodmates } from "./Components";
 
 class App extends React.Component {
   state = {
     activeFellow: "",
+    podmates: [],
     fellows: [],
     accessToken: null,
     events: {},
@@ -43,10 +44,11 @@ class App extends React.Component {
 
       const activeFellowGithubId = await fetchActiveFellow(accessToken);
       const fellow = await fetchSingleFellow(accessToken, activeFellowGithubId);
+      const podmates = await getPodmates(accessToken, fellow.pod_id)
 
       const events = await fetchEvents(accessToken);
       // console.log(events, fellows);
-      this.setState({ fellows, accessToken, events, fellow });
+      this.setState({ fellows, accessToken, events, fellow, podmates });
     }
   }
 
@@ -86,6 +88,7 @@ class App extends React.Component {
                 setAccessToken={this.setAccessToken}
                 setFetchedFellows={this.setFetchedFellows}
                 fellows={this.state.fellows}
+                podmates={this.state.podmates}
                 accessToken={this.state.accessToken || window.sessionStorage.getItem("accessToken")} />
             </Route>
           </Switch>
