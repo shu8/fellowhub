@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
-export default function PrimarySearchAppBar() {
+function Header(props) {
+  const searchEnabled = ['/', '/events', '/jobs'].includes(window.location.pathname);
+
   return (
     <div style={{ marginBottom: "20px" }}>
       <div className="Header" style={{ backgroundColor: "#1d539f" }}>
@@ -26,8 +28,10 @@ export default function PrimarySearchAppBar() {
         <div className="Header-item">
           <input
             type="search"
-            className="form-control input-dark"
+            className="header-search form-control"
             placeholder="Search"
+            disabled={!searchEnabled}
+            onInput={e => props.onSearchInput(e.target.value.toLowerCase())}
           />
         </div>
         <div className="Header-item">
@@ -69,3 +73,5 @@ export default function PrimarySearchAppBar() {
     </div>
   );
 }
+
+export default withRouter(Header);

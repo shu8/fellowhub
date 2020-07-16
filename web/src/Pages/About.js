@@ -17,22 +17,22 @@ export default function Home(props) {
         <strong>FellowHub</strong> is your all-in-one resource for all things Fellowship-related:
         <ul style={{ paddingLeft: '25px' }}>
           <li>
-            <Link onClick={() => history.push("/")}>
+            <Link to="/">
               Find your fellow Fellows
             </Link>
           </li>
           <li>
-            <Link onClick={() => history.push("/events")}>
+            <Link to="/events">
               Keep track of upcoming events from the MLH Fellowship Events Calendar
             </Link>
           </li>
           <li>
-            <Link onClick={() => history.push("/jobs")}>
+            <Link to="/jobs">
               Find job sites curated for the Fellows
             </Link>
           </li>
           <li>
-            <Link onClick={() => history.push("/fellows")}>
+            <Link to="/fellows">
               Share your own or view other Fellows' personalised portfolios, reflecting all the amazing work done during the Fellowship!
             </Link>
           </li>

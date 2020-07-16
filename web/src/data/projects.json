@@ -1,0 +1,217 @@
+{
+    "Amplify": {
+        "language": "JavaScript",
+        "siteUrl": "https://docs.amplify.aws",
+        "image": "amplify",
+        "githubUrl": "https://github.com/aws-amplify/amplify-js",
+        "description": "AWS Amplify is a set of tools and services that enables mobile and front-end web developers to build secure, scalable full stack applications, powered by AWS."
+    },
+    "Scikit-Learn": {
+        "language": "Python",
+        "siteUrl": "https://scikit-learn.org",
+        "image": "scikit_learn",
+        "githubUrl": "https://github.com/scikit-learn/scikit-learn",
+        "description": "Scikit-learn is a free software machine learning library for the Python programming language."
+    },
+    "BentoML": {
+        "language": "Python",
+        "siteUrl": "https://bentoml.org",
+        "image": "bentoml",
+        "githubUrl": "https://github.com/bentoml/BentoML",
+        "description": "BentoML is an open-source framework for high-performance machine learning model serving."
+    },
+    "Pallets": {
+        "language": "Python",
+        "siteUrl": "https://palletsprojects.com",
+        "image": "pallets",
+        "githubUrl": "https://github.com/pallets",
+        "description": "The Pallets Projects are a collection of Python web development libraries that were independently developed by Armin Ronacher and later used as the basis of the Flask microframework."
+    },
+    "Docsify": {
+        "language": "JavaScript",
+        "siteUrl": "https://docsify.js.org",
+        "image": "docsify",
+        "githubUrl": "https://github.com/docsifyjs/docsify",
+        "description": "A magical documentation site generator."
+    },
+    "Circuit Python": {
+        "language": "Python",
+        "siteUrl": "https://circuitpython.org",
+        "githubUrl": "https://github.com/adafruit/circuitpython",
+        "description": "Simplify experimenting and learning to code on low-cost microcontroller boards."
+    },
+    "Julia": {
+        "language": "duh",
+        "siteUrl": "https://julialang.org",
+        "image": "julia",
+        "githubUrl": "https://github.com/JuliaLang/julia",
+        "description": "Julia is a high-level, high-performance, dynamic programming language."
+    },
+    "HTTPie": {
+        "language": "Python",
+        "siteUrl": "https://httpie.org",
+        "image": "httpie",
+        "githubUrl": "https://github.com/jakubroztocil/httpie",
+        "description": "HTTPie is a command-line HTTP client that will make you smile."
+    },
+    "React Native": {
+        "language": "JavaScript",
+        "siteUrl": "https://reactnative.dev",
+        "image": "reactNative",
+        "githubUrl": "https://github.com/facebook/react-native",
+        "description": "A framework for building native apps with React."
+    },
+    "Homebrew": {
+        "language": "Ruby",
+        "siteUrl": "https://brew.sh",
+        "image": "homebrew",
+        "githubUrl": "https://github.com/Homebrew",
+        "description": "The missing package manager for macOS (or Linux)."
+    },
+    "Beagleboard": {
+        "language": "C",
+        "siteUrl": "http://beagleboard.org/source",
+        "image": "beagleBoard",
+        "githubUrl": "https://github.com/beagleboard/linux",
+        "description": "n/a"
+    },
+    "Next.js": {
+        "language": "JavaScript",
+        "siteUrl": "https://nextjs.org",
+        "image": "Nextjs",
+        "githubUrl": "https://github.com/vercel/next.js",
+        "description": "Next.js is a Production grade React applications that scale."
+    },
+    "Howdoi": {
+        "language": "Python",
+        "siteUrl": "http://blog.gleitzman.com/post/43330157197/howdoi-instant-coding-answers-via-the-command-line",
+        "image": "hdi",
+        "githubUrl": "https://github.com/gleitz/howdoi",
+        "description": "Instant coding answers via the command line"
+    },
+    "Babel": {
+        "language": "JavaScript",
+        "siteUrl": "https://babeljs.io",
+        "image": "babel",
+        "githubUrl": "https://github.com/babel/babel",
+        "description": "Babel is a popular tool for using the newest features of the JavaScript programming language."
+    },
+    "SciML": {
+        "language": "Julia",
+        "siteUrl": "https://sciml.ai",
+        "githubUrl": "https://github.com/SciML",
+        "description": "SciML is anOpen source software for scientific machine learning"
+    },
+    "Dev.to": {
+        "language": "Ruby",
+        "siteUrl": "https://dev.to",
+        "image": "devto",
+        "githubUrl": "https://github.com/thepracticaldev/dev.to",
+        "description": "Where programmers share ideas and help each other grow."
+    },
+    "N8N": {
+        "language": "JavaScript",
+        "siteUrl": "https://n8n.io",
+        "image": "n8n",
+        "githubUrl": "https://github.com/n8n-io/n8n",
+        "description": "Free and open self hostable workflow automation tool."
+    },
+    "Oh My Zsh": {
+        "language": "Shell",
+        "siteUrl": "https://ohmyz.sh",
+        "image": "ohmyzsh",
+        "githubUrl": "https://github.com/ohmyzsh/ohmyzsh",
+        "description": "Oh-My-Zsh is a delightful, open source, community-driven framework for managing your ZSH configuration."
+    },
+    "Fast API": {
+        "language": "Python",
+        "siteUrl": "https://fastapi.tiangolo.com",
+        "image": "fastApi",
+        "githubUrl": "https://github.com/tiangolo/fastapi",
+        "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production."
+    },
+    "Jest": {
+        "language": "JavaScript",
+        "siteUrl": "https://jestjs.io",
+        "image": "jest",
+        "githubUrl": "https://github.com/facebook/jest",
+        "description": "A comprehensive JavaScript testing solution. Works out of the box for most JavaScript projects."
+    },
+    "Sheet": {
+        "language": "JavaScript",
+        "siteUrl": "https://sheetjs.com/",
+        "image": "sheetjs",
+        "githubUrl": "https://github.com/SheetJS",
+        "description": "Spreadsheets simplified. Read, edit, and export spreadsheets Works in web browsers and servers Supports every Excel file format"
+    },
+    "Webaverse": {
+        "language": "JavaScript",
+        "siteUrl": "https://webaverse.com/",
+        "image": "webaverse",
+        "githubUrl": "https://github.com/webaverse",
+        "description": "The Webaverse is a blanket term used to describe a set of technologies that enable the use of spatial applications and objects powered by WebXR."
+    },
+    "CircuitPython": {
+        "language": "Python",
+        "siteUrl": "https://circuitpython.org/",
+        "image": "circuitPython",
+        "githubUrl": "https://github.com/adafruit/circuitpython",
+        "description": "CircuitPython is a programming language designed to simplify experimenting and learning to code on low-cost microcontroller boards."
+    },
+    "AliceVision": {
+        "language": "Python",
+        "siteUrl": "https://github.com/alicevision",
+        "image": "AliceVision",
+        "githubUrl": "https://github.com/alicevision",
+        "description": "AliceVision is a Photogrammetric Computer Vision framework for 3D Reconstruction and Camera Tracking."
+    },
+    "Keras": {
+        "language": "Python",
+        "siteUrl": "https://github.com/keras-team",
+        "image": "keras",
+        "githubUrl": "https://github.com/keras-team",
+        "description": "Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow."
+    },
+    "Docusaurus": {
+        "language": "JavaScript",
+        "siteUrl": "https://github.com/facebook/docusaurus",
+        "image": "docusaurus",
+        "githubUrl": "https://github.com/facebook/docusaurus",
+        "description": "Docusaurus is an open-source static site generator that converts Markdown files to a documentation website."
+    },
+    "WFP PRISM project": {
+        "language": "Python",
+        "siteUrl": "https://github.com/oviohub/opportunities/issues/10",
+        "image": "wfp",
+        "githubUrl": "https://github.com/oviohub/opportunities/issues/10",
+        "description": "The World Food Programme (WFP) is the food-assistance branch of the United Nations and the world's largest humanitarian organization addressing hunger and promoting food security."
+    },
+    "React": {
+        "language": "JavaScript",
+        "siteUrl": "https://github.com/facebook/react",
+        "image": "react",
+        "githubUrl": "https://github.com/facebook/react",
+        "description": "React is a JavaScript library for building user interfaces. Declarative: React makes it painless to create interactive UIs."
+    },
+    "Relay": {
+        "language": "JavaScript",
+        "siteUrl": "https://github.com/facebook/relay",
+        "image": "relay",
+        "githubUrl": "https://github.com/facebook/relay",
+        "description": "A JavaScript framework for building data-driven React applications powered by GraphQL, designed from the ground up to be easy to use, extensible and, most of all, performant."
+    },
+    "React-Jsonschema-Form": {
+        "language": "JavaScript",
+        "siteUrl": "https://github.com/rjsf-team/react-jsonschema-form",
+        "image": "reactJson",
+        "githubUrl": "https://github.com/rjsf-team/react-jsonschema-form",
+        "description": "A React component for building Web forms from JSON Schema."
+    },
+    "Typer": {
+        "language": "Python",
+        "siteUrl": "https://github.com/tiangolo/typer",
+        "image": "typer",
+        "githubUrl": "https://github.com/tiangolo/typer",
+        "description": "Typer is a library for building CLI applications that users will love using and developers will love creating."
+    }
+}
