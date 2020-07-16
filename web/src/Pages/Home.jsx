@@ -21,16 +21,7 @@ import projectsData from "../data/projects.json";
 import projectImages from "../img/projects";
 import Loading from "../Components/Loading";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    maxWidth: "65%",
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
-
 export default function Home(props) {
-  const classes = useStyles();
   const [tab, setTab] = React.useState(
     window.location.hash.substr(1) || "home"
   );
@@ -106,9 +97,9 @@ export default function Home(props) {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ display: "flex" }}>
       <Profile fellows={props.fellows} />
-      <div className={classes.root}>
+      <div style={{ width: "100%" }}>
         <TabNav aria-label="Main">
           <TabNav.Link
             href="#home"
@@ -160,8 +151,8 @@ export default function Home(props) {
             style={{
               display: "grid",
               columnGap: "15px",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gridTemplateRows: "repeat(4, 400px)",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateRows: "repeat(auto-fit, minmax(300px, 1fr))",
               rowGap: "10px",
             }}
           >
