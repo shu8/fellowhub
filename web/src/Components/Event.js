@@ -1,12 +1,32 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+const mapDay = (n) => days[n];
 
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const mapDay = n => days[n];
-
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-const mapMonth = n => months[n];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const mapMonth = (n) => months[n];
 
 export default function Event(props) {
   const history = useHistory();
@@ -18,11 +38,15 @@ export default function Event(props) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (!props.extended) history.push(`/events/${props.event.id}`)
+    if (!props.extended) history.push(`/events/${props.event.id}`);
   };
 
   return (
-    <a onClick={handleClick} href={`/events/${props.event.id}`} className="event">
+    <a
+      onClick={handleClick}
+      href={`/events/${props.event.id}`}
+      className="event"
+    >
       <div className="calendar">
         <span className="day">{day}</span>
         <span className="date">{date}</span>
@@ -30,17 +54,20 @@ export default function Event(props) {
       </div>
       <div className="details">
         <span className="times">
-          {new Date(props.event.start.dateTime).toLocaleTimeString()}
-          {' '}-{' '}
+          {new Date(props.event.start.dateTime).toLocaleTimeString()} -{" "}
           {new Date(props.event.end.dateTime).toLocaleTimeString()}
         </span>
-        <span className="summary">
-          {props.event.summary}
-        </span>
+        <span className="summary">{props.event.summary}</span>
         {props.extended && (
-          <a href={props.event.location} target="_blank" rel="noopener noreferrer">Join event!</a>
+          <a
+            href={props.event.location}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join event!
+          </a>
         )}
       </div>
     </a>
-  )
-};
+  );
+}
