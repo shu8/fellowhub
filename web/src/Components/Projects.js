@@ -7,6 +7,7 @@ const Projects = (props) => {
       <BorderBox
         style={{
           padding: "20px",
+          height: "250px",
         }}
       >
         <div class="d-table col-12">
@@ -16,7 +17,12 @@ const Projects = (props) => {
           <div class="col-10 d-table-cell v-align-middle pl-4">
             <h1 class="text-normal lh-condensed">{props.name}</h1>
             <p class="h4 text-gray text-normal mb-2">{props.description}</p>
-            <a class="text-gray text-small" href={props.link} target="_blank" rel="noopener noreferrer">
+            <a
+              class="text-gray text-small"
+              href={props.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {props.link}
             </a>
           </div>
