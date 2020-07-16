@@ -1,0 +1,36 @@
+<svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="322" width="322" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_21">
+   <g transform="matrix(0.390625,0,0,0.390625,0,0) " id="svg_18" stroke="null">
+    <title transform="translate(864,0) translate(0,608) ">background</title>
+    <rect x="863" y="607" width="322" height="322" id="svg_16" fill="#ffffff" stroke="null"/>
+    <g id="svg_15" display="none" stroke="null">
+     <rect id="svg_19" width="800" height="600" x="864" y="608" stroke-width="0" fill="url(#gridpattern)" stroke="null"/>
+    </g>
+   </g>
+   <g transform="matrix(0.9972564876079559,0,0,0.9972564876079559,1.5531267480885163,1.552812583771356) " id="svg_20" stroke="null">
+    <title transform="translate(0,-1.002751111984253) translate(-1.002751111984253,0) translate(0,20.48003387451172) translate(0,0.00003417968764551915) translate(0,0.00003417968764551915) translate(-1190.400390625,0) translate(0.00023437499476131052,0) translate(0.00023437499476131052,0) translate(-0.0003906250058207661,0) translate(1190.4000244140625,-20.479999542236328) translate(0,-145.91986083984375) translate(0,-0.00012695312034338713) translate(0,-1.2799121141433716) translate(-253.4400177001953,0) translate(-0.000019531249563442543,0) translate(-0.000019531249563442543,0) translate(-0.000019531249563442543,0) translate(1.27978515625,0) translate(-1146.8800048828125,-66.55999755859375) translate(506.8800048828125,-345.6000061035156) translate(2.559999942779541,-12.800000190734863) translate(25.600000381469727,-35.84000015258789) translate(864,0) translate(0,608) ">Layer 1</title>
+    <defs transform="translate(0,-1.002751111984253) translate(-1.002751111984253,0) translate(0,20.48003387451172) translate(0,0.00003417968764551915) translate(0,0.00003417968764551915) translate(-1190.400390625,0) translate(0.00023437499476131052,0) translate(0.00023437499476131052,0) translate(-0.0003906250058207661,0) translate(1190.4000244140625,-20.479999542236328) translate(0,-145.91986083984375) translate(0,-0.00012695312034338713) translate(0,-1.2799121141433716) translate(-253.4400177001953,0) translate(-0.000019531249563442543,0) translate(-0.000019531249563442543,0) translate(-0.000019531249563442543,0) translate(1.27978515625,0) translate(-1146.8800048828125,-66.55999755859375) translate(506.8800048828125,-345.6000061035156) translate(2.559999942779541,-12.800000190734863) translate(25.600000381469727,-35.84000015258789) translate(864,0) translate(0,608) ">
+     <style>.cls-1,.cls-2{fill:#fff;}.cls-1{fill-rule:evenodd;}.cls-3{fill:#f8b92a;}.cls-4{fill:#ffcd69;}.cls-5{fill:#e2a120;}</style>
+    </defs>
+    <g id="svg_10" stroke="null">
+     <g id="svg_11" transform="matrix(4.325091634161233,0,0,4.325091634161233,-3905.9605837434065,-3121.161035103112) " stroke="null">
+      <rect class="cls-3" x="942.121214" y="760.668612" width="34.64" height="34.64" id="svg_14" stroke="null"/>
+      <rect class="cls-4" y="760.668612" width="34.64" height="34.64" id="svg_13" x="902.861214" stroke="null"/>
+      <rect class="cls-5" x="942.121214" width="34.64" height="34.64" id="svg_12" y="721.408612" stroke="null"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

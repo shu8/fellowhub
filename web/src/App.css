@@ -9,6 +9,11 @@ html {
   padding-right: 30px;
 }
 
+.Header .logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
 .header-search:disabled {
   background-color: lightgray;
 }
