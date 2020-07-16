@@ -1,11 +1,9 @@
 import React from "react"
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { StyledOcticon, Heading } from "@primer/components";
 import { HeartFillIcon } from "@primer/octicons-react";
 
 export default function Home(props) {
-  const history = useHistory();
-
   return (
     <div className='App'>
       <Heading fontSize={7} mb={3}>

@@ -37,6 +37,7 @@
     "Circuit Python": {
         "language": "Python",
         "siteUrl": "https://circuitpython.org",
+        "image": "circuitPython",
         "githubUrl": "https://github.com/adafruit/circuitpython",
         "description": "Simplify experimenting and learning to code on low-cost microcontroller boards."
     },

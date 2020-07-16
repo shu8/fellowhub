@@ -1,12 +1,13 @@
 import React from "react";
 
-import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav, Button, Details, Truncate } from "@primer/components";
+import { Box, TabNav, Label, BorderBox, UnderlineNav, Button, Details, Truncate } from "@primer/components";
 import {
-  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon, ClippyIcon
+  GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon, ClippyIcon
 } from "@primer/octicons-react";
 
 import { fetchFellow, fetchStandups, starRepo, sendDiscordMessage } from '../Components';
 import TabPanel from "../Components/TabPanel";
+import Loading from "../Components/Loading";
 
 import linkedinTemplates from "../data/linkedin-recommendation-templates.json";
 
@@ -227,11 +228,7 @@ export default class Portfolio extends React.Component {
     const { fellow } = this.state
 
     if (!fellow) {
-      return (
-        <Heading fontSize={7} mb={3} style={{ textAlign: 'center' }}>
-          <HourglassIcon size={55} /> Loading...
-        </Heading>
-      );
+      return <Loading />
     } else if (!Object.keys(fellow).length) {
       return this.renderError();
     }

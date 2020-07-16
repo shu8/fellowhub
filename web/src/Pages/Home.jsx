@@ -19,6 +19,7 @@ import { PodmateAvatar } from "../Components/PodmateAvatar";
 
 import projectsData from "../data/projects.json";
 import projectImages from "../img/projects";
+import Loading from "../Components/Loading";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -148,7 +149,7 @@ export default function Home(props) {
               gridTemplateRows: "repeat(4, 110px)",
             }}
           >
-            {createAvatars()}
+            {props.fellows.length ? createAvatars() : <Loading small />}
           </div>
         </TabPanel>
         <TabPanel tab={tab} value={"pods"}>
@@ -161,6 +162,7 @@ export default function Home(props) {
               columnGap: "15px",
               gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
               gridTemplateRows: "repeat(4, 400px)",
+              rowGap: "10px",
             }}
           >
             {createProjects()}
