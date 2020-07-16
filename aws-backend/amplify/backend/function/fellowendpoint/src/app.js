@@ -58,6 +58,34 @@ const query = username => `
         createdAt
       }
     }
+    pinnedItems(first: 6) {
+      nodes {
+        ... on Repository {
+          name
+          url
+          forks {
+            totalCount
+          }
+          shortDescriptionHTML
+          stargazers {
+            totalCount
+          }
+        }
+      }
+    }
+    topRepositories(orderBy: {field: CREATED_AT, direction: ASC}, first: 6) {
+      nodes {
+        shortDescriptionHTML
+        url
+        stargazers {
+          totalCount
+        }
+        name
+        forks {
+          totalCount
+        }
+      }
+    }
   }
 }`;
 
@@ -71,7 +99,7 @@ const convertUrlType = (param, type) => {
   }
 }
 
-const addRecentActivity = async user => {
+const addExtraLiveData = async user => {
   const q = query(user.username_original);
   const res = await fetch(BASE_GRAPH_QL_API_URL,
     {
@@ -86,6 +114,24 @@ const addRecentActivity = async user => {
   const json = await res.json();
   user.pullsActivity = json.data.user.pullRequests.nodes;
   user.issuesActivity = json.data.user.issues.nodes;
+
+  // Filter to ensure not null
+  user.pinnedRepos = json.data.user.pinnedItems.nodes.filter(r => r);
+  user.pinnedRepos.forEach(r => {
+    if (!r) return;
+    r.forks = r.forks.totalCount;
+    r.stars = r.stargazers.totalCount;
+    delete r.stargazers;
+  });
+
+  // Filter to ensure not null
+  user.topRepos = json.data.user.topRepositories.nodes.filter(r => r);
+  user.topRepos.forEach(r => {
+    if (!r) return;
+    r.forks = r.forks.totalCount;
+    r.stars = r.stargazers.totalCount;
+    delete r.stargazers;
+  });
 };
 
 app.get(path, async function (req, res) {
@@ -112,7 +158,7 @@ app.get(path, async function (req, res) {
         res.json({ error: 'Could not load items: ' + err.message });
       } else {
         if (data.Item) {
-          await addRecentActivity(data.Item);
+          await addExtraLiveData(data.Item);
           res.json(data.Item);
         } else {
           res.json(data);
