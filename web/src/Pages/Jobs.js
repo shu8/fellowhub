@@ -16,7 +16,10 @@ export default function Jobs(props) {
       </Heading>
       <FilterList>
         <ul style={{ columns: 3, listStyleType: "none" }}>
-          {jobSites.map((jobSite) => {
+          {jobSites.filter(j => {
+            if (!props.search) return true;
+            return j.toLowerCase().includes(props.search);
+          }).map((jobSite) => {
             return (
               <FilterList.Item>
                 <li>

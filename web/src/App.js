@@ -116,7 +116,11 @@ class App extends React.Component {
                 />
               )}
             />
-            <Route path="/jobs" component={Jobs} />
+            <Route path="/jobs" component={() => (
+              <Jobs
+                search={this.state.search}
+              />
+            )} />
             <Route path="/about" component={About} />
             <Route
               path="/get-help"
