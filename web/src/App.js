@@ -1,24 +1,25 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from './Pages/Home.jsx';
-import Fellows from './Pages/Fellows';
-import Events from './Pages/Events';
-import Jobs from './Pages/Jobs';
-import About from './Pages/About';
-import GetHelp from './Pages/GetHelp';
-import Templates from './Pages/Templates';
-import Portfolio from './Pages/Portfolio';
-import VotingContest from './Pages/VotingContest';
+import Home from "./Pages/Home.jsx";
+import Fellows from "./Pages/Fellows";
+import Events from "./Pages/Events";
+import Jobs from "./Pages/Jobs";
+import About from "./Pages/About";
+import GetHelp from "./Pages/GetHelp";
+import Templates from "./Pages/Templates";
+import Portfolio from "./Pages/Portfolio";
+import VotingContest from "./Pages/VotingContest";
 
 import "./App.css";
 import Header from "./Components/Header";
 import "font-awesome/css/font-awesome.min.css";
-import { fetchFellows, fetchEvents, fetchActiveFellow, fetchSingleFellow } from "./Components";
+import {
+  fetchFellows,
+  fetchEvents,
+  fetchActiveFellow,
+  fetchSingleFellow,
+} from "./Components";
 
 class App extends React.Component {
   state = {
@@ -50,8 +51,8 @@ class App extends React.Component {
     }
   }
 
-  setAccessToken = accessToken => this.setState({ accessToken });
-  setFetchedFellows = fellows => this.setState({ fellows });
+  setAccessToken = (accessToken) => this.setState({ accessToken });
+  setFetchedFellows = (fellows) => this.setState({ fellows });
 
   render() {
     return (
@@ -59,34 +60,75 @@ class App extends React.Component {
         <div>
           <Header />
           <Switch>
-            <Route path="/fellows/:username" component={props => {
-              const username = props.match && props.match.params ? props.match.params.username : null;
-              return <Portfolio username={username} accessToken={this.state.accessToken} />
-            }} />
-            <Route path="/fellows" component={() =>
-              <Fellows fellows={this.state.fellows} accessToken={this.state.accessToken} />
-            } />
-            <Route path="/events/:id" component={props =>
-              <Events accessToken={this.state.accessToken} events={this.state.events} {...props} />
-            } />
-            <Route path="/events" component={() =>
-              <Events accessToken={this.state.accessToken} events={this.state.events} />
-            } />
-            <Route path="/templates" component={() =>
-              <Templates accessToken={this.state.accessToken} fellow={this.state.fellow} />
-            } />
+            <Route
+              path="/fellows/:username"
+              component={(props) => {
+                const username =
+                  props.match && props.match.params
+                    ? props.match.params.username
+                    : null;
+                return (
+                  <Portfolio
+                    username={username}
+                    accessToken={this.state.accessToken}
+                  />
+                );
+              }}
+            />
+            <Route
+              path="/fellows"
+              component={() => (
+                <Fellows
+                  fellows={this.state.fellows}
+                  accessToken={this.state.accessToken}
+                />
+              )}
+            />
+            <Route
+              path="/events/:id"
+              component={(props) => (
+                <Events
+                  accessToken={this.state.accessToken}
+                  events={this.state.events}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path="/events"
+              component={() => (
+                <Events
+                  accessToken={this.state.accessToken}
+                  events={this.state.events}
+                />
+              )}
+            />
+            <Route
+              path="/templates"
+              component={() => (
+                <Templates
+                  accessToken={this.state.accessToken}
+                  fellow={this.state.fellow}
+                />
+              )}
+            />
             <Route path="/jobs" component={Jobs} />
             <Route path="/about" component={About} />
-            <Route path="/get-help" render={() =>
-              <GetHelp fellows={this.state.fellows} />
-            } />
+            <Route
+              path="/get-help"
+              render={() => <GetHelp fellows={this.state.fellows} />}
+            />
             <Route path="/voting-contest" component={VotingContest} />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}
                 setFetchedFellows={this.setFetchedFellows}
                 fellows={this.state.fellows}
-                accessToken={this.state.accessToken || window.sessionStorage.getItem("accessToken")} />
+                accessToken={
+                  this.state.accessToken ||
+                  window.sessionStorage.getItem("accessToken")
+                }
+              />
             </Route>
           </Switch>
         </div>
