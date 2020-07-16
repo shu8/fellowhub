@@ -1,12 +1,14 @@
 import React from "react";
 
-import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav, Button } from "@primer/components";
+import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav, Button, Details, Truncate } from "@primer/components";
 import {
-  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon
+  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon, StarIcon, GitForkIcon, ClippyIcon
 } from "@primer/octicons-react";
 
 import { fetchFellow, fetchStandups, starRepo, sendDiscordMessage } from '../Components';
 import TabPanel from "../Components/TabPanel";
+
+import linkedinTemplates from "../data/linkedin-recommendation-templates.json";
 
 const stateColors = {
   OPEN: '#28a745',
@@ -136,8 +138,47 @@ export default class Portfolio extends React.Component {
   setTab(tab) { this.setState({ tab }) }
   setExchangeTab(exchangeTab) { this.setState({ exchangeTab }) };
 
-  renderLinkedinExchangeTab(props) {
-    return <div />
+  renderLinkedinExchangeTab() {
+    const name = this.state.fellow.name.split(' ')[0];
+    const detailElements = linkedinTemplates.map((t, i) => {
+      const text = t.replace(/RECOMMENDED_FELLOW/g, name);
+      return (
+        <BorderBox className="linkedin-template-expander" key={i}>
+          <Details>
+            <Truncate as="summary" title={text}>{text}</Truncate>
+            <p>
+              {text}
+              <Button
+                onClick={() => navigator.clipboard.writeText(text)}
+                title="Copy to clipboard"
+                className="copy-to-clipboard"
+              >
+                <ClippyIcon size={24} />
+              </Button>
+            </p>
+          </Details>
+        </BorderBox>
+      );
+    });
+
+    return (
+      <div>
+        {this.state.fellow.linkedin_id
+          ? <a href={`https://linkedin.com/in/${this.state.fellow.linkedin_id}`} target="_blank" rel="noopener noreferrer">
+              <Button className="blue-btn" onClick={() => 1}>Click here to visit {name}'s LinkedIn profile.</Button>
+            </a>
+          : <span>Oh no! Looks like we don't have this Fellow's LinkedIn profile saved! Please get in touch with us and we will fix this!</span>
+        }
+        {this.state.fellow.linkedin_id && (
+          <Button className="blue-btn" style={{ marginLeft: '10px'}} onClick={async () =>
+            await sendDiscordMessage(this.props.loggedInUser.username, this.props.username, 'linkedin', null, this.props.accessToken)}
+          >
+            I've endorsed {name}!
+          </Button>
+        )}
+        {detailElements}
+      </div>
+    );
   }
 
   renderGithubExchangeTab(props) {
@@ -272,9 +313,9 @@ export default class Portfolio extends React.Component {
               <p>
                 If you have appreciated working with a Fellow during the Fellowship, please take a minute to endorse them on LinkedIn.
                 <br />
-                FellowHub provides personalised templates you can use to make the process quick and simple! You are encouraged to edit these to include your personal experiences with the Fellow.
+                You can easily copy and paste personalised templates below to make the process quick and simple! You are encouraged to edit these to include your personal experiences with the Fellow.
               </p>
-              {this.renderLinkedinExchangeTab(this.props.accessToken)}
+              {this.renderLinkedinExchangeTab(this.props)}
             </TabPanel>
           </div>
         </TabPanel>
