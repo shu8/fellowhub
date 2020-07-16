@@ -143,7 +143,6 @@ export default function Home(props) {
             name="Mentors"
             description="The mentors for the MLH Fellowship class."
           />
-          <Pods name="0.0.1" description="Sudo Seals" />
           <Pods name="0.1.1" description="Smart Sea Cucumbers" />
           <Pods name="0.1.2" description="Baby Shark" />
           <Pods name="0.2.1" description="Distributed Dodos" />
