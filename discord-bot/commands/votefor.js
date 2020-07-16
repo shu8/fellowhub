@@ -40,7 +40,7 @@ module.exports = {
 				`ERROR FOR ONE OF THESE DISCORD IDs:\n${voterDiscordId}\n${recipientGithubId}`
 			);
 			message.channel.send(
-				"Uh oh, one of those Discord IDs is missing! Paging @<716842220648661012>"
+				"Uh oh, one of those Discord IDs is missing! Paging <@716842220648661012>"
 			);
 			return;
 		}
@@ -72,7 +72,7 @@ module.exports = {
 
 		if (GITHUB_IDS_OF_FELLOWS_WITHOUT_DISCORD_IDS.includes(recipientGithubId)) {
 			message.channel.send(
-				"Oh we have you in our database but without a Discord ID! Paging @<716842220648661012>"
+				"Oh we have you in our database but without a Discord ID! Paging <@716842220648661012>"
 			);
 			return;
 		}
@@ -121,7 +121,9 @@ module.exports = {
 		const { success } = await voteCastingResponse.json();
 
 		if (!success) {
-			message.channel.send("Uh oh, your vote could not be recorded!");
+			message.channel.send(
+				"Uh oh, your vote could not be recorded! Paging <@716842220648661012>"
+			);
 			return;
 		}
 
