@@ -23,6 +23,8 @@ import scikit_learn from "../img/scikit_learn.png";
 import julia from "../img/julia.svg";
 import docusaurus from "../img/docusaurus.png";
 import Nextjs from "../img/Nextjs.png";
+import sciml from "../img/sciml.png";
+import wtp from "../img/wfp.png";
 
 import { TabNav, Box, Text } from "@primer/components";
 import { NoteIcon, PersonIcon, RepoIcon } from "@primer/octicons-react";
@@ -245,7 +247,7 @@ export default function Home(props) {
               name="SciML"
               description="SciML is anOpen source software for scientific machine learning"
               alt="SciML"
-              image={docsify}
+              image={sciml}
               link="https://github.com/SciML"
             />
             <Projects
@@ -263,10 +265,10 @@ export default function Home(props) {
               link="https://github.com/facebook/docusaurus"
             />
             <Projects
-              name="World Food Programme's PRISM project"
-              description="The World Food Programme (WFP) is the food-assistance branch of the United Nations and the world's largest humanitarian organization addressing hunger and promoting food security."
+              name="WFP PRISM project"
+              description="The World Food Programme (WFP) is the food-assistance branch of the United Nations."
               alt="WFP"
-              image={docsify}
+              image={wtp}
               link="https://github.com/oviohub/opportunities/issues/10"
             />
             <Projects
