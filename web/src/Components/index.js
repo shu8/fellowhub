@@ -1,7 +1,34 @@
 import axios from "axios";
 
-const apiUrl =
-  "https://ld48eii9kk.execute-api.eu-central-1.amazonaws.com/dev";
+const apiUrl = "https://ld48eii9kk.execute-api.eu-central-1.amazonaws.com/dev";
+
+export const fetchActiveFellow = async (accessToken) => {
+  try {
+    const response = await axios.get(`https://api.github.com/user`, {
+      headers: {
+        Authorization: "bearer " + accessToken,
+      },
+    });
+    return response.data.login; // githubId for active fellow
+  } catch (error) {
+    console.log(error);
+    return "";
+  }
+};
+
+export const fetchSingleFellow = async (accessToken, githubId) => {
+  try {
+    const response = await axios.get(`${apiUrl}/fellows/${githubId}`, {
+      headers: {
+        Authorization: accessToken,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return "";
+  }
+};
 
 export const fetchFellows = async (accessToken) => {
   try {
@@ -61,4 +88,4 @@ export const fetchEvents = async (accessToken) => {
     console.log(error);
     return [];
   }
-}
+};

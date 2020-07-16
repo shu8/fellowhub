@@ -59,7 +59,16 @@ export default function PrimarySearchAppBar() {
           </Link>
         </div>
         <div className="Header-item">
+
+          <a href="/templates" className="Header-link">
+            Templates
+          </a>
+        </div>
+        <div className="Header-item">
+          <a href="/about" className="Header-link">
+
           <Link onClick={() => history.push("/about")} className="Header-link">
+
             About
           </Link>
         </div>
