@@ -9,6 +9,10 @@ html {
   padding-right: 30px;
 }
 
+.header-search:disabled {
+  background-color: lightgray;
+}
+
 .Search {
   display: flex;
   flex-direction: row-reverse;
