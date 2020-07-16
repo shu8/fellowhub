@@ -7,7 +7,7 @@ export const PodmateAvatar = (mate) => {
   mate = mate.mate; // no idea why
   return (
     <div>
-      <BorderBox style={{ padding: "20px" }}>
+      <BorderBox style={{ padding: "20px", marginBottom: "10px" }}>
         <div class="d-table col-12">
           <div class="col-2 d-table-cell v-align-middle">
             <img

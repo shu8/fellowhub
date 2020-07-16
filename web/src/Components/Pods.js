@@ -18,12 +18,6 @@ import logo061 from "../img/podLogos/061.png";
 import logo062 from "../img/podLogos/062.png";
 import logoStaff from "../img/podLogos/staff.jpg";
 import logoMentors from "../img/podLogos/mentors.png";
-import {
-  HourglassIcon,
-  GitCompareIcon,
-  MegaphoneIcon,
-  PencilIcon,
-} from "@primer/octicons-react";
 
 const Pods = ({ fellows }) => {
   const pods = {
@@ -96,64 +90,66 @@ const Pods = ({ fellows }) => {
       {Object.keys(pods).map((podId) => {
         console.log(imageMapping[podId]);
         return (
-          <div class="d-table col-12" style={{ marginBottom: "15px" }}>
-            <div class="col-2 d-table-cell v-align-middle">
-              <img
-                class="width-full avatar"
-                src={imageMapping[podId]}
-                alt="-"
-                style={{ maxWidth: "100px", maxHeight: "100px" }}
-              />
-            </div>
-            <div class="col-10 d-table-cell v-align-middle pl-4">
-              <Heading fontSize={3} mb={2} mt={2} color="#1d539f">
-                Pod {podId}
-              </Heading>
-              <Text as="p" sx={{ fontSize: 2 }}>
-                <b>Podmates</b>:{" "}
-                <span style={{ color: "#808080" }}>
-                  {pods[podId].map((fellow, index) => (
-                    <span>
-                      {(fellow.name || fellow.username) +
-                        (index === pods[podId].length - 1 ? "" : " · ")}
-                    </span>
-                  ))}
-                </span>
-                <br />
-                {projectMapping[podId] === undefined ? null : (
-                  <>
-                    <b>Projects</b>:{" "}
-                    <span style={{ color: "#808080" }}>
-                      {projectMapping[podId].map((project, index) => (
-                        <span>
-                          {project +
-                            (index === projectMapping[podId].length - 1
-                              ? ""
-                              : " · ")}
-                        </span>
-                      ))}
-                    </span>
-                  </>
-                )}
-              </Text>
-              <Text as="p" sx={{ fontSize: 1 }}>
-                <a
-                  class="text-gray text-small"
-                  href={getPodGithubUrl(podId)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <StyledOcticon
-                    icon={MarkGithubIcon}
-                    size={18}
-                    color="#1d539f"
-                    mr={2}
-                  />
+          <BorderBox style={{ padding: "20px", marginBottom: "10px" }}>
+            <div class="d-table col-12" style={{ marginBottom: "15px" }}>
+              <div class="col-2 d-table-cell v-align-middle">
+                <img
+                  class="width-full avatar"
+                  src={imageMapping[podId]}
+                  alt="-"
+                  style={{ maxWidth: "100px", maxHeight: "100px" }}
+                />
+              </div>
+              <div class="col-10 d-table-cell v-align-middle pl-4">
+                <Heading fontSize={3} mb={2} mt={2} color="#1d539f">
+                  Pod {podId}
+                </Heading>
+                <Text as="p" sx={{ fontSize: 2 }}>
+                  <b>Podmates</b>:{" "}
+                  <span style={{ color: "#808080" }}>
+                    {pods[podId].map((fellow, index) => (
+                      <a href={`/fellows/${fellow.username}`} target="_blank" rel="noopener noreferrer">
+                        {(fellow.name || fellow.username) +
+                          (index === pods[podId].length - 1 ? "" : " · ")}
+                      </a>
+                    ))}
+                  </span>
+                  <br />
+                  {projectMapping[podId] === undefined ? null : (
+                    <>
+                      <b>Projects</b>:{" "}
+                      <span style={{ color: "#808080" }}>
+                        {projectMapping[podId].map((project, index) => (
+                          <span>
+                            {project +
+                              (index === projectMapping[podId].length - 1
+                                ? ""
+                                : " · ")}
+                          </span>
+                        ))}
+                      </span>
+                    </>
+                  )}
+                </Text>
+                <Text as="p" sx={{ fontSize: 1 }}>
+                  <a
+                    class="text-gray text-small"
+                    href={getPodGithubUrl(podId)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <StyledOcticon
+                      icon={MarkGithubIcon}
+                      size={18}
+                      color="#1d539f"
+                      mr={2}
+                    />
                   Pod's GitHub
                 </a>
-              </Text>
+                </Text>
+              </div>
             </div>
-          </div>
+          </BorderBox>
         );
       })}
     </BorderBox>
