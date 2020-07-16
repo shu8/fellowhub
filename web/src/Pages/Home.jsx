@@ -152,11 +152,7 @@ export default function Home(props) {
           </div>
         </TabPanel>
         <TabPanel tab={tab} value={"pods"}>
-          {props.fellows.map((fellow, i) => (
-            <Pods key={i} mate={fellow}>
-              {fellow.name || fellow.username}
-            </Pods>
-          ))}
+          <Pods {...props} />
         </TabPanel>
         <TabPanel tab={tab} value={"projects"}>
           <div
