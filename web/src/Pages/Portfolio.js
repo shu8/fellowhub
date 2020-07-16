@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Heading, Box, TabNav, Label, BorderBox } from "@primer/components";
+import { Heading, Box, TabNav, Label, BorderBox, UnderlineNav } from "@primer/components";
 import {
-  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon
+  HourglassIcon, GitCompareIcon, MegaphoneIcon, PencilIcon, HeartIcon
 } from "@primer/octicons-react";
 
 import { fetchFellow, fetchStandups } from '../Components';
@@ -63,7 +63,12 @@ function Standup(props) {
 }
 
 export default class Portfolio extends React.Component {
-  state = { fellow: null, standups: [], tab: 'pulls' };
+  state = {
+    fellow: null,
+    standups: [],
+    tab: window.location.hash.substr(1) || 'pulls',
+    exchangeTab: 'github',
+  };
 
   async componentDidMount() {
     if (this.props.username && this.props.accessToken) {
@@ -83,6 +88,7 @@ export default class Portfolio extends React.Component {
   }
 
   setTab(tab) { this.setState({ tab }) }
+  setExchangeTab(exchangeTab) { this.setState({ exchangeTab }) };
 
   render() {
     if (!this.props.username) return this.renderError();
@@ -132,6 +138,13 @@ export default class Portfolio extends React.Component {
           >
             <PencilIcon /> Standups
           </TabNav.Link>
+          <TabNav.Link
+            href="#exchange"
+            selected={this.state.tab === "exchange"}
+            onClick={() => this.setTab("exchange")}
+          >
+            <HeartIcon /> Exchange Network
+          </TabNav.Link>
         </TabNav>
 
         <TabPanel tab={this.state.tab} value={"pulls"}>
@@ -149,6 +162,44 @@ export default class Portfolio extends React.Component {
         <TabPanel tab={this.state.tab} value={"standups"}>
           <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
             {this.state.standups.map((standup, i) => <Standup standup={standup} key={i} />)}
+          </div>
+        </TabPanel>
+
+        <TabPanel tab={this.state.tab} value={"exchange"}>
+          <div>
+            <strong>FellowHub wants to help all our Fellows boost their social & professional network.</strong>
+            <UnderlineNav aria-label="Social Network">
+              <UnderlineNav.Link
+                href="#github"
+                selected={this.state.exchangeTab === "github"}
+                onClick={() => this.setExchangeTab("github")}
+              >
+                GitHub
+              </UnderlineNav.Link>
+              <UnderlineNav.Link
+                href="#linkedin"
+                selected={this.state.exchangeTab === "linkedin"}
+                onClick={() => this.setExchangeTab("linkedin")}
+              >
+                LinkedIn
+              </UnderlineNav.Link>
+            </UnderlineNav>
+
+            <TabPanel tab={this.state.exchangeTab} value={"github"}>
+              <p>
+                If you have discovered an awesome open source project by a fellow Fellow, please consider starring their projects to help boost their visibility.
+                <br />
+                You can even use FellowHub to discover open source projects by Fellows you work with.
+              </p>
+            </TabPanel>
+
+            <TabPanel tab={this.state.exchangeTab} value={"linkedin"}>
+              <p>
+                If you have appreciated working with a Fellow during the Fellowship, please take a minute to endorse them on LinkedIn.
+                <br />
+                FellowHub provides personalised templates you can use to make the process quick and simple! You are encouraged to edit these to include your personal experiences with the Fellow.
+              </p>
+            </TabPanel>
           </div>
         </TabPanel>
       </div>
