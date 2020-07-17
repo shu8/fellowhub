@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Profile from "../Components/Profile";
 import SimpleAvatar from "../Components/SimpleAvatar";
 import Pods from "../Components/Pods";
