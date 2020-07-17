@@ -1,6 +1,7 @@
 import React from "react";
 
 import SimpleAvatar from "../Components/SimpleAvatar";
+import Login from "../Components/Login";
 
 export default class Fellows extends React.Component {
   state = { search: "" };
@@ -22,6 +23,8 @@ export default class Fellows extends React.Component {
   }
 
   render() {
+    if (!this.props.accessToken) return (<Login />);
+
     return (
       <div className="App">
         <div

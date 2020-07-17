@@ -10,13 +10,17 @@ import {
   BookmarkFillIcon,
 } from "@primer/octicons-react";
 import Loading from "../Components/Loading";
+import Login from "../Components/Login";
 
 const getSkill = (string, number) => string.split(",")[number];
 
 export default function Templates(props) {
+  console.log(props.fellow)
+  if (!props.accessToken) return (<Login />);
+
   return (
     <div className="App">
-      {props.fellow === undefined ? (
+      {!props.fellow ? (
         <Loading />
       ) : (
           <>

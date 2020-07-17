@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading, SelectMenu, Button } from "@primer/components";
 import SimpleAvatar from "../Components/SimpleAvatar";
+import Login from "../Components/Login";
 
 import techs from "../data/techs.json";
 
@@ -18,6 +19,8 @@ export default function GetHelp(props) {
       .map((fellow, i) => (
         <SimpleAvatar bgPhoto={fellow.avatar_url} cta="View profile" key={i} />
       ));
+
+  if (!props.accessToken) return (<Login />);
 
   return (
     <div className="App">

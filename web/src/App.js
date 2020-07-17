@@ -121,15 +121,23 @@ class App extends React.Component {
             />
             <Route path="/jobs" component={() => (
               <Jobs
+                accessToken={this.state.accessToken}
                 search={this.state.search}
               />
             )} />
             <Route path="/about" component={About} />
             <Route
               path="/get-help"
-              render={() => <GetHelp fellows={this.state.fellows} />}
+              component={() => (
+                <GetHelp
+                  accessToken={this.state.accessToken}
+                  fellows={this.state.fellows}
+                />
+              )}
             />
-            <Route path="/voting-contest" component={VotingContest} />
+            <Route path="/voting-contest" component={() => (
+              <VotingContest accessToken={this.state.accessToken} />
+            )} />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}

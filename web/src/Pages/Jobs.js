@@ -4,8 +4,12 @@ import { HeartFillIcon } from "@primer/octicons-react";
 
 import jobsData from "../data/jobs.json";
 
+import Login from "../Components/Login";
+
 export default function Jobs(props) {
   const jobSites = Object.keys(jobsData);
+  if (!props.accessToken) return (<Login />);
+
   return (
     <div className="App">
       <Heading fontSize={7} mb={3}>

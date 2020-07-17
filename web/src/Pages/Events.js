@@ -3,6 +3,7 @@ import { SubNav, TextInput, Heading } from "@primer/components";
 
 import Event from "../Components/Event";
 import TabPanel from "../Components/TabPanel";
+import Login from "../Components/Login";
 
 import { SearchIcon } from "@primer/octicons-react";
 
@@ -74,6 +75,7 @@ export default function Events(props) {
     );
   };
 
+  if (!props.accessToken) return (<Login />);
   if (!props.events.items) return <div />
 
   const id = props.match && props.match.params
