@@ -8,8 +8,8 @@ import {
   ChecklistIcon,
   BriefcaseIcon,
   BookmarkFillIcon,
-  HourglassIcon,
 } from "@primer/octicons-react";
+import Loading from "../Components/Loading";
 
 const getSkill = (string, number) => string.split(",")[number];
 
@@ -17,9 +17,7 @@ export default function Templates(props) {
   return (
     <div className="App">
       {props.fellow === undefined ? (
-        <Heading fontSize={7} mb={3} style={{ textAlign: 'center' }}>
-          <HourglassIcon size={55} /> Loading...
-        </Heading>
+        <Loading />
       ) : (
           <>
           <Heading fontSize={7} mb={3}>

@@ -19,17 +19,9 @@ import { PodmateAvatar } from "../Components/PodmateAvatar";
 
 import projectsData from "../data/projects.json";
 import projectImages from "../img/projects";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    maxWidth: "65%",
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
+import Loading from "../Components/Loading";
 
 export default function Home(props) {
-  const classes = useStyles();
   const [tab, setTab] = React.useState(
     window.location.hash.substr(1) || "home"
   );
@@ -105,9 +97,9 @@ export default function Home(props) {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ display: "flex" }}>
       <Profile fellows={props.fellows} />
-      <div className={classes.root}>
+      <div style={{ width: "100%" }}>
         <TabNav aria-label="Main">
           <TabNav.Link
             href="#home"
@@ -148,7 +140,7 @@ export default function Home(props) {
               gridTemplateRows: "repeat(4, 110px)",
             }}
           >
-            {createAvatars()}
+            {props.fellows.length ? createAvatars() : <Loading small />}
           </div>
         </TabPanel>
         <TabPanel tab={tab} value={"pods"}>
@@ -159,8 +151,9 @@ export default function Home(props) {
             style={{
               display: "grid",
               columnGap: "15px",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gridTemplateRows: "repeat(4, 400px)",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateRows: "repeat(auto-fit, minmax(300px, 1fr))",
+              rowGap: "10px",
             }}
           >
             {createProjects()}
