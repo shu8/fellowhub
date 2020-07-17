@@ -31,7 +31,11 @@ export default function Home(props) {
       .filter((fellow) => {
         if (!props.search) return true;
         if (!fellow.name) return false;
-        return fellow.name.toLowerCase().includes(props.search);
+        return [
+          fellow.name.toLowerCase(),
+          fellow.username.toLowerCase(),
+          fellow.pod.toLowerCase(),
+        ].some((t) => t.includes(props.search));
       })
       .map((fellow, i) => (
         <SimpleAvatar
