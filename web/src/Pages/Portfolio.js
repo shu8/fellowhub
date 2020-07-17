@@ -141,7 +141,7 @@ export default class Portfolio extends React.Component {
     if (this.props.username && this.props.accessToken) {
       const fellow = await fetchFellow(this.props.username, this.props.accessToken);
       const standups = await fetchStandups(this.props.username, this.props.accessToken);
-      this.setState({ fellow, standups });
+      this.setState({ fellow, standups: standups.error ? [] : standups });
     }
   }
 
