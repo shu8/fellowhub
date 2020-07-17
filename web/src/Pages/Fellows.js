@@ -11,7 +11,6 @@ export default class Fellows extends React.Component {
   };
 
   createAvatars() {
-    console.log(this.props)
     return this.props.fellows.map((fellow, i) => (
       <SimpleAvatar
         bgPhoto={fellow.avatar_url}

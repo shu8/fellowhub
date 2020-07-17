@@ -42,7 +42,6 @@ class App extends React.Component {
       const [fellows, events, activeFellowGithubId] = await Promise.all([
         fetchFellows(accessToken), fetchEvents(accessToken), fetchActiveFellow(accessToken),
       ]);
-      console.log(fellows, events, activeFellowGithubId);
 
       // Get all this data from what we've already fetched, no need for more requests!
       const loggedInFellow = fellows.find(f => f.username_original === activeFellowGithubId);

@@ -15,7 +15,6 @@ import Login from "../Components/Login";
 const getSkill = (string, number) => string.split(",")[number];
 
 export default function Templates(props) {
-  console.log(props.fellow)
   if (!props.accessToken) return (<Login />);
 
   return (

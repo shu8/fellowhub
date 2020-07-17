@@ -84,7 +84,6 @@ export default function Events(props) {
 
   if (id) {
     const event = props.events.items.find(e => e.id === id);
-    console.log(event);
     if (event) {
       return (
         <div className="App">

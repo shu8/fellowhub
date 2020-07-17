@@ -89,7 +89,6 @@ const Pods = ({ fellows }) => {
   return (
     <BorderBox style={{ padding: "20px" }}>
       {Object.keys(pods).map((podId) => {
-        console.log(imageMapping[podId]);
         return (
           <BorderBox style={{ padding: "20px", marginBottom: "10px" }}>
             <div class="d-table col-12" style={{ marginBottom: "15px" }}>
