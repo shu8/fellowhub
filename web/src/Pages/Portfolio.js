@@ -8,6 +8,7 @@ import {
 import { fetchFellow, fetchStandups, starRepo, sendDiscordMessage } from '../Components';
 import TabPanel from "../Components/TabPanel";
 import Loading from "../Components/Loading";
+import Login from "../Components/Login";
 
 import linkedinTemplates from "../data/linkedin-recommendation-templates.json";
 
@@ -226,6 +227,8 @@ export default class Portfolio extends React.Component {
   render() {
     if (!this.props.username) return this.renderError();
     const { fellow } = this.state
+
+    if (!this.props.accessToken) return (<Login />);
 
     if (!fellow) {
       return <Loading />

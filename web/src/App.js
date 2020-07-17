@@ -14,7 +14,7 @@ import VotingContest from "./Pages/VotingContest";
 import "./App.css";
 import Header from "./Components/Header";
 import "font-awesome/css/font-awesome.min.css";
-import { fetchFellows, fetchEvents, fetchActiveFellow, fetchSingleFellow, getPodmates } from "./Components";
+import { fetchFellows, fetchEvents, fetchActiveFellow } from "./Components";
 
 class App extends React.Component {
   state = {
@@ -24,6 +24,7 @@ class App extends React.Component {
     accessToken: null,
     events: {},
     search: "",
+    loggedInFellow: null,
   };
 
   async componentDidMount() {
@@ -37,15 +38,16 @@ class App extends React.Component {
     }
 
     if (accessToken) {
-      const fellows = await fetchFellows(accessToken);
+      // Fetch all together, not sequentially!
+      const [fellows, events, activeFellowGithubId] = await Promise.all([
+        fetchFellows(accessToken), fetchEvents(accessToken), fetchActiveFellow(accessToken),
+      ]);
+      console.log(fellows, events, activeFellowGithubId);
 
-      const activeFellowGithubId = await fetchActiveFellow(accessToken);
-      const fellow = await fetchSingleFellow(accessToken, activeFellowGithubId);
-      const podmates = await getPodmates(accessToken, fellow.pod_id)
-
-      const events = await fetchEvents(accessToken);
-      // console.log(events, fellows);
-      this.setState({ fellows, accessToken, events, fellow, podmates });
+      // Get all this data from what we've already fetched, no need for more requests!
+      const loggedInFellow = fellows.find(f => f.username_original === activeFellowGithubId);
+      const podmates = fellows.filter(f => f.pod_id === loggedInFellow.pod_id);
+      this.setState({ fellows, accessToken, events, loggedInFellow, podmates });
     }
   }
 
@@ -73,7 +75,7 @@ class App extends React.Component {
                   <Portfolio
                     username={username}
                     accessToken={this.state.accessToken}
-                    loggedInUser={this.state.fellow}
+                    loggedInUser={this.state.loggedInFellow}
                   />
                 );
               }}
@@ -113,21 +115,29 @@ class App extends React.Component {
               component={() => (
                 <Templates
                   accessToken={this.state.accessToken}
-                  fellow={this.state.fellow}
+                  fellow={this.state.loggedInFellow}
                 />
               )}
             />
             <Route path="/jobs" component={() => (
               <Jobs
+                accessToken={this.state.accessToken}
                 search={this.state.search}
               />
             )} />
             <Route path="/about" component={About} />
             <Route
               path="/get-help"
-              render={() => <GetHelp fellows={this.state.fellows} />}
+              component={() => (
+                <GetHelp
+                  accessToken={this.state.accessToken}
+                  fellows={this.state.fellows}
+                />
+              )}
             />
-            <Route path="/voting-contest" component={VotingContest} />
+            <Route path="/voting-contest" component={() => (
+              <VotingContest accessToken={this.state.accessToken} />
+            )} />
             <Route path="/">
               <Home
                 setAccessToken={this.setAccessToken}

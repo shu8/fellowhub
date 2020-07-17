@@ -7,8 +7,11 @@ import {
   StarFillIcon,
 } from "@primer/octicons-react";
 import bookPromo from "../img/book-promo.png";
+import Login from "../Components/Login";
 
-export default function VotingContest() {
+export default function VotingContest(props) {
+  if (!props.accessToken) return (<Login />);
+
   return (
     <div className="App">
       <Heading fontSize={7} mb={3}>
