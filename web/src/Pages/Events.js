@@ -84,11 +84,12 @@ export default function Events(props) {
 
   if (id) {
     const event = props.events.items.find(e => e.id === id);
+    console.log(event);
     if (event) {
       return (
         <div className="App">
           <Event event={event} extended />
-          <div className="description" dangerouslySetInnerHTML={{ __html: event.description.replace(/\n/g, '<br/>') }} />
+          <div className="description" dangerouslySetInnerHTML={{ __html: event.description ? event.description.replace(/\n/g, '<br/>') : "<strong>No description available</strong>" }} />
         </div>
       );
     } else {
