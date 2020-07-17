@@ -151,8 +151,7 @@ export default function Home(props) {
             style={{
               display: "grid",
               columnGap: "15px",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gridTemplateRows: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "auto auto",
               rowGap: "10px",
             }}
           >
