@@ -45,6 +45,7 @@ const isPodNumber = (string) => /^\d\.\d\.\d$/.test(string);
 
 const displayProjectTeamStandups = async (project, message) => {
 	const projectData = getProjectData(project);
+	console.log(projectData);
 	for (let username of projectData.fellows) {
 		try {
 			const standupData = await getStandupData({ type: "user", arg: username });
