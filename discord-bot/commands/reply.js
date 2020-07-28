@@ -16,7 +16,7 @@ module.exports = {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					secret: config.sendMessageSecret,
+					secret: process.env.SEND_MESSAGE_SECRET,
 					message: reply,
 				}),
 			});
