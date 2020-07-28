@@ -9,7 +9,7 @@ module.exports = {
 		const reply = args.join(" ");
 
 		try {
-			await fetch("localhost:3000", {
+			await fetch("http://localhost:3000", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",
