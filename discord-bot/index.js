@@ -26,7 +26,7 @@ let cachedMessage;
 client.on("message", (message) => {
 	cachedMessage = message;
 
-	if (!message.content.startsWith("!") || message.author.bot) return;
+	if (!message.content.startsWith("!")) return;
 
 	const args = message.content.slice(1).split(/ +/);
 	const command = args.shift().toLowerCase();
