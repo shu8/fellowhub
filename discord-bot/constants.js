@@ -7,6 +7,8 @@ const VOTING_SERVER_API_BASE_URL = "https://fellow-voting-system.herokuapp.com";
 
 const REPORTER_BASE_URL = "https://github-reporter.now.sh";
 
+const EC2_BOT_REPLY_URL = "http://18.195.241.222:3000/send-message";
+
 const PLAYLIST_URL =
 	"https://www.youtube.com/playlist?list=PLPDgudJ_VDUfjmLIe9vasB6miSL1ggWkH";
 
@@ -130,4 +132,5 @@ module.exports = {
 	MENTOR_GITHUB_IDS,
 	MLH_STAFF_GITHUB_IDS,
 	GITHUB_IDS_OF_FELLOWS_WITHOUT_DISCORD_IDS,
+	EC2_BOT_REPLY_URL,
 };
