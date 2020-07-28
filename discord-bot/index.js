@@ -24,7 +24,7 @@ client.login(discordToken);
 
 let cachedMessage;
 client.on("message", (message) => {
-	cachedMessage = message;
+	if (message.author.bot && !message.content.startsWith("!reply")) cachedMessage = message;
 
 	if (!message.content.startsWith("!")) return;
 
