@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const config = require("../config");
-const { EC2_BOT_REPLY_URL } = require("../constants");
+// const { EC2_BOT_REPLY_URL } = require("../constants");
 
 module.exports = {
 	name: "reply",
@@ -9,7 +9,7 @@ module.exports = {
 		const reply = args.join(" ");
 
 		try {
-			await fetch(EC2_BOT_REPLY_URL, {
+			await fetch("localhost:3000", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",
