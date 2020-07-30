@@ -1,13 +1,21 @@
 const fetch = require("node-fetch");
-const config = require("../config");
-// const { EC2_BOT_REPLY_URL } = require("../constants");
 
 module.exports = {
 	name: "reply",
 	description: "Sends a reply through the bot",
 	async execute(message, args) {
-		const reply = args.join(" ");
+		let channelToMessage;
+		if (args[0] && args[0].startsWith('$')) {
+			channelToMessage = args[0].slice(1); // Remove symbol at front
+			args.shift();
+		}
 
+		if (!channelToMessage) {
+			message.channel.send("Uh oh, no channel provided.");
+			return;
+		}
+
+		const reply = args.join(" ");
 		try {
 			await fetch("http://localhost:3000/send-message", {
 				method: "POST",
@@ -17,6 +25,7 @@ module.exports = {
 				},
 				body: JSON.stringify({
 					secret: process.env.SEND_MESSAGE_SECRET,
+					channelCustomId: channelToMessage,
 					message: reply,
 				}),
 			});

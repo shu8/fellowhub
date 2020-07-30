@@ -3,6 +3,9 @@ const bodyParser = require("body-parser");
 const { discordToken } = require("./config");
 const client = require("./Client");
 
+// Object with key/values in the form `friendlyName: channelIdAsString`
+const { friendlyChannelMappings } = require("./secretConfig");
+
 client.once("ready", () => {
 	console.log("Client ready!");
 	// client.guilds.cache
@@ -22,10 +25,7 @@ client.once("ready", () => {
 
 client.login(discordToken);
 
-let cachedMessage;
 client.on("message", (message) => {
-	if (message.author.bot && !message.content.startsWith("!reply")) cachedMessage = message;
-
 	if (!message.content.startsWith("!")) return;
 
 	const args = message.content.slice(1).split(/ +/);
@@ -48,15 +48,38 @@ client.on("message", (message) => {
 const app = express();
 app.use(bodyParser.json());
 
-app.post("/send-message", (req, res) => {
-	if (req.body.secret !== process.env.SEND_MESSAGE_SECRET)
+app.post("/send-message", async (req, res) => {
+	if (req.body.secret !== process.env.SEND_MESSAGE_SECRET) {
 		return res.json({ error: true, error_msg: "Unauthorized" });
+	}
 
-	if (cachedMessage) {
-		cachedMessage.channel.send(req.body.message);
+	if (!req.body.channelCustomId) {
+		return res.json({ error: true, error_msg: "No channel found :(" });
+	}
+
+	let channel;
+	let error = false;
+	try {
+		// First try getting the channel assuming the parameter is the 'friendly name' e.g. "server-spam"
+		channel = await client.channels.fetch(friendlyChannelMappings[req.body.channelCustomId]);
+	} catch (err) {
+		try {
+			// Fall back to the parameter being the channel ID itself
+			channel = await client.channels.fetch(req.body.channelCustomId);
+		} catch (err) {
+			// Alert maintainers if there's an error
+			console.error('Unknown channel: ' + req.body.channelCustomId);
+			error = true;
+			channel = await client.channels.fetch(process.env.ALERTS_CHANNEL);
+		}
+	}
+
+	if (channel) {
+		if (error) channel.send('Error sending message to channel: ' + req.body.channelCustomId);
+		channel.send(req.body.message);
 		res.json({ error: false });
 	} else {
-		res.json({ error: true, error_msg: "No cached message available :(" });
+		res.json({ error: true, error_msg: "No channel found :(" });
 	}
 });
 
