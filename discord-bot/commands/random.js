@@ -137,6 +137,10 @@ const createRandomizedPodReply = ({ randomData, format }) => {
 };
 
 const createRandomPlainMessage = (randomData) => {
+	randomData = randomData.filter(
+		(member) => member.name !== "Shraddha Shaligram"
+	);
+
 	const isFellowGroup =
 		randomData[0].pod !== "MLH Staff" && randomData[0].pod !== "Mentors";
 	const fellowGroupLabel = `**Pod ${randomData[0].pod_id} → ${randomData[0].pod}**`;
