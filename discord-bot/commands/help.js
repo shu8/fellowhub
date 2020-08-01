@@ -16,12 +16,13 @@ module.exports = {
     :robot: \`!standup [GitHub username]\` or \`!standup [pod number]\` or \`!standup [project]\`\n\t\t\tto get their daily standups
     \t\t → Example: \`!standup michiboo\` or \`!standup 0.4.1\` or \`!standup amplify\`
     \t\t → Note: \`!standup [project]\` only works for the projects of 0.2.1 and 0.2.2\n
-    :robot: \`!goodbot\` or \`!badbot\` to like or dislike the bot\n
-    :robot: \`!votefor @[Discord username]\` to cast a vote for your favorite fellow
-    \t\t → Note: Only valid during the MLH Halfway Hackathon FellowHub Voting Event.
-    \t\t → Example: \`!votefor @John Smith\`
+    :robot: \`!goodbot\` or \`!badbot\` to like or dislike the bot
     `;
 
 		message.channel.send(helpMessage);
 	},
 };
+
+// :robot: \`!votefor @[Discord username]\` to cast a vote for your favorite fellow
+// \t\t → Note: Only valid during the MLH Halfway Hackathon FellowHub Voting Event.
+// \t\t → Example: \`!votefor @John Smith\`
