@@ -49,12 +49,12 @@ module.exports = {
 
 		console.log(recipientGithubId);
 
-		// if (["ivov", "kendevops", "shu8"].includes(recipientGithubId)) {
-		// 	message.channel.send(
-		// 		"Oh that fellow is a voting event organizer! Please vote for another fellow!"
-		// 	);
-		// 	return;
-		// }
+		if (["ivov", "kendevops", "shu8"].includes(recipientGithubId)) {
+			message.channel.send(
+				"Oh that fellow is a voting event organizer! Please vote for another fellow!"
+			);
+			return;
+		}
 
 		if (MLH_STAFF_GITHUB_IDS.includes(recipientGithubId)) {
 			message.channel.send(
