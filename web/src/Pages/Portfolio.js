@@ -136,6 +136,7 @@ export default class Portfolio extends React.Component {
     standups: [],
     tab: window.location.hash.substr(1) || 'pulls',
     exchangeTab: 'github',
+    pullStateFiltersToShow: ['CLOSED', 'OPEN', 'MERGED'],
   };
 
   async componentDidMount() {
@@ -224,6 +225,31 @@ export default class Portfolio extends React.Component {
     );
   }
 
+  renderPullsTab() {
+    const _togglePullsFilter = type => {
+      const previousFilters = this.state.pullStateFiltersToShow;
+      const newFilters = previousFilters.includes(type) ? previousFilters.filter(t => t != type) : [...previousFilters, type];
+      this.setState({ pullStateFiltersToShow: newFilters });
+    }
+
+    return (
+      <>
+        <div className="pulls-filters">
+          Filter:
+          {' '}
+          <Label variant="medium" mr={2} bg={stateColors['OPEN']} style={{opacity: this.state.pullStateFiltersToShow.includes('OPEN') ? 1 : 0.5}} onClick={() => _togglePullsFilter('OPEN')}>OPEN</Label>
+          <Label variant="medium" mr={2} bg={stateColors['MERGED']} style={{opacity: this.state.pullStateFiltersToShow.includes('MERGED') ? 1 : 0.5}} onClick={() => _togglePullsFilter('MERGED')}>MERGED</Label>
+          <Label variant="medium" mr={2} bg={stateColors['CLOSED']} style={{opacity: this.state.pullStateFiltersToShow.includes('CLOSED') ? 1 : 0.5}} onClick={() => _togglePullsFilter('CLOSED')}>CLOSED</Label>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+          {this.state.fellow.pullsActivity
+            .filter(pull => this.state.pullStateFiltersToShow.includes(pull.state))
+            .map((pull, i) => <Pull pull={pull} key={i} />)}
+        </div>
+      </>
+    );
+  }
+
   render() {
     if (!this.props.username) return this.renderError();
     const { fellow } = this.state
@@ -284,9 +310,7 @@ export default class Portfolio extends React.Component {
         </TabNav>
 
         <TabPanel tab={this.state.tab} value={"pulls"}>
-          <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-            {this.state.fellow.pullsActivity.map((pull, i) => <Pull pull={pull} key={i} />)}
-          </div>
+          {this.renderPullsTab()}
         </TabPanel>
 
         <TabPanel tab={this.state.tab} value={"issues"}>
